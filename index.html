@@ -1,0 +1,2445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Bodybuilding Competition Prep Program</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0f1117;
+            color: #e6edf3;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #30363d;
+            padding-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #58a6ff, #79c0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #8b949e;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .athlete-profile {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+            padding: 15px;
+            background: #1a1d27;
+            border-radius: 8px;
+        }
+
+        .profile-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .profile-item:last-child {
+            border-bottom: none;
+        }
+
+        .profile-label {
+            color: #79c0ff;
+            font-weight: 600;
+        }
+
+        .profile-value {
+            color: #e6edf3;
+        }
+
+        /* Timeline */
+        .timeline-container {
+            margin: 40px 0;
+            padding: 20px;
+            background: #1a1d27;
+            border-radius: 8px;
+            border-left: 4px solid #58a6ff;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .phase-badge {
+            padding: 15px;
+            background: #161b22;
+            border-radius: 6px;
+            border: 2px solid #30363d;
+            text-align: center;
+        }
+
+        .phase-badge h3 {
+            color: #79c0ff;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .phase-badge .duration {
+            color: #8b949e;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .phase-badge .sessions {
+            color: #58a6ff;
+            font-weight: 600;
+        }
+
+        /* Main phases grid */
+        .phases-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .phase {
+            background: #1a1d27;
+            border: 2px solid #30363d;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .phase-header {
+            background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
+            padding: 25px;
+            border-bottom: 3px solid #58a6ff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .phase-header:hover {
+            background: linear-gradient(135deg, #1a1d27 0%, #161b22 100%);
+        }
+
+        .phase-header h2 {
+            font-size: 1.6em;
+            color: #79c0ff;
+        }
+
+        .phase-subtitle {
+            color: #8b949e;
+            font-size: 0.95em;
+            margin-top: 5px;
+        }
+
+        .phase-toggle {
+            width: 30px;
+            height: 30px;
+            background: #30363d;
+            border: none;
+            color: #79c0ff;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .phase-toggle:hover {
+            background: #58a6ff;
+            color: #0f1117;
+        }
+
+        .phase-content {
+            padding: 30px;
+            display: none;
+        }
+
+        .phase-content.active {
+            display: block;
+        }
+
+        .phase-overview {
+            background: #161b22;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            border-left: 4px solid #58a6ff;
+        }
+
+        .phase-overview h3 {
+            color: #79c0ff;
+            margin-bottom: 10px;
+        }
+
+        .phase-overview p {
+            color: #8b949e;
+            margin-bottom: 8px;
+        }
+
+        .overview-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .overview-item {
+            padding: 10px;
+            background: #0f1117;
+            border-radius: 4px;
+            border-left: 3px solid #30363d;
+        }
+
+        .overview-item strong {
+            color: #79c0ff;
+        }
+
+        /* Workouts */
+        .workouts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .workout {
+            background: #161b22;
+            border: 2px solid #30363d;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .workout:hover {
+            border-color: #58a6ff;
+            box-shadow: 0 0 20px rgba(88, 166, 255, 0.1);
+        }
+
+        .workout-header {
+            background: #0f1117;
+            padding: 15px;
+            border-bottom: 2px solid #30363d;
+        }
+
+        .workout-header h3 {
+            color: #79c0ff;
+            font-size: 1.3em;
+        }
+
+        .workout-meta {
+            color: #8b949e;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        .exercises {
+            padding: 0;
+        }
+
+        .exercise {
+            padding: 15px;
+            border-bottom: 1px solid #30363d;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            transition: background 0.2s;
+        }
+
+        .exercise:last-child {
+            border-bottom: none;
+        }
+
+        .exercise:hover {
+            background: #0f1117;
+        }
+
+        .exercise.compound {
+            border-left: 4px solid #58a6ff;
+        }
+
+        .exercise.isolation {
+            border-left: 4px solid #79c0ff;
+        }
+
+        .exercise.superset {
+            border-left: 4px solid #3fb950;
+            background: rgba(63, 185, 80, 0.05);
+        }
+
+        .exercise-name {
+            flex: 1;
+        }
+
+        .exercise-name strong {
+            display: block;
+            color: #e6edf3;
+            margin-bottom: 5px;
+            font-size: 1em;
+        }
+
+        .exercise-details {
+            color: #8b949e;
+            font-size: 0.85em;
+            display: flex;
+            gap: 15px;
+            margin-top: 5px;
+            flex-wrap: wrap;
+        }
+
+        .exercise-details span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .exercise-meta {
+            text-align: right;
+            min-width: 100px;
+        }
+
+        .sets-reps {
+            color: #79c0ff;
+            font-weight: 600;
+            font-size: 0.95em;
+            margin-bottom: 5px;
+        }
+
+        .rpe {
+            color: #f85149;
+            font-size: 0.85em;
+        }
+
+        .rest-period {
+            color: #8b949e;
+            font-size: 0.85em;
+        }
+
+        /* Macro tables */
+        .macros-section {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .macro-card {
+            background: #161b22;
+            border: 2px solid #30363d;
+            border-radius: 6px;
+            padding: 20px;
+            border-top: 4px solid #58a6ff;
+        }
+
+        .macro-card h4 {
+            color: #79c0ff;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .macro-table {
+            width: 100%;
+        }
+
+        .macro-table tr {
+            border-bottom: 1px solid #30363d;
+        }
+
+        .macro-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .macro-table td {
+            padding: 12px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .macro-label {
+            color: #8b949e;
+            font-weight: 500;
+        }
+
+        .macro-value {
+            color: #e6edf3;
+            font-weight: 600;
+        }
+
+        .macro-value.calories {
+            color: #58a6ff;
+            font-size: 1.2em;
+        }
+
+        .macro-bar {
+            width: 100px;
+            height: 8px;
+            background: #30363d;
+            border-radius: 4px;
+            margin-left: 10px;
+            overflow: hidden;
+        }
+
+        .macro-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+        }
+
+        .protein-bar {
+            background: linear-gradient(90deg, #f85149, #ff7b72);
+        }
+
+        .carbs-bar {
+            background: linear-gradient(90deg, #d29922, #ffd700);
+        }
+
+        .fat-bar {
+            background: linear-gradient(90deg, #3fb950, #56d364);
+        }
+
+        /* Rest periods table */
+        .rest-guide {
+            background: #161b22;
+            border: 2px solid #30363d;
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 20px;
+            border-left: 4px solid #58a6ff;
+        }
+
+        .rest-guide h4 {
+            color: #79c0ff;
+            margin-bottom: 15px;
+        }
+
+        .rest-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .rest-table th {
+            background: #0f1117;
+            color: #79c0ff;
+            padding: 10px;
+            text-align: left;
+            border-bottom: 2px solid #30363d;
+        }
+
+        .rest-table td {
+            padding: 10px;
+            border-bottom: 1px solid #30363d;
+            color: #8b949e;
+        }
+
+        .rest-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 1000px) {
+            .workouts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .phase-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .phase-toggle {
+                align-self: flex-end;
+                margin-top: -30px;
+            }
+        }
+
+        /* Utility */
+        .label {
+            display: inline-block;
+            font-size: 0.75em;
+            padding: 3px 8px;
+            border-radius: 3px;
+            margin-right: 5px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .label-compound {
+            background: rgba(88, 166, 255, 0.2);
+            color: #79c0ff;
+        }
+
+        .label-isolation {
+            background: rgba(121, 192, 255, 0.2);
+            color: #79c0ff;
+        }
+
+        .label-superset {
+            background: rgba(63, 185, 80, 0.2);
+            color: #3fb950;
+        }
+    
+        /* Download Dropdown Menu */
+        .download-menu-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .download-button {
+            background: #1a1d27;
+            border: 2px solid #30363d;
+            color: #e6edf3;
+            padding: 10px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.95em;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .download-button:hover {
+            background: #58a6ff;
+            color: #0f1117;
+            border-color: #58a6ff;
+        }
+
+        .download-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: #1a1d27;
+            border: 2px solid #30363d;
+            border-radius: 6px;
+            min-width: 200px;
+            margin-top: 8px;
+            display: none;
+            flex-direction: column;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        }
+
+        .download-dropdown.active {
+            display: flex;
+        }
+
+        .download-dropdown-item {
+            padding: 12px 16px;
+            color: #e6edf3;
+            cursor: pointer;
+            border-bottom: 1px solid #30363d;
+            transition: all 0.2s;
+            text-align: left;
+        }
+
+        .download-dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .download-dropdown-item:hover {
+            background: #58a6ff;
+            color: #0f1117;
+        }
+
+        /* Copy JSON Button */
+        .copy-json-button {
+            background: #30363d;
+            border: 1px solid #30363d;
+            color: #e6edf3;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            margin-left: 12px;
+        }
+
+        .copy-json-button:hover {
+            background: #58a6ff;
+            color: #0f1117;
+            border-color: #58a6ff;
+        }
+
+        .copy-json-button.copied {
+            background: #3fb950;
+            color: #0f1117;
+            border-color: #3fb950;
+        }
+
+        .phase-header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .phase-header-text {
+            flex: 1;
+        }
+
+        .phase-header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Advanced Bodybuilding Competition Prep</h1>
+            <p class="subtitle">40-Week Periodized Program | 3-Day Rotating Split</p>
+
+            <div class="athlete-profile">
+                <div class="profile-item">
+                    <span class="profile-label">Height</span>
+                    <span class="profile-value">181 cm</span>
+                </div>
+                <div class="profile-item">
+                    <span class="profile-label">Current Weight</span>
+                    <span class="profile-value">122 kg (25% BF)</span>
+                </div>
+                <div class="profile-item">
+                    <span class="profile-label">Lean Mass</span>
+                    <span class="profile-value">~91 kg</span>
+                </div>
+                <div class="profile-item">
+                    <span class="profile-label">Fat Mass</span>
+                    <span class="profile-value">~30 kg</span>
+                </div>
+                <div class="profile-item">
+                    <span class="profile-label">Training Status</span>
+                    <span class="profile-value">Advanced (4mo detraining)</span>
+                </div>
+                <div class="profile-item">
+                    <span class="profile-label">Split Structure</span>
+                    <span class="profile-value">Push / Pull / Legs (rotating)</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Timeline Overview -->
+        <div class="timeline-container">
+            <h3 style="color: #79c0ff; margin-bottom: 20px; font-size: 1.3em;">40-Week Timeline</h3>
+            <div class="timeline">
+                <div class="phase-badge">
+                    <h3>Phase 1</h3>
+                    <div class="duration">Weeks 1–4</div>
+                    <div class="sessions">RE-ENTRY</div>
+                    <div class="duration" style="margin-top: 8px;">~12 sessions</div>
+                </div>
+                <div class="phase-badge">
+                    <h3>Phase 2</h3>
+                    <div class="duration">Weeks 5–12</div>
+                    <div class="sessions">FOUNDATION</div>
+                    <div class="duration" style="margin-top: 8px;">~24 sessions</div>
+                </div>
+                <div class="phase-badge">
+                    <h3>Phase 3</h3>
+                    <div class="duration">Weeks 13–28</div>
+                    <div class="sessions">HYPERTROPHY + CUT</div>
+                    <div class="duration" style="margin-top: 8px;">~48 sessions</div>
+                </div>
+                <div class="phase-badge">
+                    <h3>Phase 4</h3>
+                    <div class="duration">Weeks 29–40+</div>
+                    <div class="sessions">CONTEST PREP</div>
+                    <div class="duration" style="margin-top: 8px;">12+ sessions</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phases -->
+        <div class="phases-container">
+            <!-- PHASE 1: RE-ENTRY -->
+            <div class="phase">
+                <div class="phase-header" onclick="togglePhase(this)">
+                    <div>
+                        <h2>Phase 1: RE-ENTRY</h2>
+                        <div class="phase-subtitle">Weeks 1–4 | ~12 sessions | Rebuild work capacity & motor patterns</div>
+                    </div>
+                    <button class="copy-json-button" onclick="copyPhaseJson('phase1', this)" title="Copy phase JSON to clipboard">
+                                    📋 Copy JSON
+                                </button>
+                                <button class="phase-toggle">+</button>
+                </div>
+                <div class="phase-content">
+                    <div class="phase-overview">
+                        <h3>Phase Goals & Guidelines</h3>
+                        <p><strong>Primary Objective:</strong> Rebuild work capacity, restore motor patterns, adapt connective tissue after detraining period</p>
+                        <p><strong>Training Focus:</strong> Machine-heavy work, basic compound patterns, joint health prioritized</p>
+                        <p><strong>Intensity:</strong> RPE 5–7 (50–65% of historical maxes)</p>
+                        <p><strong>Volume:</strong> 3 sets × 12–15 reps per exercise | 5–6 exercises per session</p>
+                        <p><strong>Duration:</strong> ~60 minutes per session</p>
+                        <p><strong>Cardio:</strong> 20 min low-intensity (walking/incline treadmill) post-session</p>
+
+                        <div class="overview-row">
+                            <div class="overview-item">
+                                <strong>Rest Between Sets</strong><br>60–90 seconds
+                            </div>
+                            <div class="overview-item">
+                                <strong>Exercise Selection</strong><br>Machines & light barbells favored
+                            </div>
+                            <div class="overview-item">
+                                <strong>Recovery Focus</strong><br>Mobility & sleep priority
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="workouts-grid">
+                        <!-- PUSH A -->
+                        <div class="workout">
+                            <div class="workout-header">
+                                <h3>PUSH A</h3>
+                                <div class="workout-meta">Compound pressing patterns</div>
+                            </div>
+                            <div class="exercises">
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Bench Press</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Chest Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 12</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">90s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Incline Bench Press</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Upper Chest</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 12</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">75s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Seated Military Press</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Shoulders Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 12</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">90s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Rear Delt Raise</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Shoulder Accessory</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 15</div>
+                                        <div class="rpe">RPE 5</div>
+                                        <div class="rest-period">60s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Lying Triceps Extension</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Triceps</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 13</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">60s rest</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PULL A -->
+                        <div class="workout">
+                            <div class="workout-header">
+                                <h3>PULL A</h3>
+                                <div class="workout-meta">Row & vertical pull patterns</div>
+                            </div>
+                            <div class="exercises">
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Pendlay Row</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Back Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 12</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">90s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Bent Over Row (Pronated)</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Back Secondary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 12</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">85s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Shrugs</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Traps & Upper Back</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 15</div>
+                                        <div class="rpe">RPE 5</div>
+                                        <div class="rest-period">60s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Bicep Curl (Normal Grip)</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Biceps</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 13</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">60s rest</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LEGS A -->
+                        <div class="workout">
+                            <div class="workout-header">
+                                <h3>LEGS A</h3>
+                                <div class="workout-meta">Squat & hinge patterns</div>
+                            </div>
+                            <div class="exercises">
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Full Squat</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Quads Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 12</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">90s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Romanian Deadlift</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Hamstring Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 12</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">90s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Hip Thrust</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Glutes Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 13</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">75s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Box Squat</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Quad Accessory</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 12</div>
+                                        <div class="rpe">RPE 5</div>
+                                        <div class="rest-period">60s rest</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 1 Macros -->
+                    <div class="macros-section">
+                        <div class="macro-card">
+                            <h4>Nutritional Guidelines</h4>
+                            <table class="macro-table">
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Total Calories</span>
+                                        <span class="macro-value calories">2,800 kcal</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Protein</span>
+                                        <span class="macro-value">245g (35%)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Carbohydrates</span>
+                                        <span class="macro-value">280g (40%)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Fat</span>
+                                        <span class="macro-value">78g (25%)</span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p style="margin-top: 15px; color: #8b949e; font-size: 0.9em;"><strong>Strategy:</strong> Maintenance to slight surplus. Focus on muscle repletion and recovery. Prioritize whole foods and consistent meal timing.</p>
+                        </div>
+                    </div>
+
+                    <div class="rest-guide">
+                        <h4>Rest & Recovery Protocols — Phase 1</h4>
+                        <table class="rest-table">
+                            <thead>
+                                <tr>
+                                    <th>Exercise Type</th>
+                                    <th>Rest Between Sets</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Heavy Compounds</strong></td>
+                                    <td>85–90 seconds</td>
+                                    <td>Full CNS recovery between lifts</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Isolation Lifts</strong></td>
+                                    <td>60–75 seconds</td>
+                                    <td>Shorter rest acceptable, still controlled tempo</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Supersets</strong></td>
+                                    <td>N/A (not used P1)</td>
+                                    <td>Introduced in Phase 2</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Between Sessions</strong></td>
+                                    <td colspan="2">48 hours (rotating split prevents same muscle group working consecutive sessions)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHASE 2: FOUNDATION REBUILD -->
+            <div class="phase">
+                <div class="phase-header" onclick="togglePhase(this)">
+                    <div>
+                        <h2>Phase 2: FOUNDATION REBUILD</h2>
+                        <div class="phase-subtitle">Weeks 5–12 | ~24 sessions | Rebuild strength base & muscle memory</div>
+                    </div>
+                    <button class="copy-json-button" onclick="copyPhaseJson('phase2', this)" title="Copy phase JSON to clipboard">
+                                    📋 Copy JSON
+                                </button>
+                                <button class="phase-toggle">+</button>
+                </div>
+                <div class="phase-content">
+                    <div class="phase-overview">
+                        <h3>Phase Goals & Guidelines</h3>
+                        <p><strong>Primary Objective:</strong> Rebuild foundational strength, activate muscle memory, progressive overload on major lifts</p>
+                        <p><strong>Training Focus:</strong> Heavier barbells, cable exercises, dumbbell variations introduced</p>
+                        <p><strong>Intensity:</strong> RPE 7–8 (65–80% of historical maxes)</p>
+                        <p><strong>Volume:</strong> 4 sets × 8–12 reps | 6–7 exercises per session</p>
+                        <p><strong>Duration:</strong> ~75 minutes per session</p>
+                        <p><strong>Cardio:</strong> 25 min moderate (incline walk or light cycling) post-session</p>
+
+                        <div class="overview-row">
+                            <div class="overview-item">
+                                <strong>Rest Between Sets</strong><br>75–120 seconds (heavier = longer)
+                            </div>
+                            <div class="overview-item">
+                                <strong>Progressive Overload</strong><br>+5 lbs per week when possible
+                            </div>
+                            <div class="overview-item">
+                                <strong>Exercise Variety</strong><br>Introduce cables & dumbbells
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="workouts-grid">
+                        <!-- PUSH B -->
+                        <div class="workout">
+                            <div class="workout-header">
+                                <h3>PUSH B</h3>
+                                <div class="workout-meta">Varied pressing (Barbell/Cable/DB)</div>
+                            </div>
+                            <div class="exercises">
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Close Grip Bench Press</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Chest / Triceps</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 8</div>
+                                        <div class="rpe">RPE 8</div>
+                                        <div class="rest-period">120s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Decline Bench Press</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Lower Chest</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 9</div>
+                                        <div class="rpe">RPE 7</div>
+                                        <div class="rest-period">90s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Behind Neck Push Press</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Shoulders</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 10</div>
+                                        <div class="rpe">RPE 7</div>
+                                        <div class="rest-period">110s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Front Raise</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Front Delts</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 12</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">75s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Seated Overhead Triceps Press</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Triceps</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 10</div>
+                                        <div class="rpe">RPE 7</div>
+                                        <div class="rest-period">75s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell JM Bench Press</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Chest / Triceps Hybrid</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 11</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">75s rest</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PULL B -->
+                        <div class="workout">
+                            <div class="workout-header">
+                                <h3>PULL B</h3>
+                                <div class="workout-meta">Varied rows & pulls (Barbell/Dumbbell)</div>
+                            </div>
+                            <div class="exercises">
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Underhand Bent Over Row</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Back Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 8</div>
+                                        <div class="rpe">RPE 8</div>
+                                        <div class="rest-period">120s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Push Bent Over Row</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Back Secondary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 9</div>
+                                        <div class="rpe">RPE 7</div>
+                                        <div class="rest-period">100s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Back Wide Shrugs</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Traps</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 12</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">75s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Drag Biceps Curl</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Biceps (Peak Contraction)</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 10</div>
+                                        <div class="rpe">RPE 7</div>
+                                        <div class="rest-period">75s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Reverse Biceps Curl</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Biceps / Forearms</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 11</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">75s rest</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LEGS B -->
+                        <div class="workout">
+                            <div class="workout-header">
+                                <h3>LEGS B</h3>
+                                <div class="workout-meta">Varied squat & hinge variations</div>
+                            </div>
+                            <div class="exercises">
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Clean Grip Front Squat</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Quads Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 8</div>
+                                        <div class="rpe">RPE 8</div>
+                                        <div class="rest-period">120s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Stiff Leg Deadlift</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Hamstring Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 9</div>
+                                        <div class="rpe">RPE 7</div>
+                                        <div class="rest-period">110s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Feet Elevated Glute Bridge</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Glutes Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 10</div>
+                                        <div class="rpe">RPE 7</div>
+                                        <div class="rest-period">90s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Bulgarian Split Squat</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Quad / Glute Accessory</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 11</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">75s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Single Leg Deadlift</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Hamstring / Balance</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 12</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">60s rest</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 2 Macros -->
+                    <div class="macros-section">
+                        <div class="macro-card">
+                            <h4>Nutritional Guidelines</h4>
+                            <table class="macro-table">
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Total Calories</span>
+                                        <span class="macro-value calories">3,000 kcal</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Protein</span>
+                                        <span class="macro-value">262g (35%)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Carbohydrates</span>
+                                        <span class="macro-value">315g (42%)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Fat</span>
+                                        <span class="macro-value">86g (23%)</span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p style="margin-top: 15px; color: #8b949e; font-size: 0.9em;"><strong>Strategy:</strong> Slight surplus. Carbs support heavier training. Front-load carbs around workouts for energy & recovery.</p>
+                        </div>
+                    </div>
+
+                    <div class="rest-guide">
+                        <h4>Rest & Recovery Protocols — Phase 2</h4>
+                        <table class="rest-table">
+                            <thead>
+                                <tr>
+                                    <th>Exercise Type</th>
+                                    <th>Rest Between Sets</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Heavy Compounds</strong></td>
+                                    <td>100–120 seconds</td>
+                                    <td>Loads increasing; full recovery critical</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Moderate Compounds</strong></td>
+                                    <td>85–100 seconds</td>
+                                    <td>Secondary lifts</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Isolation Lifts</strong></td>
+                                    <td>60–75 seconds</td>
+                                    <td>Faster tempo permissible</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Between Sessions</strong></td>
+                                    <td colspan="2">48 hours (rotating split)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHASE 3: HYPERTROPHY + CUT -->
+            <div class="phase">
+                <div class="phase-header" onclick="togglePhase(this)">
+                    <div>
+                        <h2>Phase 3: HYPERTROPHY + CUT</h2>
+                        <div class="phase-subtitle">Weeks 13–28 | ~48 sessions | Maximum hypertrophy with progressive deficit</div>
+                    </div>
+                    <button class="copy-json-button" onclick="copyPhaseJson('phase3a', this)" title="Copy phase JSON to clipboard">
+                                    📋 Copy JSON
+                                </button>
+                                <button class="phase-toggle">+</button>
+                </div>
+                <div class="phase-content">
+                    <div class="phase-overview">
+                        <h3>Phase Goals & Guidelines</h3>
+                        <p><strong>Primary Objective:</strong> Maximize hypertrophy stimulus while managing progressive caloric deficit. Rotate exercises every 4 weeks for novelty stimulus.</p>
+                        <p><strong>Training Focus:</strong> High exercise diversity, 7–8 exercises per session, varied equipment (cables, machines, dumbbells, barbells)</p>
+                        <p><strong>Intensity:</strong> RPE 8–9 (progressive overload)</p>
+                        <p><strong>Volume:</strong> 4 sets × 8–12 reps (main), 3 sets × 12–15 reps (isolation) | Total 7–8 exercises per session</p>
+                        <p><strong>Duration:</strong> ~85–95 minutes per session</p>
+                        <p><strong>Cardio:</strong> 30–40 min moderate, increasing frequency (2–3× weekly)</p>
+                        <p><strong>Exercise Rotation:</strong> Change 40–50% of exercises every 4 weeks within this phase</p>
+
+                        <div class="overview-row">
+                            <div class="overview-item">
+                                <strong>Phase 3A (Weeks 13–20)</strong><br>Moderate deficit, ~2,500 kcal
+                            </div>
+                            <div class="overview-item">
+                                <strong>Phase 3B (Weeks 21–28)</strong><br>Deeper deficit, ~2,200 kcal
+                            </div>
+                            <div class="overview-item">
+                                <strong>Rest Between Sets</strong><br>65–90 seconds (brief for hypertrophy)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="workouts-grid">
+                        <!-- PUSH C (3A/3B) -->
+                        <div class="workout">
+                            <div class="workout-header">
+                                <h3>PUSH C (Weeks 13–20)</h3>
+                                <div class="workout-meta">High-volume chest/shoulders/triceps with rotation</div>
+                            </div>
+                            <div class="exercises">
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Floor Chest Press</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Chest Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 8</div>
+                                        <div class="rpe">RPE 8</div>
+                                        <div class="rest-period">90s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Wide Bench Press</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Chest (Outer)</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 10</div>
+                                        <div class="rpe">RPE 7</div>
+                                        <div class="rest-period">75s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Seated Military Press</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Shoulders</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 9</div>
+                                        <div class="rpe">RPE 8</div>
+                                        <div class="rest-period">85s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Reverse Grip Bench Press</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Upper Chest</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 12</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">70s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Pullover to Triceps Extension</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Chest / Triceps</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 12</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">60s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Close Grip Press</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Triceps Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 11</div>
+                                        <div class="rpe">RPE 7</div>
+                                        <div class="rest-period">70s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Lying Triceps Skull Crushers</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Triceps</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 13</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">60s rest</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PULL C (3A/3B) -->
+                        <div class="workout">
+                            <div class="workout-header">
+                                <h3>PULL C (Weeks 13–20)</h3>
+                                <div class="workout-meta">High-volume back/biceps with varied angles</div>
+                            </div>
+                            <div class="exercises">
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Reverse Grip Bent Over Row</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Back Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 8</div>
+                                        <div class="rpe">RPE 8</div>
+                                        <div class="rest-period">90s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Overhead Shrug</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Traps / Back</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 9</div>
+                                        <div class="rpe">RPE 7</div>
+                                        <div class="rest-period">80s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Pendlay Row</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Back Secondary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 10</div>
+                                        <div class="rpe">RPE 7</div>
+                                        <div class="rest-period">75s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Wide Shrug</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Traps (Width)</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 12</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">70s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Bicep Curl (Wide Grip)</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Biceps (Outer)</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 11</div>
+                                        <div class="rpe">RPE 7</div>
+                                        <div class="rest-period">70s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Preacher Curl</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Biceps (Peak)</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 12</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">60s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Lap Curl</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Biceps (Compound)</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 13</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">60s rest</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LEGS C (3A/3B) -->
+                        <div class="workout">
+                            <div class="workout-header">
+                                <h3>LEGS C (Weeks 13–20)</h3>
+                                <div class="workout-meta">High-volume legs with quad/hinge/glute focus</div>
+                            </div>
+                            <div class="exercises">
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Front Chest Squat</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Quads Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 8</div>
+                                        <div class="rpe">RPE 8</div>
+                                        <div class="rest-period">100s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Sumo Romanian Deadlift</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Hamstring/Glute Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 9</div>
+                                        <div class="rpe">RPE 8</div>
+                                        <div class="rest-period">90s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell KAS Glute Bridge</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Glutes Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 10</div>
+                                        <div class="rpe">RPE 7</div>
+                                        <div class="rest-period">80s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Box Squat</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Quad Accessory</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 11</div>
+                                        <div class="rpe">RPE 7</div>
+                                        <div class="rest-period">75s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Feet Elevated Single Leg Glute Bridge</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Glute Accessory</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 12</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">70s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Dumbbell Close Legs Deadlift</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Dumbbell</span>
+                                            <span>Hamstring Accessory</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 13</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">60s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Kneeling Squat</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Quad Isolation</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 14</div>
+                                        <div class="rpe">RPE 5</div>
+                                        <div class="rest-period">60s rest</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 3 Macros -->
+                    <div class="macros-section">
+                        <div class="macro-card">
+                            <h4>Macros — Phase 3A (Weeks 13–20)</h4>
+                            <table class="macro-table">
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Total Calories</span>
+                                        <span class="macro-value calories">2,500 kcal</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Protein</span>
+                                        <span class="macro-value">250g (40%)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Carbohydrates</span>
+                                        <span class="macro-value">219g (35%)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Fat</span>
+                                        <span class="macro-value">70g (25%)</span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p style="margin-top: 15px; color: #8b949e; font-size: 0.9em;"><strong>Strategy:</strong> Moderate deficit. Prioritize protein for muscle preservation. Time carbs around training. Increase cardio frequency.</p>
+                        </div>
+                        <div class="macro-card">
+                            <h4>Macros — Phase 3B (Weeks 21–28)</h4>
+                            <table class="macro-table">
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Total Calories</span>
+                                        <span class="macro-value calories">2,200 kcal</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Protein</span>
+                                        <span class="macro-value">247g (45%)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Carbohydrates</span>
+                                        <span class="macro-value">165g (30%)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Fat</span>
+                                        <span class="macro-value">61g (25%)</span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p style="margin-top: 15px; color: #8b949e; font-size: 0.9em;"><strong>Strategy:</strong> Deeper deficit. Lean protein critical. Consider lower carbs on lower-volume days. Maintain training intensity.</p>
+                        </div>
+                    </div>
+
+                    <div class="rest-guide">
+                        <h4>Rest & Recovery Protocols — Phase 3</h4>
+                        <table class="rest-table">
+                            <thead>
+                                <tr>
+                                    <th>Exercise Type</th>
+                                    <th>Rest Between Sets</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Heavy Compounds (8 reps)</strong></td>
+                                    <td>85–100 seconds</td>
+                                    <td>Maintain strength on deficit</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Moderate Compounds (9–10)</strong></td>
+                                    <td>75–85 seconds</td>
+                                    <td>Good balance of intensity & volume</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Isolation/Pump Work (11–15)</strong></td>
+                                    <td>55–75 seconds</td>
+                                    <td>Hypertrophy-focused rep ranges</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Exercise Rotation</strong></td>
+                                    <td colspan="2">Change 40–50% of exercises every 4 weeks (novelty stimulus)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHASE 4: CONTEST PREP -->
+            <div class="phase">
+                <div class="phase-header" onclick="togglePhase(this)">
+                    <div>
+                        <h2>Phase 4: CONTEST PREP</h2>
+                        <div class="phase-subtitle">Weeks 29–40+ | 12+ sessions | Maintain muscle, strip fat, peak conditioning</div>
+                    </div>
+                    <button class="copy-json-button" onclick="copyPhaseJson('phase4', this)" title="Copy phase JSON to clipboard">
+                                    📋 Copy JSON
+                                </button>
+                                <button class="phase-toggle">+</button>
+                </div>
+                <div class="phase-content">
+                    <div class="phase-overview">
+                        <h3>Phase Goals & Guidelines</h3>
+                        <p><strong>Primary Objective:</strong> Maintain hard-earned muscle while achieving stage-ready conditioning. Manage fatigue and central nervous system (CNS) load on aggressive deficit.</p>
+                        <p><strong>Training Focus:</strong> More machine & isolation work to reduce joint stress on low calories. Maintain intensity but slightly reduce volume.</p>
+                        <p><strong>Intensity:</strong> RPE 8–8.5 (maintain load, reduce reps/volume)</p>
+                        <p><strong>Volume:</strong> 3–4 sets × 6–10 reps (compounds), 3 sets × 12–15 reps (isolation) | 6–7 exercises per session</p>
+                        <p><strong>Duration:</strong> ~75–85 minutes per session</p>
+                        <p><strong>Cardio:</strong> 40–60 min (mix LISS + brief HIIT)</p>
+                        <p><strong>Critical Note:</strong> Recommend working with a prep coach during final 8 weeks for conditioning assessment, posing practice, and supplementation guidance</p>
+
+                        <div class="overview-row">
+                            <div class="overview-item">
+                                <strong>Caloric Deficit</strong><br>~2,000 kcal (aggressive)
+                            </div>
+                            <div class="overview-item">
+                                <strong>Training Priority</strong><br>Maintain load, reduce volume slightly
+                            </div>
+                            <div class="overview-item">
+                                <strong>Recovery Tools</strong><br>Sleep, massage, deload management
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="workouts-grid">
+                        <!-- PUSH D (Contest Prep) -->
+                        <div class="workout">
+                            <div class="workout-header">
+                                <h3>PUSH D (Contest Prep)</h3>
+                                <div class="workout-meta">Lower volume, maintain intensity on machines</div>
+                            </div>
+                            <div class="exercises">
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Bench Press</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Chest Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 6</div>
+                                        <div class="rpe">RPE 8</div>
+                                        <div class="rest-period">100s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Incline Bench Press</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Upper Chest</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 8</div>
+                                        <div class="rpe">RPE 8</div>
+                                        <div class="rest-period">75s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Z Press</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Shoulders</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 8</div>
+                                        <div class="rpe">RPE 8</div>
+                                        <div class="rest-period">80s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Rear Delt Raise</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Rear Delts</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 12</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">60s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Close Grip Press</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Triceps</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 9</div>
+                                        <div class="rpe">RPE 7</div>
+                                        <div class="rest-period">65s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Dumbbell Incline Triceps Extension</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Dumbbell</span>
+                                            <span>Triceps Finisher</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 14</div>
+                                        <div class="rpe">RPE 5</div>
+                                        <div class="rest-period">45s rest</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PULL D (Contest Prep) -->
+                        <div class="workout">
+                            <div class="workout-header">
+                                <h3>PULL D (Contest Prep)</h3>
+                                <div class="workout-meta">Maintenance rows & pulls, high definition</div>
+                            </div>
+                            <div class="exercises">
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Pendlay Row</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Back Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 6</div>
+                                        <div class="rpe">RPE 8</div>
+                                        <div class="rest-period">100s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Bent Over Row (Supinated)</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Back Secondary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 8</div>
+                                        <div class="rpe">RPE 8</div>
+                                        <div class="rest-period">85s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Shrugs</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Traps</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 10</div>
+                                        <div class="rpe">RPE 7</div>
+                                        <div class="rest-period">70s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Drag Curl</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Biceps (Short ROM)</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 9</div>
+                                        <div class="rpe">RPE 7</div>
+                                        <div class="rest-period">65s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Reverse Spider Curl</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Biceps Peak & Forearm</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 13</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">50s rest</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LEGS D (Contest Prep) -->
+                        <div class="workout">
+                            <div class="workout-header">
+                                <h3>LEGS D (Contest Prep)</h3>
+                                <div class="workout-meta">Maintenance quads/hams/glutes, joint-friendly</div>
+                            </div>
+                            <div class="exercises">
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Full Squat</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Quads Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">4 × 6</div>
+                                        <div class="rpe">RPE 8</div>
+                                        <div class="rest-period">110s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Romanian Deadlift</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Hamstring Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 8</div>
+                                        <div class="rpe">RPE 8</div>
+                                        <div class="rest-period">90s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise compound">
+                                    <div class="exercise-name">
+                                        <span class="label label-compound">COMPOUND</span>
+                                        <strong>Barbell Hip Thrust</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Glutes Primary</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 9</div>
+                                        <div class="rpe">RPE 8</div>
+                                        <div class="rest-period">80s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Barbell Feet Elevated Glute Bridge</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Barbell</span>
+                                            <span>Glute Accessory</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 12</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">70s rest</div>
+                                    </div>
+                                </div>
+                                <div class="exercise isolation">
+                                    <div class="exercise-name">
+                                        <span class="label label-isolation">ISOLATION</span>
+                                        <strong>Dumbbell Romanian Deadlift</strong>
+                                        <div class="exercise-details">
+                                            <span>🏋️ Dumbbell</span>
+                                            <span>Hamstring Accessory</span>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-meta">
+                                        <div class="sets-reps">3 × 13</div>
+                                        <div class="rpe">RPE 6</div>
+                                        <div class="rest-period">60s rest</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 4 Macros -->
+                    <div class="macros-section">
+                        <div class="macro-card">
+                            <h4>Nutritional Guidelines</h4>
+                            <table class="macro-table">
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Total Calories</span>
+                                        <span class="macro-value calories">2,000 kcal</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Protein</span>
+                                        <span class="macro-value">225g (45%)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Carbohydrates</span>
+                                        <span class="macro-value">140g (28%)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="macro-label">Fat</span>
+                                        <span class="macro-value">61g (27%)</span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p style="margin-top: 15px; color: #8b949e; font-size: 0.9em;"><strong>Strategy:</strong> Aggressive deficit. Extreme protein prioritization. Carb periodization (front-load training days). Consider sodium/water manipulation in final 2–3 weeks under coach guidance.</p>
+                        </div>
+                    </div>
+
+                    <div class="rest-guide">
+                        <h4>Rest & Recovery Protocols — Phase 4</h4>
+                        <table class="rest-table">
+                            <thead>
+                                <tr>
+                                    <th>Strategy</th>
+                                    <th>Application</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Heavy Compounds</strong></td>
+                                    <td>100–110s rest</td>
+                                    <td>Maintain strength above all else</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Secondary Compounds</strong></td>
+                                    <td>75–90s rest</td>
+                                    <td>Managed intensity</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Isolation/Pump</strong></td>
+                                    <td>50–70s rest</td>
+                                    <td>Shorter rest acceptable for definition</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Deload Week</strong></td>
+                                    <td colspan="2">Every 3–4 weeks: reduce volume 40%, maintain intensity, emphasize recovery</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sleep & Recovery</strong></td>
+                                    <td colspan="2">8–9 hours nightly. Stress management critical on deficit.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Prep Coach</strong></td>
+                                    <td colspan="2">Highly recommended in final 8 weeks for posing, conditioning feedback, taper strategy</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="background: #161b22; border: 2px solid #30363d; border-radius: 6px; padding: 20px; margin-top: 30px; border-left: 4px solid #f85149;">
+                        <h4 style="color: #f85149; margin-bottom: 15px;">Contest Prep Final Weeks (Last 8 Weeks)</h4>
+                        <p style="color: #8b949e; margin-bottom: 10px;"><strong>Recommendation:</strong> Work with an experienced prep coach for:</p>
+                        <ul style="color: #8b949e; margin-left: 20px; margin-bottom: 15px;">
+                            <li>Weekly conditioning assessment & feedback</li>
+                            <li>Posing practice & coaching</li>
+                            <li>Posing tan / suit selection</li>
+                            <li>Water/sodium/carb manipulation taper</li>
+                            <li>Mental preparation & confidence</li>
+                            <li>Contingency nutrition adjustments</li>
+                        </ul>
+                        <p style="color: #8b949e;"><strong>Training during taper:</strong> Reduce volume 30–40%, maintain intensity & frequency, focus on maintaining muscle fullness & hardness.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end phases-container -->
+
+    </div><!-- end container -->
+
+    
+    <!-- Download Menu -->
+    <div class="download-menu-container">
+        <button class="download-button" onclick="toggleDownloadMenu()">
+            📥 Download Programs
+        </button>
+        <div class="download-dropdown" id="downloadMenu">
+            <div class="download-dropdown-item" onclick="downloadPhaseJson('phase1', 'phase1_reentry.json')">Phase 1: RE-ENTRY</div>
+            <div class="download-dropdown-item" onclick="downloadPhaseJson('phase2', 'phase2_foundation.json')">Phase 2: FOUNDATION</div>
+            <div class="download-dropdown-item" onclick="downloadPhaseJson('phase3a', 'phase3a_hypertrophy_cut.json')">Phase 3A: HYPERTROPHY (Mod Cut)</div>
+            <div class="download-dropdown-item" onclick="downloadPhaseJson('phase3b', 'phase3b_hypertrophy_deep_cut.json')">Phase 3B: HYPERTROPHY (Deep Cut)</div>
+            <div class="download-dropdown-item" onclick="downloadPhaseJson('phase4', 'phase4_contest_prep.json')">Phase 4: CONTEST PREP</div>
+        </div>
+    </div>
+
+    <script>
+        // Phase JSON file mapping
+        const PHASE_FILES = {
+            phase1: 'phase1_reentry.json',
+            phase2: 'phase2_foundation.json',
+            phase3a: 'phase3a_hypertrophy_cut.json',
+            phase3b: 'phase3b_hypertrophy_deep_cut.json',
+            phase4: 'phase4_contest_prep.json'
+        };
+
+        // Cache for loaded JSON data
+        const PHASE_DATA = {};
+
+        // Load all JSON files on page load
+        async function loadPhaseData() {
+            const entries = Object.entries(PHASE_FILES);
+            const results = await Promise.allSettled(
+                entries.map(([key, file]) =>
+                    fetch(file)
+                        .then(r => {
+                            if (!r.ok) throw new Error(`${file}: ${r.status}`);
+                            return r.json();
+                        })
+                        .then(data => { PHASE_DATA[key] = data; })
+                )
+            );
+            
+            const failed = results.filter(r => r.status === 'rejected');
+            if (failed.length > 0) {
+                console.warn('Some JSON files could not be loaded:', failed.map(r => r.reason.message));
+            }
+            
+            // Update UI to show files are ready
+            document.querySelectorAll('.copy-json-button').forEach(btn => {
+                const phaseKey = btn.getAttribute('onclick').match(/'(\w+)'/)?.[1];
+                if (phaseKey && PHASE_DATA[phaseKey]) {
+                    btn.classList.add('ready');
+                } else {
+                    btn.style.opacity = '0.4';
+                    btn.title = 'JSON file not found';
+                }
+            });
+        }
+
+        // Download a phase JSON file directly (link to actual file)
+        function downloadPhaseJson(phaseKey, filename) {
+            // If data is cached, use it (allows downloading even offline)
+            if (PHASE_DATA[phaseKey]) {
+                const jsonString = JSON.stringify(PHASE_DATA[phaseKey], null, 2);
+                const blob = new Blob([jsonString], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                a.click();
+                URL.revokeObjectURL(url);
+            } else {
+                // Fallback: direct link to file
+                const a = document.createElement('a');
+                a.href = filename;
+                a.download = filename;
+                a.click();
+            }
+            document.getElementById('downloadMenu').classList.remove('show');
+        }
+
+        // Copy phase JSON to clipboard
+        function copyPhaseJson(phaseKey, button) {
+            const originalText = button.innerHTML;
+            
+            if (!PHASE_DATA[phaseKey]) {
+                // Try to fetch it on demand
+                fetch(PHASE_FILES[phaseKey])
+                    .then(r => r.json())
+                    .then(data => {
+                        PHASE_DATA[phaseKey] = data;
+                        doCopy(data, button, originalText);
+                    })
+                    .catch(() => {
+                        button.innerHTML = '\u2717 Not found';
+                        setTimeout(() => { button.innerHTML = originalText; }, 2000);
+                    });
+                return;
+            }
+            
+            doCopy(PHASE_DATA[phaseKey], button, originalText);
+        }
+        
+        function doCopy(data, button, originalText) {
+            const jsonString = JSON.stringify(data, null, 2);
+            navigator.clipboard.writeText(jsonString).then(() => {
+                button.innerHTML = '\u2713 Copied!';
+                button.style.background = '#238636';
+                button.style.borderColor = '#3fb950';
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = '';
+                    button.style.borderColor = '';
+                }, 2000);
+            }).catch(() => {
+                // Fallback for older browsers
+                const ta = document.createElement('textarea');
+                ta.value = jsonString;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                button.innerHTML = '\u2713 Copied!';
+                button.style.background = '#238636';
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = '';
+                }, 2000);
+            });
+        }
+
+        // Toggle download menu
+        function toggleDownloadMenu() {
+            document.getElementById('downloadMenu').classList.toggle('show');
+        }
+
+        // Close download menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.download-menu-container')) {
+                document.getElementById('downloadMenu').classList.remove('show');
+            }
+        });
+
+        // Toggle phase sections
+        function togglePhase(headerElement) {
+            const content = headerElement.nextElementSibling;
+            const toggle = headerElement.querySelector('.phase-toggle');
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                toggle.textContent = '+';
+            } else {
+                content.classList.add('active');
+                toggle.textContent = '\u2212';
+            }
+        }
+
+        // Load JSON data when page loads
+        document.addEventListener('DOMContentLoaded', loadPhaseData);
+    </script>
+</body>
+</html>

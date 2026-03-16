@@ -1,0 +1,1110 @@
+{
+  "version": 1,
+  "exportedAt": "2026-03-16T14:00:00.000Z",
+  "program": {
+    "name": "Phase 3A \u2014 Hypertrophy (Moderate Cut)",
+    "description": "8-week hypertrophy focus with moderate caloric deficit. High volume, RPE 8-9.",
+    "daysPerWeek": 3,
+    "type": "pushPullLegs"
+  },
+  "days": [
+    {
+      "dayNumber": 1,
+      "name": "Pull 1",
+      "description": "Pull day rotation 1 with back and biceps focus",
+      "exercises": [
+        {
+          "exerciseId": "alternate_hammer_curl_seated_dumbbells",
+          "exerciseName": "Alternate hammer curl seated dumbbells",
+          "orderIndex": 0,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "alternate_hammer_curl_standing_dumbbells",
+          "exerciseName": "Alternate hammer curl standing dumbbells",
+          "orderIndex": 1,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "alternating_biceps_curl_seated_dumbbells",
+          "exerciseName": "Alternating biceps curl seated dumbbells",
+          "orderIndex": 2,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "assisted_close_grip_underhand_chin_up",
+          "exerciseName": "Assisted close grip underhand chin up",
+          "orderIndex": 3,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "assisted_parallel_close_grip_pull_up",
+          "exerciseName": "Assisted parallel close grip pull up",
+          "orderIndex": 4,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "hammer_strength_mts_iso_lateral_biceps_curl_both_arm",
+          "exerciseName": "Hammer Strength MTS Iso-Lateral Biceps Curl Both Arm",
+          "orderIndex": 5,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "name": "Legs 1",
+      "description": "Leg day rotation 1 with quad and glute focus",
+      "exercises": [
+        {
+          "exerciseId": "45_degree_side_bend",
+          "exerciseName": "45 degree side bend",
+          "orderIndex": 0,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "ab_wheel_all_the_way_out",
+          "exerciseName": "AB Wheel All The Way out",
+          "orderIndex": 1,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "ab_wheel_halfway_out",
+          "exerciseName": "AB Wheel Halfway out",
+          "orderIndex": 2,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "ab_wheel_left_out",
+          "exerciseName": "AB Wheel Left out",
+          "orderIndex": 3,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "ab_wheel_plank",
+          "exerciseName": "Ab Wheel Plank",
+          "orderIndex": 4,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "ab_wheel_pulses",
+          "exerciseName": "AB Wheel Pulses",
+          "orderIndex": 5,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        }
+      ]
+    },
+    {
+      "dayNumber": 3,
+      "name": "Push 1",
+      "description": "Push day rotation 1 with chest and shoulders focus",
+      "exercises": [
+        {
+          "exerciseId": "alternate_punching",
+          "exerciseName": "Alternate punching",
+          "orderIndex": 0,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "backhand_raise",
+          "exerciseName": "Backhand raise",
+          "orderIndex": 1,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "band_single_arm_overhead_press",
+          "exerciseName": "Band Single Arm Overhead Press",
+          "orderIndex": 2,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_z_press",
+          "exerciseName": "Barbell Z Press",
+          "orderIndex": 3,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "iso_lateral_shoulder_press_alternate_arms",
+          "exerciseName": "Iso Lateral Shoulder Press Alternate Arms",
+          "orderIndex": 4,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "iso_lateral_shoulder_press_single_arm",
+          "exerciseName": "Iso Lateral Shoulder Press Single Arm",
+          "orderIndex": 5,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        }
+      ]
+    },
+    {
+      "dayNumber": 4,
+      "name": "Pull 2",
+      "description": "Pull day rotation 2 with back and biceps focus",
+      "exercises": [
+        {
+          "exerciseId": "hammer_strength_mts_iso_lateral_biceps_curl_both_arm",
+          "exerciseName": "Hammer Strength MTS Iso-Lateral Biceps Curl Both Arm",
+          "orderIndex": 0,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "hammer_strength_mts_iso_lateral_biceps_curl_single_arm",
+          "exerciseName": "Hammer Strength MTS Iso-Lateral Biceps Curl Single Arm",
+          "orderIndex": 1,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "ski_ergometer_cross_country_ski_face_biceps_curl_pull",
+          "exerciseName": "Ski Ergometer Cross Country Ski Face Biceps Curl Pull",
+          "orderIndex": 2,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "suspension_trainer_with_grips_chin_up",
+          "exerciseName": "Suspension Trainer with Grips Chin-up",
+          "orderIndex": 3,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "alternate_bicep_curl_standing_dumbbells",
+          "exerciseName": "Alternate bicep curl standing dumbbells",
+          "orderIndex": 4,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "alternating_hammer_curls_seated_dumbbells",
+          "exerciseName": "Alternating hammer curls seated dumbbells",
+          "orderIndex": 5,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        }
+      ]
+    },
+    {
+      "dayNumber": 5,
+      "name": "Legs 2",
+      "description": "Leg day rotation 2 with quad and glute focus",
+      "exercises": [
+        {
+          "exerciseId": "ab_wheel_pulses",
+          "exerciseName": "AB Wheel Pulses",
+          "orderIndex": 0,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "ab_wheel_right_out",
+          "exerciseName": "AB Wheel Right out",
+          "orderIndex": 1,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "ab_wheel_take_it_or_leave_it",
+          "exerciseName": "AB Wheel Take it or Leave It",
+          "orderIndex": 2,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "abdominal_crunches",
+          "exerciseName": "Abdominal crunches",
+          "orderIndex": 3,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "abdominal_crunches_machine",
+          "exerciseName": "Abdominal Crunches Machine",
+          "orderIndex": 4,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "abdominal_crunches_with_hold",
+          "exerciseName": "Abdominal crunches with hold",
+          "orderIndex": 5,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        }
+      ]
+    },
+    {
+      "dayNumber": 6,
+      "name": "Push 2",
+      "description": "Push day rotation 2 with chest and shoulders focus",
+      "exercises": [
+        {
+          "exerciseId": "iso_lateral_shoulder_press_single_arm",
+          "exerciseName": "Iso Lateral Shoulder Press Single Arm",
+          "orderIndex": 0,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "ski_ergometer_cross_country_ski_basic_pull",
+          "exerciseName": "Ski Ergometer Cross Country Ski Basic Pull",
+          "orderIndex": 1,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "suspension_trainer_with_grips_face_pull",
+          "exerciseName": "Suspension Trainer with Grips Face Pull",
+          "orderIndex": 2,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "suspension_trainer_with_grips_front_raise",
+          "exerciseName": "Suspension Trainer with Grips Front Raise",
+          "orderIndex": 3,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "suspension_trainer_with_grips_inverted_row",
+          "exerciseName": "Suspension Trainer with Grips Inverted Row",
+          "orderIndex": 4,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "suspension_trainer_with_grips_rear_delt_row",
+          "exerciseName": "Suspension Trainer with Grips Rear Delt Row",
+          "orderIndex": 5,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        }
+      ]
+    },
+    {
+      "dayNumber": 7,
+      "name": "Pull 3",
+      "description": "Pull day rotation 3 with back and biceps focus",
+      "exercises": [
+        {
+          "exerciseId": "alternating_hammer_curls_seated_dumbbells",
+          "exerciseName": "Alternating hammer curls seated dumbbells",
+          "orderIndex": 0,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_bicep_curl_close_grip",
+          "exerciseName": "Barbell bicep curl close grip",
+          "orderIndex": 1,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_bicep_curl_normal_grip",
+          "exerciseName": "Barbell bicep curl normal grip",
+          "orderIndex": 2,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_bicep_curl_wide_grip",
+          "exerciseName": "Barbell bicep curl wide grip",
+          "orderIndex": 3,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_biceps_curl",
+          "exerciseName": "Barbell biceps curl",
+          "orderIndex": 4,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_drag_biceps_curl",
+          "exerciseName": "Barbell drag biceps curl",
+          "orderIndex": 5,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        }
+      ]
+    },
+    {
+      "dayNumber": 8,
+      "name": "Legs 3",
+      "description": "Leg day rotation 3 with quad and glute focus",
+      "exercises": [
+        {
+          "exerciseId": "abdominal_crunches_with_hold",
+          "exerciseName": "Abdominal crunches with hold",
+          "orderIndex": 0,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "air_twisting_crunch",
+          "exerciseName": "Air twisting crunch",
+          "orderIndex": 1,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "alternate_leg_pull",
+          "exerciseName": "Alternate leg pull",
+          "orderIndex": 2,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "alternate_oblique_crunch",
+          "exerciseName": "Alternate oblique crunch",
+          "orderIndex": 3,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "alternating_leg_lifts",
+          "exerciseName": "Alternating leg lifts",
+          "orderIndex": 4,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "back_lever",
+          "exerciseName": "Back lever",
+          "orderIndex": 5,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        }
+      ]
+    },
+    {
+      "dayNumber": 9,
+      "name": "Push 3",
+      "description": "Push day rotation 3 with chest and shoulders focus",
+      "exercises": [
+        {
+          "exerciseId": "suspension_trainer_with_grips_rear_delt_row",
+          "exerciseName": "Suspension Trainer with Grips Rear Delt Row",
+          "orderIndex": 0,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "suspension_trainer_with_grips_single_arm_rear_delt_row",
+          "exerciseName": "Suspension Trainer with Grips Single Arm Rear Delt Row",
+          "orderIndex": 1,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "suspension_trainer_with_grips_split_fly",
+          "exerciseName": "Suspension Trainer with Grips Split Fly",
+          "orderIndex": 2,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "arm_circle",
+          "exerciseName": "Arm circle",
+          "orderIndex": 3,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "arm_circles_backward",
+          "exerciseName": "Arm circles backward",
+          "orderIndex": 4,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "arm_crossover",
+          "exerciseName": "Arm crossover",
+          "orderIndex": 5,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        }
+      ]
+    },
+    {
+      "dayNumber": 10,
+      "name": "Pull 4",
+      "description": "Pull day rotation 4 with back and biceps focus",
+      "exercises": [
+        {
+          "exerciseId": "barbell_drag_biceps_curl",
+          "exerciseName": "Barbell drag biceps curl",
+          "orderIndex": 0,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_drag_curl",
+          "exerciseName": "Barbell drag curl",
+          "orderIndex": 1,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_lap_curl",
+          "exerciseName": "Barbell lap curl",
+          "orderIndex": 2,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_preacher_curl",
+          "exerciseName": "Barbell preacher curl",
+          "orderIndex": 3,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_reverse_biceps_curl",
+          "exerciseName": "Barbell reverse biceps curl",
+          "orderIndex": 4,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_reverse_spider_curl",
+          "exerciseName": "Barbell reverse spider curl",
+          "orderIndex": 5,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        }
+      ]
+    },
+    {
+      "dayNumber": 11,
+      "name": "Legs 4",
+      "description": "Leg day rotation 4 with quad and glute focus",
+      "exercises": [
+        {
+          "exerciseId": "back_lever",
+          "exerciseName": "Back lever",
+          "orderIndex": 0,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "reverse_ab_wheel_rollout",
+          "exerciseName": "Reverse Ab Wheel Rollout",
+          "orderIndex": 1,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "standing_ab_wheel_rollout",
+          "exerciseName": "Standing Ab Wheel Rollout",
+          "orderIndex": 2,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "suspension_trainer_with_grips_abdominal_fallout",
+          "exerciseName": "Suspension Trainer with Grips Abdominal Fallout",
+          "orderIndex": 3,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "suspension_trainer_with_grips_hanging_leg_hip_raise",
+          "exerciseName": "Suspension Trainer with Grips Hanging Leg Hip Raise",
+          "orderIndex": 4,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "suspension_trainer_with_grips_hanging_straight_leg_hip_raise",
+          "exerciseName": "Suspension Trainer with Grips Hanging Straight Leg Hip Raise",
+          "orderIndex": 5,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        }
+      ]
+    },
+    {
+      "dayNumber": 12,
+      "name": "Push 4",
+      "description": "Push day rotation 4 with chest and shoulders focus",
+      "exercises": [
+        {
+          "exerciseId": "arm_crossover",
+          "exerciseName": "Arm crossover",
+          "orderIndex": 0,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "arm_pulses",
+          "exerciseName": "Arm pulses",
+          "orderIndex": 1,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "arm_pulses_cross",
+          "exerciseName": "Arm pulses cross",
+          "orderIndex": 2,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "arm_pulses_palms_downwards",
+          "exerciseName": "Arm pulses palms downwards",
+          "orderIndex": 3,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "arm_pulses_palms_upwards",
+          "exerciseName": "Arm pulses palms upwards",
+          "orderIndex": 4,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "arm_swing_side_to_side",
+          "exerciseName": "Arm swing side to side",
+          "orderIndex": 5,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        }
+      ]
+    },
+    {
+      "dayNumber": 13,
+      "name": "Pull 5",
+      "description": "Pull day rotation 5 with back and biceps focus",
+      "exercises": [
+        {
+          "exerciseId": "barbell_reverse_spider_curl",
+          "exerciseName": "Barbell reverse spider curl",
+          "orderIndex": 0,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_seated_concentration_biceps_curl",
+          "exerciseName": "Barbell seated concentration biceps curl",
+          "orderIndex": 1,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_single_arm_biceps_curl",
+          "exerciseName": "Barbell single arm biceps curl",
+          "orderIndex": 2,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_standing_close_grip_curl",
+          "exerciseName": "Barbell standing close grip curl",
+          "orderIndex": 3,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_standing_concentration_curl",
+          "exerciseName": "Barbell standing concentration curl",
+          "orderIndex": 4,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_standing_wide_grip_biceps_curls",
+          "exerciseName": "Barbell standing wide grip biceps curls",
+          "orderIndex": 5,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        }
+      ]
+    },
+    {
+      "dayNumber": 14,
+      "name": "Legs 5",
+      "description": "Leg day rotation 5 with quad and glute focus",
+      "exercises": [
+        {
+          "exerciseId": "suspension_trainer_with_grips_hanging_straight_leg_hip_raise",
+          "exerciseName": "Suspension Trainer with Grips Hanging Straight Leg Hip Raise",
+          "orderIndex": 0,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "suspension_trainer_with_grips_mountain_climber",
+          "exerciseName": "Suspension Trainer with Grips Mountain Climber",
+          "orderIndex": 1,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "suspension_trainer_with_grips_pike",
+          "exerciseName": "Suspension Trainer with Grips Pike",
+          "orderIndex": 2,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "suspension_trainer_with_grips_reverse_ab_rollout",
+          "exerciseName": "Suspension Trainer with Grips Reverse Ab Rollout",
+          "orderIndex": 3,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "suspension_trainer_with_grips_supine_crunch",
+          "exerciseName": "Suspension Trainer with Grips Supine Crunch",
+          "orderIndex": 4,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "wheels_to_heaven",
+          "exerciseName": "Wheels To Heaven",
+          "orderIndex": 5,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        }
+      ]
+    },
+    {
+      "dayNumber": 15,
+      "name": "Push 5",
+      "description": "Push day rotation 5 with chest and shoulders focus",
+      "exercises": [
+        {
+          "exerciseId": "arm_swing_side_to_side",
+          "exerciseName": "Arm swing side to side",
+          "orderIndex": 0,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "arms_behind_back_shoulder_flexor_stretch",
+          "exerciseName": "Arms behind back shoulder flexor stretch",
+          "orderIndex": 1,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "arms_up_and_down",
+          "exerciseName": "Arms up and down",
+          "orderIndex": 2,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "arnold_press_dumbbell",
+          "exerciseName": "Arnold press dumbbell",
+          "orderIndex": 3,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "back_and_shoulder_stretch",
+          "exerciseName": "back and shoulder stretch",
+          "orderIndex": 4,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_behind_neck_push_press",
+          "exerciseName": "Barbell behind neck push press",
+          "orderIndex": 5,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        }
+      ]
+    },
+    {
+      "dayNumber": 16,
+      "name": "Pull 6",
+      "description": "Pull day rotation 6 with back and biceps focus",
+      "exercises": [
+        {
+          "exerciseId": "barbell_standing_wide_grip_biceps_curls",
+          "exerciseName": "Barbell standing wide grip biceps curls",
+          "orderIndex": 0,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_wide_grip_biceps_curl",
+          "exerciseName": "Barbell wide grip biceps curl",
+          "orderIndex": 1,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "bicep_curl_low_cable_machine_normal_grip",
+          "exerciseName": "Bicep curl low cable machine normal grip",
+          "orderIndex": 2,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "biceps_curl_cable",
+          "exerciseName": "Biceps curl cable",
+          "orderIndex": 3,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "biceps_curl_cable_wide_grip",
+          "exerciseName": "Biceps curl cable wide grip",
+          "orderIndex": 4,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "biceps_curl_cable_wide_grip_crossover_machine",
+          "exerciseName": "Biceps curl cable wide grip crossover machine",
+          "orderIndex": 5,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        }
+      ]
+    },
+    {
+      "dayNumber": 17,
+      "name": "Legs 6",
+      "description": "Leg day rotation 6 with quad and glute focus",
+      "exercises": [
+        {
+          "exerciseId": "wheels_to_heaven",
+          "exerciseName": "Wheels To Heaven",
+          "orderIndex": 0,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "wheels_to_toes",
+          "exerciseName": "Wheels To Toes",
+          "orderIndex": 1,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "45_degree_bicycle_twist_knee_to_elbow",
+          "exerciseName": "45 degree bicycle twist knee to elbow",
+          "orderIndex": 2,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "90_degree_heel_touch",
+          "exerciseName": "90 degree heel touch",
+          "orderIndex": 3,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "alternate_arm_leg_plank",
+          "exerciseName": "Alternate arm leg plank",
+          "orderIndex": 4,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "alternate_arm_leg_plank_hold",
+          "exerciseName": "Alternate arm leg plank hold",
+          "orderIndex": 5,
+          "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        }
+      ]
+    },
+    {
+      "dayNumber": 18,
+      "name": "Push 6",
+      "description": "Push day rotation 6 with chest and shoulders focus",
+      "exercises": [
+        {
+          "exerciseId": "barbell_behind_neck_push_press",
+          "exerciseName": "Barbell behind neck push press",
+          "orderIndex": 0,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_clean_and_press",
+          "exerciseName": "Barbell clean and press",
+          "orderIndex": 1,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_front_raise",
+          "exerciseName": "Barbell front raise",
+          "orderIndex": 2,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_lying_row",
+          "exerciseName": "Barbell lying row",
+          "orderIndex": 3,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_power_jerk",
+          "exerciseName": "Barbell power jerk",
+          "orderIndex": 4,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "barbell_rear_delt_raise",
+          "exerciseName": "Barbell rear delt raise",
+          "orderIndex": 5,
+          "targetSets": 3,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetWeight": 0.0
+        }
+      ]
+    }
+  ]
+}
