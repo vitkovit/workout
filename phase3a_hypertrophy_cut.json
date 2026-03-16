@@ -1,11 +1,11 @@
 {
-  "version": "1.0",
-  "exportedAt": "2026-03-16T00:00:00Z",
+  "version": 1,
+  "exportedAt": "2026-03-16T14:00:00.000Z",
   "program": {
     "name": "Hypertrophy + Cut Phase",
     "description": "Weeks 17-24: Maximize hypertrophy with controlled cut",
     "daysPerWeek": 3,
-    "type": "custom"
+    "type": "pushPullLegs"
   },
   "days": [
     {
