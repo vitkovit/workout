@@ -66,6 +66,24 @@
           "targetRepsMin": 8,
           "targetRepsMax": 12,
           "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "walking_fast",
+          "exerciseName": "Walking Fast",
+          "orderIndex": 6,
+          "targetSets": 1,
+          "targetRepsMin": 20,
+          "targetRepsMax": 25,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "gym_elliptical_machine_normal_speed",
+          "exerciseName": "Gym Elliptical Machine Normal Speed",
+          "orderIndex": 7,
+          "targetSets": 1,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
         }
       ]
     },
@@ -124,6 +142,24 @@
           "exerciseName": "Captains chair leg raise",
           "orderIndex": 5,
           "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "walking_fast",
+          "exerciseName": "Walking Fast",
+          "orderIndex": 6,
+          "targetSets": 1,
+          "targetRepsMin": 20,
+          "targetRepsMax": 25,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "gym_elliptical_machine_normal_speed",
+          "exerciseName": "Gym Elliptical Machine Normal Speed",
+          "orderIndex": 7,
+          "targetSets": 1,
           "targetRepsMin": 10,
           "targetRepsMax": 15,
           "targetWeight": 0.0
@@ -188,6 +224,24 @@
           "targetRepsMin": 8,
           "targetRepsMax": 12,
           "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "walking_fast",
+          "exerciseName": "Walking Fast",
+          "orderIndex": 6,
+          "targetSets": 1,
+          "targetRepsMin": 20,
+          "targetRepsMax": 25,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "gym_elliptical_machine_normal_speed",
+          "exerciseName": "Gym Elliptical Machine Normal Speed",
+          "orderIndex": 7,
+          "targetSets": 1,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
         }
       ]
     },
@@ -249,6 +303,24 @@
           "targetRepsMin": 8,
           "targetRepsMax": 12,
           "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "treadmill_jogging",
+          "exerciseName": "Treadmill Jogging",
+          "orderIndex": 6,
+          "targetSets": 1,
+          "targetRepsMin": 20,
+          "targetRepsMax": 25,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "stationary_exercise_bike",
+          "exerciseName": "Stationary Exercise Bike",
+          "orderIndex": 7,
+          "targetSets": 1,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
         }
       ]
     },
@@ -307,6 +379,24 @@
           "exerciseName": "Middle crunches",
           "orderIndex": 5,
           "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "treadmill_jogging",
+          "exerciseName": "Treadmill Jogging",
+          "orderIndex": 6,
+          "targetSets": 1,
+          "targetRepsMin": 20,
+          "targetRepsMax": 25,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "stationary_exercise_bike",
+          "exerciseName": "Stationary Exercise Bike",
+          "orderIndex": 7,
+          "targetSets": 1,
           "targetRepsMin": 10,
           "targetRepsMax": 15,
           "targetWeight": 0.0
@@ -371,6 +461,24 @@
           "targetRepsMin": 8,
           "targetRepsMax": 12,
           "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "treadmill_jogging",
+          "exerciseName": "Treadmill Jogging",
+          "orderIndex": 6,
+          "targetSets": 1,
+          "targetRepsMin": 20,
+          "targetRepsMax": 25,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "stationary_exercise_bike",
+          "exerciseName": "Stationary Exercise Bike",
+          "orderIndex": 7,
+          "targetSets": 1,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
         }
       ]
     },
@@ -432,6 +540,24 @@
           "targetRepsMin": 8,
           "targetRepsMax": 12,
           "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "briskly_walking",
+          "exerciseName": "Briskly walking",
+          "orderIndex": 6,
+          "targetSets": 1,
+          "targetRepsMin": 20,
+          "targetRepsMax": 25,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "gym_rowing_machine_normal_speed",
+          "exerciseName": "Gym Rowing Machine Normal Speed",
+          "orderIndex": 7,
+          "targetSets": 1,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
         }
       ]
     },
@@ -490,6 +616,24 @@
           "exerciseName": "Back extension machine",
           "orderIndex": 5,
           "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "briskly_walking",
+          "exerciseName": "Briskly walking",
+          "orderIndex": 6,
+          "targetSets": 1,
+          "targetRepsMin": 20,
+          "targetRepsMax": 25,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "gym_rowing_machine_normal_speed",
+          "exerciseName": "Gym Rowing Machine Normal Speed",
+          "orderIndex": 7,
+          "targetSets": 1,
           "targetRepsMin": 10,
           "targetRepsMax": 15,
           "targetWeight": 0.0
@@ -554,6 +698,24 @@
           "targetRepsMin": 8,
           "targetRepsMax": 12,
           "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "briskly_walking",
+          "exerciseName": "Briskly walking",
+          "orderIndex": 6,
+          "targetSets": 1,
+          "targetRepsMin": 20,
+          "targetRepsMax": 25,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "gym_rowing_machine_normal_speed",
+          "exerciseName": "Gym Rowing Machine Normal Speed",
+          "orderIndex": 7,
+          "targetSets": 1,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
         }
       ]
     },
@@ -615,6 +777,24 @@
           "targetRepsMin": 8,
           "targetRepsMax": 12,
           "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "walking_fast",
+          "exerciseName": "Walking Fast",
+          "orderIndex": 6,
+          "targetSets": 1,
+          "targetRepsMin": 20,
+          "targetRepsMax": 25,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "stationary_exercise_bike",
+          "exerciseName": "Stationary Exercise Bike",
+          "orderIndex": 7,
+          "targetSets": 1,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
         }
       ]
     },
@@ -673,6 +853,24 @@
           "exerciseName": "Gym Elliptical Machine Sprint Speed",
           "orderIndex": 5,
           "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "walking_fast",
+          "exerciseName": "Walking Fast",
+          "orderIndex": 6,
+          "targetSets": 1,
+          "targetRepsMin": 20,
+          "targetRepsMax": 25,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "stationary_exercise_bike",
+          "exerciseName": "Stationary Exercise Bike",
+          "orderIndex": 7,
+          "targetSets": 1,
           "targetRepsMin": 10,
           "targetRepsMax": 15,
           "targetWeight": 0.0
@@ -737,6 +935,24 @@
           "targetRepsMin": 8,
           "targetRepsMax": 12,
           "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "walking_fast",
+          "exerciseName": "Walking Fast",
+          "orderIndex": 6,
+          "targetSets": 1,
+          "targetRepsMin": 20,
+          "targetRepsMax": 25,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "stationary_exercise_bike",
+          "exerciseName": "Stationary Exercise Bike",
+          "orderIndex": 7,
+          "targetSets": 1,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
         }
       ]
     },
@@ -798,6 +1014,24 @@
           "targetRepsMin": 8,
           "targetRepsMax": 12,
           "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "treadmill_jogging",
+          "exerciseName": "Treadmill Jogging",
+          "orderIndex": 6,
+          "targetSets": 1,
+          "targetRepsMin": 20,
+          "targetRepsMax": 25,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "gym_elliptical_machine_normal_speed",
+          "exerciseName": "Gym Elliptical Machine Normal Speed",
+          "orderIndex": 7,
+          "targetSets": 1,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
         }
       ]
     },
@@ -856,6 +1090,24 @@
           "exerciseName": "Lever Leg Extension",
           "orderIndex": 5,
           "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "treadmill_jogging",
+          "exerciseName": "Treadmill Jogging",
+          "orderIndex": 6,
+          "targetSets": 1,
+          "targetRepsMin": 20,
+          "targetRepsMax": 25,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "gym_elliptical_machine_normal_speed",
+          "exerciseName": "Gym Elliptical Machine Normal Speed",
+          "orderIndex": 7,
+          "targetSets": 1,
           "targetRepsMin": 10,
           "targetRepsMax": 15,
           "targetWeight": 0.0
@@ -920,6 +1172,24 @@
           "targetRepsMin": 8,
           "targetRepsMax": 12,
           "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "treadmill_jogging",
+          "exerciseName": "Treadmill Jogging",
+          "orderIndex": 6,
+          "targetSets": 1,
+          "targetRepsMin": 20,
+          "targetRepsMax": 25,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "gym_elliptical_machine_normal_speed",
+          "exerciseName": "Gym Elliptical Machine Normal Speed",
+          "orderIndex": 7,
+          "targetSets": 1,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
         }
       ]
     },
@@ -981,6 +1251,24 @@
           "targetRepsMin": 8,
           "targetRepsMax": 12,
           "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "briskly_walking",
+          "exerciseName": "Briskly walking",
+          "orderIndex": 6,
+          "targetSets": 1,
+          "targetRepsMin": 20,
+          "targetRepsMax": 25,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "gym_rowing_machine_normal_speed",
+          "exerciseName": "Gym Rowing Machine Normal Speed",
+          "orderIndex": 7,
+          "targetSets": 1,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
         }
       ]
     },
@@ -1039,6 +1327,24 @@
           "exerciseName": "chair back lunge right Resistance band",
           "orderIndex": 5,
           "targetSets": 3,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "briskly_walking",
+          "exerciseName": "Briskly walking",
+          "orderIndex": 6,
+          "targetSets": 1,
+          "targetRepsMin": 20,
+          "targetRepsMax": 25,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "gym_rowing_machine_normal_speed",
+          "exerciseName": "Gym Rowing Machine Normal Speed",
+          "orderIndex": 7,
+          "targetSets": 1,
           "targetRepsMin": 10,
           "targetRepsMax": 15,
           "targetWeight": 0.0
@@ -1102,6 +1408,24 @@
           "targetSets": 3,
           "targetRepsMin": 8,
           "targetRepsMax": 12,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "briskly_walking",
+          "exerciseName": "Briskly walking",
+          "orderIndex": 6,
+          "targetSets": 1,
+          "targetRepsMin": 20,
+          "targetRepsMax": 25,
+          "targetWeight": 0.0
+        },
+        {
+          "exerciseId": "gym_rowing_machine_normal_speed",
+          "exerciseName": "Gym Rowing Machine Normal Speed",
+          "orderIndex": 7,
+          "targetSets": 1,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
           "targetWeight": 0.0
         }
       ]

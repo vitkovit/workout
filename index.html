@@ -511,6 +511,61 @@
             border-bottom: none;
         }
 
+        .cardio-section {
+            margin-top: 20px;
+            padding: 15px;
+            background: #161b22;
+            border-radius: 8px;
+            border-left: 4px solid #f0883e;
+        }
+
+        .cardio-section h4 {
+            color: #f0883e;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+
+        .cardio-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        .cardio-table th {
+            background: #0f1117;
+            color: #f0883e;
+            padding: 8px 10px;
+            text-align: left;
+            border-bottom: 2px solid #30363d;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cardio-table td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #30363d;
+            color: #8b949e;
+            font-size: 0.9em;
+        }
+
+        .cardio-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .cardio-table .type-liss { color: #7ee787; }
+        .cardio-table .type-miss { color: #79c0ff; }
+        .cardio-table .type-hiit { color: #ff7b72; }
+
+        .cardio-note {
+            color: #8b949e;
+            font-size: 0.85em;
+            font-style: italic;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid #30363d;
+        }
+
         /* Responsive */
         @media (max-width: 1000px) {
             .workouts-grid {
@@ -729,7 +784,29 @@
                         <p><strong>Intensity:</strong> RPE 5–7 (50–65% of historical maxes)</p>
                         <p><strong>Volume:</strong> 3 sets × 12–15 reps per exercise | 5–6 exercises per session</p>
                         <p><strong>Duration:</strong> ~60 minutes per session</p>
-                        <p><strong>Cardio:</strong> 20 min low-intensity (walking/incline treadmill) post-session</p>
+                        <div class="cardio-section">
+                            <h4>Cardio Protocol — Phase 1 (Weeks 1–8)</h4>
+                            <table class="cardio-table">
+                                <tr><th>Type</th><th>Modality</th><th>Duration</th><th>Frequency</th><th>Intensity / HR Zone</th><th>Timing</th></tr>
+                                <tr>
+                                    <td class="type-liss">LISS</td>
+                                    <td>Incline treadmill walk (10–12% grade, 5.5–6.5 km/h)</td>
+                                    <td>20–25 min</td>
+                                    <td>Every training day (3×/rotation)</td>
+                                    <td>Zone 2 (120–135 bpm) — conversational pace</td>
+                                    <td>Post-session</td>
+                                </tr>
+                                <tr>
+                                    <td class="type-liss">LISS</td>
+                                    <td>Outdoor walk or light cycling</td>
+                                    <td>30–45 min</td>
+                                    <td>1–2× on rest days (optional)</td>
+                                    <td>Zone 1–2 (100–130 bpm) — recovery pace</td>
+                                    <td>Any time</td>
+                                </tr>
+                            </table>
+                            <p class="cardio-note">Goal: Rebuild aerobic base without taxing recovery. Keep it easy — this phase is about reconnecting with movement. Avoid HIIT entirely; joints and connective tissue need time to re-adapt. Target ~8,000–10,000 daily steps on top of formal cardio.</p>
+                        </div>
 
                         <div class="overview-row">
                             <div class="overview-item">
@@ -845,7 +922,37 @@
                         <p><strong>Intensity:</strong> RPE 6–8 (65–80% of estimated maxes)</p>
                         <p><strong>Volume:</strong> 3–4 sets × 8–12 reps per exercise</p>
                         <p><strong>Duration:</strong> ~75 minutes per session</p>
-                        <p><strong>Cardio:</strong> 15 min moderate-intensity (incline walk/light jog) 2x/week post-session</p>
+                        <div class="cardio-section">
+                            <h4>Cardio Protocol — Phase 2 (Weeks 9–16)</h4>
+                            <table class="cardio-table">
+                                <tr><th>Type</th><th>Modality</th><th>Duration</th><th>Frequency</th><th>Intensity / HR Zone</th><th>Timing</th></tr>
+                                <tr>
+                                    <td class="type-liss">LISS</td>
+                                    <td>Incline treadmill walk (12–15% grade, 6–7 km/h)</td>
+                                    <td>20 min</td>
+                                    <td>Every training day (3×/rotation)</td>
+                                    <td>Zone 2 (125–140 bpm)</td>
+                                    <td>Post-session</td>
+                                </tr>
+                                <tr>
+                                    <td class="type-miss">MISS</td>
+                                    <td>Elliptical, rowing machine, or stair climber</td>
+                                    <td>20–25 min</td>
+                                    <td>2×/week on rest days</td>
+                                    <td>Zone 2–3 (135–150 bpm) — moderate, slightly breathless</td>
+                                    <td>AM preferred (fasted optional)</td>
+                                </tr>
+                                <tr>
+                                    <td class="type-liss">LISS</td>
+                                    <td>Outdoor walk or light cycling</td>
+                                    <td>30–45 min</td>
+                                    <td>1× rest day (active recovery)</td>
+                                    <td>Zone 1–2 (100–130 bpm)</td>
+                                    <td>Any time</td>
+                                </tr>
+                            </table>
+                            <p class="cardio-note">Goal: Build aerobic capacity while supporting a caloric surplus for strength gains. Introduce moderate-intensity work on non-training days to improve cardiovascular conditioning without compromising recovery. Target 10,000+ daily steps.</p>
+                        </div>
 
                         <div class="overview-row">
                             <div class="overview-item">
@@ -961,7 +1068,37 @@
                         <p><strong>Intensity:</strong> RPE 6–7 (70–75% of 1RM); controlled tempos for time-under-tension</p>
                         <p><strong>Volume:</strong> 3–5 sets × 8–15 reps per exercise (varied rep ranges)</p>
                         <p><strong>Duration:</strong> ~90 minutes per session</p>
-                        <p><strong>Cardio:</strong> 20–25 min moderate (elliptical/steady-state run) 3x/week post-session for energy deficit</p>
+                        <div class="cardio-section">
+                            <h4>Cardio Protocol — Phase 3A (Weeks 17–24)</h4>
+                            <table class="cardio-table">
+                                <tr><th>Type</th><th>Modality</th><th>Duration</th><th>Frequency</th><th>Intensity / HR Zone</th><th>Timing</th></tr>
+                                <tr>
+                                    <td class="type-liss">LISS</td>
+                                    <td>Incline treadmill walk (12–15% grade)</td>
+                                    <td>25 min</td>
+                                    <td>Every training day (3×/rotation)</td>
+                                    <td>Zone 2 (130–140 bpm)</td>
+                                    <td>Post-session</td>
+                                </tr>
+                                <tr>
+                                    <td class="type-miss">MISS</td>
+                                    <td>Stair climber, elliptical, or steady-state cycling</td>
+                                    <td>25–30 min</td>
+                                    <td>3×/week on rest or AM sessions</td>
+                                    <td>Zone 3 (140–155 bpm) — controlled breathing, sustainable effort</td>
+                                    <td>AM fasted or separate from lifting (2+ hrs gap)</td>
+                                </tr>
+                                <tr>
+                                    <td class="type-hiit">HIIT</td>
+                                    <td>Assault bike or rowing intervals (30s on / 60s off)</td>
+                                    <td>15 min (8–10 rounds)</td>
+                                    <td>1×/week</td>
+                                    <td>Zone 4–5 (160–175 bpm) work / Zone 2 recovery</td>
+                                    <td>Rest day or 6+ hrs from lifting</td>
+                                </tr>
+                            </table>
+                            <p class="cardio-note">Goal: Create a meaningful caloric deficit through increased cardio volume. MISS sessions become the primary deficit driver — they burn more per minute than LISS without the CNS fatigue of HIIT. Introduce one weekly HIIT session to maintain metabolic flexibility. Target 12,000+ daily steps. Monitor recovery closely — if strength drops significantly, reduce HIIT first.</p>
+                        </div>
 
                         <div class="overview-row">
                             <div class="overview-item">
@@ -1077,7 +1214,45 @@
                         <p><strong>Intensity:</strong> RPE 6–7 (70–75% of 1RM); high metabolic stress and pump work</p>
                         <p><strong>Volume:</strong> 3–5 sets × 10–20 reps per exercise (higher reps for deficit adaptation)</p>
                         <p><strong>Duration:</strong> ~90 minutes per session</p>
-                        <p><strong>Cardio:</strong> 30–40 min moderate-to-high intensity (HIIT or steady-state) 4x/week; prioritize for energy deficit</p>
+                        <div class="cardio-section">
+                            <h4>Cardio Protocol — Phase 3B (Weeks 25–32)</h4>
+                            <table class="cardio-table">
+                                <tr><th>Type</th><th>Modality</th><th>Duration</th><th>Frequency</th><th>Intensity / HR Zone</th><th>Timing</th></tr>
+                                <tr>
+                                    <td class="type-liss">LISS</td>
+                                    <td>Incline treadmill walk (15% grade) or outdoor brisk walk</td>
+                                    <td>30 min</td>
+                                    <td>Every training day (3×/rotation)</td>
+                                    <td>Zone 2 (130–140 bpm)</td>
+                                    <td>Post-session</td>
+                                </tr>
+                                <tr>
+                                    <td class="type-miss">MISS</td>
+                                    <td>Stair climber, elliptical, rowing machine, or cycling</td>
+                                    <td>30–35 min</td>
+                                    <td>4×/week (rest days + 1 AM double)</td>
+                                    <td>Zone 3 (140–155 bpm)</td>
+                                    <td>AM fasted (25g BCAA/EAA pre-session recommended)</td>
+                                </tr>
+                                <tr>
+                                    <td class="type-hiit">HIIT</td>
+                                    <td>Assault bike, sled push, or battle ropes (20s on / 40s off)</td>
+                                    <td>15–18 min (10–12 rounds)</td>
+                                    <td>2×/week</td>
+                                    <td>Zone 4–5 (165–180 bpm) work / Zone 2 recovery</td>
+                                    <td>Separate session (AM) or rest day</td>
+                                </tr>
+                                <tr>
+                                    <td class="type-liss">LISS</td>
+                                    <td>Evening walk</td>
+                                    <td>20–30 min</td>
+                                    <td>Daily (non-negotiable)</td>
+                                    <td>Zone 1 (100–120 bpm) — digestion/recovery walk</td>
+                                    <td>Post-dinner</td>
+                                </tr>
+                            </table>
+                            <p class="cardio-note">Goal: Aggressive deficit through combined cardio volume (~5–7 hrs/week total). MISS is the workhorse — maximize time in Zone 3 for fat oxidation. HIIT at 2×/week to maintain metabolic rate as calories drop. Daily evening walks are mandatory for NEAT and digestion. Target 14,000+ daily steps. If feeling flat or strength drops &gt;10%, pull back one HIIT session and add LISS instead. Consider BCAA/EAA supplementation before fasted cardio to protect muscle.</p>
+                        </div>
 
                         <div class="overview-row">
                             <div class="overview-item">
@@ -1193,7 +1368,46 @@
                         <p><strong>Intensity:</strong> RPE 5–7; vary: 3–4 heavy compounds at RPE 7, then pump work at RPE 6 with shorter rest</p>
                         <p><strong>Volume:</strong> 3–4 sets × 6–8 reps (compounds), 3–4 sets × 12–20 reps (pump work)</p>
                         <p><strong>Duration:</strong> ~80 minutes per session (shorter, more focused)</p>
-                        <p><strong>Cardio:</strong> 30–45 min daily (walking, light cycling) + 1–2 HIIT sessions/week for final conditioning</p>
+                        <div class="cardio-section">
+                            <h4>Cardio Protocol — Phase 4 (Weeks 33–40)</h4>
+                            <table class="cardio-table">
+                                <tr><th>Type</th><th>Modality</th><th>Duration</th><th>Frequency</th><th>Intensity / HR Zone</th><th>Timing</th></tr>
+                                <tr>
+                                    <td class="type-liss">LISS</td>
+                                    <td>Incline treadmill walk or outdoor walk</td>
+                                    <td>30–40 min</td>
+                                    <td>Every training day (3×/rotation)</td>
+                                    <td>Zone 2 (125–140 bpm)</td>
+                                    <td>Post-session</td>
+                                </tr>
+                                <tr>
+                                    <td class="type-miss">MISS</td>
+                                    <td>Stair climber, elliptical, or steady cycling</td>
+                                    <td>30–40 min</td>
+                                    <td>5×/week (AM sessions)</td>
+                                    <td>Zone 2–3 (135–150 bpm) — drop intensity from 3B to preserve muscle</td>
+                                    <td>AM fasted (EAA mandatory pre-session)</td>
+                                </tr>
+                                <tr>
+                                    <td class="type-hiit">HIIT</td>
+                                    <td>Assault bike or rowing (15s on / 45s off)</td>
+                                    <td>12 min (8 rounds)</td>
+                                    <td>1×/week (Weeks 33–37 only)</td>
+                                    <td>Zone 4 (160–170 bpm) — reduced from Phase 3B</td>
+                                    <td>Separate session, early in the week</td>
+                                </tr>
+                                <tr>
+                                    <td class="type-liss">LISS</td>
+                                    <td>Evening walk</td>
+                                    <td>30–45 min</td>
+                                    <td>Daily (non-negotiable)</td>
+                                    <td>Zone 1 (100–120 bpm)</td>
+                                    <td>Post-dinner</td>
+                                </tr>
+                            </table>
+                            <p class="cardio-note"><strong>Peak Week (Week 39–40):</strong> Drop ALL HIIT. LISS only — 30–40 min walks, 2× daily if needed. Reduce total cardio volume by ~30% in final 5 days. Goal is glycogen preservation and flat-free presentation. Monitor posing practice energy expenditure as part of total activity budget.</p>
+                            <p class="cardio-note">Goal: Maintain deficit through volume (not intensity). HIIT is reduced then eliminated — CNS recovery is critical during extreme caloric restriction. MISS intensity drops slightly from Phase 3B to prevent cortisol spikes and muscle catabolism. EAA before every fasted session is non-negotiable. Target 15,000+ daily steps Weeks 33–37, then taper to 10,000–12,000 in peak week. Total cardio volume: ~7–9 hrs/week (Weeks 33–37), tapering to ~4–5 hrs (Week 38–40).</p>
+                        </div>
 
                         <div class="overview-row">
                             <div class="overview-item">
