@@ -507,116 +507,7 @@
             background: rgba(63, 185, 80, 0.2);
             color: #3fb950;
         }
-    
-        /* Download Dropdown Menu */
-        .download-menu-container {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-
-        .download-button {
-            background: #1a1d27;
-            border: 2px solid #30363d;
-            color: #e6edf3;
-            padding: 10px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.95em;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s;
-        }
-
-        .download-button:hover {
-            background: #58a6ff;
-            color: #0f1117;
-            border-color: #58a6ff;
-        }
-
-        .download-dropdown {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: #1a1d27;
-            border: 2px solid #30363d;
-            border-radius: 6px;
-            min-width: 200px;
-            margin-top: 8px;
-            display: none;
-            flex-direction: column;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-        }
-
-        .download-dropdown.active {
-            display: flex;
-        }
-
-        .download-dropdown-item {
-            padding: 12px 16px;
-            color: #e6edf3;
-            cursor: pointer;
-            border-bottom: 1px solid #30363d;
-            transition: all 0.2s;
-            text-align: left;
-        }
-
-        .download-dropdown-item:last-child {
-            border-bottom: none;
-        }
-
-        .download-dropdown-item:hover {
-            background: #58a6ff;
-            color: #0f1117;
-        }
-
-        /* Copy JSON Button */
-        .copy-json-button {
-            background: #30363d;
-            border: 1px solid #30363d;
-            color: #e6edf3;
-            padding: 6px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.85em;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: all 0.2s;
-            margin-left: 12px;
-        }
-
-        .copy-json-button:hover {
-            background: #58a6ff;
-            color: #0f1117;
-            border-color: #58a6ff;
-        }
-
-        .copy-json-button.copied {
-            background: #3fb950;
-            color: #0f1117;
-            border-color: #3fb950;
-        }
-
-        .phase-header-content {
-            display: flex;
-            align-items: center;
-        }
-
-        .phase-header-text {
-            flex: 1;
-        }
-
-        .phase-header-buttons {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-</style>
+    </style>
 </head>
 <body>
     <div class="container">
@@ -692,10 +583,7 @@
                         <h2>Phase 1: RE-ENTRY</h2>
                         <div class="phase-subtitle">Weeks 1–4 | ~12 sessions | Rebuild work capacity & motor patterns</div>
                     </div>
-                    <button class="copy-json-button" onclick="copyPhaseJson('phase1', this)" title="Copy phase JSON to clipboard">
-                                    📋 Copy JSON
-                                </button>
-                                <button class="phase-toggle">+</button>
+                    <button class="phase-toggle">+</button>
                 </div>
                 <div class="phase-content">
                     <div class="phase-overview">
@@ -1024,10 +912,7 @@
                         <h2>Phase 2: FOUNDATION REBUILD</h2>
                         <div class="phase-subtitle">Weeks 5–12 | ~24 sessions | Rebuild strength base & muscle memory</div>
                     </div>
-                    <button class="copy-json-button" onclick="copyPhaseJson('phase2', this)" title="Copy phase JSON to clipboard">
-                                    📋 Copy JSON
-                                </button>
-                                <button class="phase-toggle">+</button>
+                    <button class="phase-toggle">+</button>
                 </div>
                 <div class="phase-content">
                     <div class="phase-overview">
@@ -1401,10 +1286,7 @@
                         <h2>Phase 3: HYPERTROPHY + CUT</h2>
                         <div class="phase-subtitle">Weeks 13–28 | ~48 sessions | Maximum hypertrophy with progressive deficit</div>
                     </div>
-                    <button class="copy-json-button" onclick="copyPhaseJson('phase3a', this)" title="Copy phase JSON to clipboard">
-                                    📋 Copy JSON
-                                </button>
-                                <button class="phase-toggle">+</button>
+                    <button class="phase-toggle">+</button>
                 </div>
                 <div class="phase-content">
                     <div class="phase-overview">
@@ -1884,10 +1766,7 @@
                         <h2>Phase 4: CONTEST PREP</h2>
                         <div class="phase-subtitle">Weeks 29–40+ | 12+ sessions | Maintain muscle, strip fat, peak conditioning</div>
                     </div>
-                    <button class="copy-json-button" onclick="copyPhaseJson('phase4', this)" title="Copy phase JSON to clipboard">
-                                    📋 Copy JSON
-                                </button>
-                                <button class="phase-toggle">+</button>
+                    <button class="phase-toggle">+</button>
                 </div>
                 <div class="phase-content">
                     <div class="phase-overview">
@@ -2281,165 +2160,20 @@
 
     </div><!-- end container -->
 
-    
-    <!-- Download Menu -->
-    <div class="download-menu-container">
-        <button class="download-button" onclick="toggleDownloadMenu()">
-            📥 Download Programs
-        </button>
-        <div class="download-dropdown" id="downloadMenu">
-            <div class="download-dropdown-item" onclick="downloadPhaseJson('phase1', 'phase1_reentry.json')">Phase 1: RE-ENTRY</div>
-            <div class="download-dropdown-item" onclick="downloadPhaseJson('phase2', 'phase2_foundation.json')">Phase 2: FOUNDATION</div>
-            <div class="download-dropdown-item" onclick="downloadPhaseJson('phase3a', 'phase3a_hypertrophy_cut.json')">Phase 3A: HYPERTROPHY (Mod Cut)</div>
-            <div class="download-dropdown-item" onclick="downloadPhaseJson('phase3b', 'phase3b_hypertrophy_deep_cut.json')">Phase 3B: HYPERTROPHY (Deep Cut)</div>
-            <div class="download-dropdown-item" onclick="downloadPhaseJson('phase4', 'phase4_contest_prep.json')">Phase 4: CONTEST PREP</div>
-        </div>
-    </div>
-
     <script>
-        // Phase JSON file mapping
-        const PHASE_FILES = {
-            phase1: 'phase1_reentry.json',
-            phase2: 'phase2_foundation.json',
-            phase3a: 'phase3a_hypertrophy_cut.json',
-            phase3b: 'phase3b_hypertrophy_deep_cut.json',
-            phase4: 'phase4_contest_prep.json'
-        };
-
-        // Cache for loaded JSON data
-        const PHASE_DATA = {};
-
-        // Load all JSON files on page load
-        async function loadPhaseData() {
-            const entries = Object.entries(PHASE_FILES);
-            const results = await Promise.allSettled(
-                entries.map(([key, file]) =>
-                    fetch(file)
-                        .then(r => {
-                            if (!r.ok) throw new Error(`${file}: ${r.status}`);
-                            return r.json();
-                        })
-                        .then(data => { PHASE_DATA[key] = data; })
-                )
-            );
-            
-            const failed = results.filter(r => r.status === 'rejected');
-            if (failed.length > 0) {
-                console.warn('Some JSON files could not be loaded:', failed.map(r => r.reason.message));
-            }
-            
-            // Update UI to show files are ready
-            document.querySelectorAll('.copy-json-button').forEach(btn => {
-                const phaseKey = btn.getAttribute('onclick').match(/'(\w+)'/)?.[1];
-                if (phaseKey && PHASE_DATA[phaseKey]) {
-                    btn.classList.add('ready');
-                } else {
-                    btn.style.opacity = '0.4';
-                    btn.title = 'JSON file not found';
-                }
-            });
+        function togglePhase(header) {
+            const content = header.nextElementSibling;
+            content.classList.toggle('active');
+            const button = header.querySelector('.phase-toggle');
+            button.textContent = content.classList.contains('active') ? '−' : '+';
         }
 
-        // Download a phase JSON file directly (link to actual file)
-        function downloadPhaseJson(phaseKey, filename) {
-            // If data is cached, use it (allows downloading even offline)
-            if (PHASE_DATA[phaseKey]) {
-                const jsonString = JSON.stringify(PHASE_DATA[phaseKey], null, 2);
-                const blob = new Blob([jsonString], { type: 'application/json' });
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = filename;
-                a.click();
-                URL.revokeObjectURL(url);
-            } else {
-                // Fallback: direct link to file
-                const a = document.createElement('a');
-                a.href = filename;
-                a.download = filename;
-                a.click();
-            }
-            document.getElementById('downloadMenu').classList.remove('show');
-        }
-
-        // Copy phase JSON to clipboard
-        function copyPhaseJson(phaseKey, button) {
-            const originalText = button.innerHTML;
-            
-            if (!PHASE_DATA[phaseKey]) {
-                // Try to fetch it on demand
-                fetch(PHASE_FILES[phaseKey])
-                    .then(r => r.json())
-                    .then(data => {
-                        PHASE_DATA[phaseKey] = data;
-                        doCopy(data, button, originalText);
-                    })
-                    .catch(() => {
-                        button.innerHTML = '\u2717 Not found';
-                        setTimeout(() => { button.innerHTML = originalText; }, 2000);
-                    });
-                return;
-            }
-            
-            doCopy(PHASE_DATA[phaseKey], button, originalText);
-        }
-        
-        function doCopy(data, button, originalText) {
-            const jsonString = JSON.stringify(data, null, 2);
-            navigator.clipboard.writeText(jsonString).then(() => {
-                button.innerHTML = '\u2713 Copied!';
-                button.style.background = '#238636';
-                button.style.borderColor = '#3fb950';
-                setTimeout(() => {
-                    button.innerHTML = originalText;
-                    button.style.background = '';
-                    button.style.borderColor = '';
-                }, 2000);
-            }).catch(() => {
-                // Fallback for older browsers
-                const ta = document.createElement('textarea');
-                ta.value = jsonString;
-                document.body.appendChild(ta);
-                ta.select();
-                document.execCommand('copy');
-                document.body.removeChild(ta);
-                button.innerHTML = '\u2713 Copied!';
-                button.style.background = '#238636';
-                setTimeout(() => {
-                    button.innerHTML = originalText;
-                    button.style.background = '';
-                }, 2000);
-            });
-        }
-
-        // Toggle download menu
-        function toggleDownloadMenu() {
-            document.getElementById('downloadMenu').classList.toggle('show');
-        }
-
-        // Close download menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!e.target.closest('.download-menu-container')) {
-                document.getElementById('downloadMenu').classList.remove('show');
-            }
+        // Open first phase by default
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstPhase = document.querySelector('.phase-content');
+            firstPhase.classList.add('active');
+            firstPhase.previousElementSibling.querySelector('.phase-toggle').textContent = '−';
         });
-
-        // Toggle phase sections
-        function togglePhase(headerElement) {
-            const content = headerElement.nextElementSibling;
-            const toggle = headerElement.querySelector('.phase-toggle');
-            
-            if (content.classList.contains('active')) {
-                content.classList.remove('active');
-                toggle.textContent = '+';
-            } else {
-                content.classList.add('active');
-                toggle.textContent = '\u2212';
-            }
-        }
-
-        // Load JSON data when page loads
-        document.addEventListener('DOMContentLoaded', loadPhaseData);
     </script>
 </body>
 </html>
