@@ -2,8 +2,8 @@
   "version": 1,
   "exportedAt": "2026-03-16T14:00:00.000Z",
   "program": {
-    "name": "Contest Prep Phase",
-    "description": "Weeks 33-40: Final conditioning, heavy compounds + pump work",
+    "name": "Phase 4 \u2013 Contest Prep (Weeks 29-40+)",
+    "description": "Heavy compounds (6-8 reps) paired with high-rep pump sets (15-20 reps) for peak condition.",
     "daysPerWeek": 3,
     "type": "pushPullLegs"
   },
@@ -11,1449 +11,1134 @@
     {
       "dayNumber": 1,
       "name": "Pull 1",
-      "description": "Rotation 1 \u2014 Pull Day",
+      "description": "Rotation 1 \u2013 Pull Day",
       "exercises": [
         {
-          "exerciseId": "cable_low_seated_row",
-          "exerciseName": "Cable low seated row",
-          "orderIndex": 0,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "lat_pull_down_wide_grip",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Vertical pull, heavy compound"
         },
         {
-          "exerciseId": "assisted_pull_up",
-          "exerciseName": "Assisted pull up",
-          "orderIndex": 1,
-          "targetSets": 3,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "barbell_bent_over_row_pronated_grip",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Horizontal pull, heavy compound"
         },
         {
-          "exerciseId": "cable_rear_pulldown",
-          "exerciseName": "Cable rear pulldown",
-          "orderIndex": 2,
-          "targetSets": 3,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "exerciseId": "cable_straight_arm_pulldown",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Back isolation, pump set"
         },
         {
-          "exerciseId": "dumbbell_standing_simultaneous_biceps_curl",
-          "exerciseName": "Dumbbell Standing Simultaneous Biceps Curl",
-          "orderIndex": 3,
-          "targetSets": 3,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "barbell_biceps_curl",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Bicep, pump set"
         },
         {
-          "exerciseId": "cable_preacher_curl",
-          "exerciseName": "Cable preacher curl",
-          "orderIndex": 4,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "reverse_machine_fly",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Rear delt, pump set"
         },
         {
-          "exerciseId": "dumbbell_rear_lateral_raise",
-          "exerciseName": "Dumbbell Rear Lateral Raise",
-          "orderIndex": 5,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "barbell_wrist_curl_on_knees",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Forearm, pump set"
         },
         {
-          "exerciseId": "walking_fast",
-          "exerciseName": "Walking Fast",
-          "orderIndex": 6,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 40,
-          "targetWeight": 0.0
+          "exerciseId": "treadmill_jogging",
+          "sets": 1,
+          "reps": "30 min",
+          "restSeconds": 0,
+          "notes": "LISS cardio"
         },
         {
-          "exerciseId": "gym_elliptical_machine_normal_speed",
-          "exerciseName": "Gym Elliptical Machine Normal Speed",
-          "orderIndex": 7,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 35,
-          "targetWeight": 0.0
-        },
-        {
-          "exerciseId": "assault_airbike_normal_speed",
-          "exerciseName": "Assault AirBike Normal Speed",
-          "orderIndex": 8,
-          "targetSets": 1,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "exerciseId": "assault_airbike_sprint_speed",
+          "sets": 1,
+          "reps": "10 min",
+          "restSeconds": 0,
+          "notes": "HIIT cardio"
         }
       ]
     },
     {
       "dayNumber": 2,
       "name": "Legs 1",
-      "description": "Rotation 1 \u2014 Legs Day",
+      "description": "Rotation 1 \u2013 Legs Day",
       "exercises": [
         {
-          "exerciseId": "hack_squat_machine_squat",
-          "exerciseName": "Hack Squat Machine Squat",
-          "orderIndex": 0,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "barbell_full_squat",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Quad compound, heavy"
         },
         {
-          "exerciseId": "barbell_bulgarian_split_squat",
-          "exerciseName": "Barbell bulgarian split squat",
-          "orderIndex": 1,
-          "targetSets": 3,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "exerciseId": "barbell_romanian_deadlift",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Hamstring compound, heavy"
         },
         {
-          "exerciseId": "seated_leg_extension_single_leg",
-          "exerciseName": "Seated leg extension single leg",
-          "orderIndex": 2,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "barbell_hip_thrust",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 45,
+          "notes": "Glute, pump set"
         },
         {
-          "exerciseId": "trap_bar_deadlift",
-          "exerciseName": "Trap bar deadlift",
-          "orderIndex": 3,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "seated_leg_extension_both_legs",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Quad isolation, pump set"
         },
         {
-          "exerciseId": "hammer_strength_iso_lateral_leg_curl_both_leg",
-          "exerciseName": "HAMMER STRENGTH ISO-LATERAL LEG CURL_Both Leg",
-          "orderIndex": 4,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "high_cable_kneeling_crunch",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Core, pump set, belly fat goal"
         },
         {
-          "exerciseId": "dumbbell_standing_calf_raise",
-          "exerciseName": "Dumbbell standing calf raise",
-          "orderIndex": 5,
-          "targetSets": 4,
-          "targetRepsMin": 12,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "seated_calf_machine",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Calf, pump set"
         },
         {
           "exerciseId": "walking_fast",
-          "exerciseName": "Walking Fast",
-          "orderIndex": 6,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 40,
-          "targetWeight": 0.0
+          "sets": 1,
+          "reps": "30 min",
+          "restSeconds": 0,
+          "notes": "LISS cardio"
         },
         {
-          "exerciseId": "gym_elliptical_machine_normal_speed",
-          "exerciseName": "Gym Elliptical Machine Normal Speed",
-          "orderIndex": 7,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 35,
-          "targetWeight": 0.0
-        },
-        {
-          "exerciseId": "assault_airbike_normal_speed",
-          "exerciseName": "Assault AirBike Normal Speed",
-          "orderIndex": 8,
-          "targetSets": 1,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "exerciseId": "jump_rope_basic_jump",
+          "sets": 1,
+          "reps": "10x20 sec",
+          "restSeconds": 0,
+          "notes": "HIIT cardio"
         }
       ]
     },
     {
       "dayNumber": 3,
       "name": "Push 1",
-      "description": "Rotation 1 \u2014 Push Day",
+      "description": "Rotation 1 \u2013 Push Day",
       "exercises": [
         {
-          "exerciseId": "hammer_strength_mts_iso_lateral_decline_press_single_arm",
-          "exerciseName": "HAMMER STRENGTH MTS ISO-LATERAL DECLINE PRESS Single Arm",
-          "orderIndex": 0,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "barbell_bench_press",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Chest compound, heavy"
         },
         {
-          "exerciseId": "barbell_wide_bench_press",
-          "exerciseName": "Barbell wide bench press",
-          "orderIndex": 1,
-          "targetSets": 3,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "exerciseId": "barbell_seated_overhead_press",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Shoulder press, heavy"
         },
         {
-          "exerciseId": "cable_lying_fly",
-          "exerciseName": "Cable lying fly",
-          "orderIndex": 2,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_fly_flat_bench",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 45,
+          "notes": "Chest isolation, pump set"
         },
         {
-          "exerciseId": "dumbbell_seated_shoulder_press",
-          "exerciseName": "Dumbbell Seated Shoulder Press",
-          "orderIndex": 3,
-          "targetSets": 3,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "lateral_raises_dumbbell",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Shoulder isolation #1, pump, big shoulders"
         },
         {
-          "exerciseId": "cable_bent_over_one_arm_lateral_raise",
-          "exerciseName": "Cable bent over one arm lateral raise",
-          "orderIndex": 4,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "cable_front_raises_straight_bar",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Shoulder isolation #2, pump, big shoulders"
         },
         {
-          "exerciseId": "cable_reverse_grip_pushdown",
-          "exerciseName": "Cable reverse grip pushdown",
-          "orderIndex": 5,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "cable_pushdown",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Tricep, pump set"
         },
         {
-          "exerciseId": "walking_fast",
-          "exerciseName": "Walking Fast",
-          "orderIndex": 6,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 40,
-          "targetWeight": 0.0
+          "exerciseId": "stationary_exercise_bike",
+          "sets": 1,
+          "reps": "30 min",
+          "restSeconds": 0,
+          "notes": "LISS cardio"
         },
         {
-          "exerciseId": "gym_elliptical_machine_normal_speed",
-          "exerciseName": "Gym Elliptical Machine Normal Speed",
-          "orderIndex": 7,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 35,
-          "targetWeight": 0.0
-        },
-        {
-          "exerciseId": "assault_airbike_normal_speed",
-          "exerciseName": "Assault AirBike Normal Speed",
-          "orderIndex": 8,
-          "targetSets": 1,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "exerciseId": "gym_elliptical_machine_sprint_speed",
+          "sets": 1,
+          "reps": "10 min",
+          "restSeconds": 0,
+          "notes": "HIIT cardio"
         }
       ]
     },
     {
       "dayNumber": 4,
       "name": "Pull 2",
-      "description": "Rotation 2 \u2014 Pull Day",
+      "description": "Rotation 2 \u2013 Pull Day",
       "exercises": [
         {
-          "exerciseId": "cable_one_arm_bent_over_row",
-          "exerciseName": "Cable one arm bent over row",
-          "orderIndex": 0,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "lat_pull_down_close_grip",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Vertical pull, heavy compound"
         },
         {
-          "exerciseId": "v_bar_lat_pull_down",
-          "exerciseName": "V bar lat pull down",
-          "orderIndex": 1,
-          "targetSets": 3,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "cable_low_seated_row",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Horizontal pull, heavy compound"
         },
         {
           "exerciseId": "dumbbell_bent_arm_pullover",
-          "exerciseName": "Dumbbell Bent Arm Pullover",
-          "orderIndex": 2,
-          "targetSets": 3,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Back isolation, pump set"
         },
         {
-          "exerciseId": "barbell_bicep_curl_close_grip",
-          "exerciseName": "Barbell bicep curl close grip",
-          "orderIndex": 3,
-          "targetSets": 3,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "ez_bar_biceps_curl_normal_grip",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Bicep, pump set"
         },
         {
-          "exerciseId": "dumbbell_incline_biceps_simultaneous_curl",
-          "exerciseName": "Dumbbell Incline Biceps Simultaneous Curl",
-          "orderIndex": 4,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "cable_rear_delt_fly",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Rear delt, pump set"
         },
         {
-          "exerciseId": "reverse_machine_fly",
-          "exerciseName": "Reverse machine fly",
-          "orderIndex": 5,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "wrist_extension_dumbbell",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Forearm, pump set"
         },
         {
-          "exerciseId": "treadmill_jogging",
-          "exerciseName": "Treadmill Jogging",
-          "orderIndex": 6,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 40,
-          "targetWeight": 0.0
+          "exerciseId": "treadmill_running",
+          "sets": 1,
+          "reps": "30 min",
+          "restSeconds": 0,
+          "notes": "LISS cardio"
         },
         {
-          "exerciseId": "gym_rowing_machine_normal_speed",
-          "exerciseName": "Gym Rowing Machine Normal Speed",
-          "orderIndex": 7,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 35,
-          "targetWeight": 0.0
+          "exerciseId": "assault_airbike_sprint_speed",
+          "sets": 1,
+          "reps": "10 min",
+          "restSeconds": 0,
+          "notes": "HIIT cardio"
         }
       ]
     },
     {
       "dayNumber": 5,
       "name": "Legs 2",
-      "description": "Rotation 2 \u2014 Legs Day",
+      "description": "Rotation 2 \u2013 Legs Day",
       "exercises": [
         {
-          "exerciseId": "dumbbell_goblet_squat",
-          "exerciseName": "Dumbbell Goblet Squat",
-          "orderIndex": 0,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "hack_squat_machine_squat",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Quad compound, heavy"
         },
         {
-          "exerciseId": "smith_machine_bulgarian_split_squat",
-          "exerciseName": "Smith machine bulgarian split squat",
-          "orderIndex": 1,
-          "targetSets": 3,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_romanian_deadlift",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Hamstring compound, heavy"
         },
         {
-          "exerciseId": "seated_leg_extension_both_legs",
-          "exerciseName": "Seated leg extension_both legs",
-          "orderIndex": 2,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "cable_pull_through",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 45,
+          "notes": "Glute, pump set"
         },
         {
-          "exerciseId": "single_leg_romanian_deadlift_dumbbell",
-          "exerciseName": "Single leg romanian deadlift dumbbell",
-          "orderIndex": 3,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "seated_leg_extension_single_leg",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Quad isolation, pump set"
         },
         {
-          "exerciseId": "seated_leg_curl_machine",
-          "exerciseName": "Seated leg curl machine",
-          "orderIndex": 4,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "abdominal_crunches_machine",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Core, pump set, belly fat goal"
         },
         {
-          "exerciseId": "bodyweight_calf_raises",
-          "exerciseName": "Bodyweight calf raises",
-          "orderIndex": 5,
-          "targetSets": 4,
-          "targetRepsMin": 12,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
-        },
-        {
-          "exerciseId": "treadmill_jogging",
-          "exerciseName": "Treadmill Jogging",
-          "orderIndex": 6,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 40,
-          "targetWeight": 0.0
+          "exerciseId": "calf_raise_leg_press_machine",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Calf, pump set"
         },
         {
           "exerciseId": "gym_rowing_machine_normal_speed",
-          "exerciseName": "Gym Rowing Machine Normal Speed",
-          "orderIndex": 7,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 35,
-          "targetWeight": 0.0
+          "sets": 1,
+          "reps": "30 min",
+          "restSeconds": 0,
+          "notes": "LISS cardio"
+        },
+        {
+          "exerciseId": "jump_rope_basic_jump",
+          "sets": 1,
+          "reps": "10x20 sec",
+          "restSeconds": 0,
+          "notes": "HIIT cardio"
         }
       ]
     },
     {
       "dayNumber": 6,
       "name": "Push 2",
-      "description": "Rotation 2 \u2014 Push Day",
+      "description": "Rotation 2 \u2013 Push Day",
       "exercises": [
         {
           "exerciseId": "barbell_incline_bench_press",
-          "exerciseName": "Barbell incline bench press",
-          "orderIndex": 0,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Chest compound, heavy"
         },
         {
-          "exerciseId": "barbell_bench_press_decline",
-          "exerciseName": "Barbell bench press decline",
-          "orderIndex": 1,
-          "targetSets": 3,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_seated_shoulder_press",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Shoulder press, heavy"
         },
         {
-          "exerciseId": "dumbbell_incline_fly",
-          "exerciseName": "Dumbbell Incline Fly",
-          "orderIndex": 2,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
-        },
-        {
-          "exerciseId": "smith_machine_shoulder_press",
-          "exerciseName": "Smith machine shoulder press",
-          "orderIndex": 3,
-          "targetSets": 3,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "cable_middle_fly",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 45,
+          "notes": "Chest isolation, pump set"
         },
         {
           "exerciseId": "cable_lateral_raises",
-          "exerciseName": "Cable lateral raises",
-          "orderIndex": 4,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Shoulder isolation #1, pump, big shoulders"
         },
         {
-          "exerciseId": "cable_triceps_overhead_extension_ez_bar",
-          "exerciseName": "Cable triceps overhead extension (ez bar)",
-          "orderIndex": 5,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_front_raise",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Shoulder isolation #2, pump, big shoulders"
         },
         {
-          "exerciseId": "treadmill_jogging",
-          "exerciseName": "Treadmill Jogging",
-          "orderIndex": 6,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 40,
-          "targetWeight": 0.0
+          "exerciseId": "cable_overhead_extension_rope",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Tricep, pump set"
         },
         {
-          "exerciseId": "gym_rowing_machine_normal_speed",
-          "exerciseName": "Gym Rowing Machine Normal Speed",
-          "orderIndex": 7,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 35,
-          "targetWeight": 0.0
+          "exerciseId": "walking",
+          "sets": 1,
+          "reps": "30 min",
+          "restSeconds": 0,
+          "notes": "LISS cardio"
+        },
+        {
+          "exerciseId": "gym_elliptical_machine_sprint_speed",
+          "sets": 1,
+          "reps": "10 min",
+          "restSeconds": 0,
+          "notes": "HIIT cardio"
         }
       ]
     },
     {
       "dayNumber": 7,
       "name": "Pull 3",
-      "description": "Rotation 3 \u2014 Pull Day",
+      "description": "Rotation 3 \u2013 Pull Day",
       "exercises": [
         {
-          "exerciseId": "barbell_reverse_grip_bent_over_row",
-          "exerciseName": "Barbell reverse grip bent over row",
-          "orderIndex": 0,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "assisted_pull_up_wide_grip",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Vertical pull, heavy compound"
         },
         {
-          "exerciseId": "lat_pull_down_close_grip",
-          "exerciseName": "Lat pull down close grip",
-          "orderIndex": 1,
-          "targetSets": 3,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_bent_over_row",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Horizontal pull, heavy compound"
         },
         {
-          "exerciseId": "cable_one_arm_lat_pulldown",
-          "exerciseName": "Cable one arm lat pulldown",
-          "orderIndex": 2,
-          "targetSets": 3,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "exerciseId": "cable_straight_arm_pulldown",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Back isolation, pump set"
         },
         {
-          "exerciseId": "dumbbell_simultaneous_biceps_curl",
-          "exerciseName": "Dumbbell Simultaneous Biceps Curl",
-          "orderIndex": 3,
-          "targetSets": 3,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_hammer_curl",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Bicep, pump set"
         },
         {
-          "exerciseId": "hammer_strength_mts_iso_lateral_biceps_curl_both_arm",
-          "exerciseName": "Hammer Strength MTS Iso-Lateral Biceps Curl Both Arm",
-          "orderIndex": 4,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_rear_lateral_raise",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Rear delt, pump set"
         },
         {
-          "exerciseId": "dumbbell_bent_over_face_pull",
-          "exerciseName": "Dumbbell Bent Over Face Pull",
-          "orderIndex": 5,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_farmer_walks",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Forearm, pump set"
         },
         {
-          "exerciseId": "stationary_exercise_bike",
-          "exerciseName": "Stationary Exercise Bike",
-          "orderIndex": 6,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 40,
-          "targetWeight": 0.0
+          "exerciseId": "treadmill_jogging",
+          "sets": 1,
+          "reps": "30 min",
+          "restSeconds": 0,
+          "notes": "LISS cardio"
         },
         {
-          "exerciseId": "gym_elliptical_machine_normal_speed",
-          "exerciseName": "Gym Elliptical Machine Normal Speed",
-          "orderIndex": 7,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 35,
-          "targetWeight": 0.0
+          "exerciseId": "assault_airbike_sprint_speed",
+          "sets": 1,
+          "reps": "10 min",
+          "restSeconds": 0,
+          "notes": "HIIT cardio"
         }
       ]
     },
     {
       "dayNumber": 8,
       "name": "Legs 3",
-      "description": "Rotation 3 \u2014 Legs Day",
+      "description": "Rotation 3 \u2013 Legs Day",
       "exercises": [
         {
-          "exerciseId": "leg_press_wide_high_stance",
-          "exerciseName": "Leg press wide high stance",
-          "orderIndex": 0,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "leg_press_machine_normal_stance",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Quad compound, heavy"
         },
         {
-          "exerciseId": "single_leg_incline_45_degree_leg_press_machine",
-          "exerciseName": "Single leg incline 45 degree leg press machine",
-          "orderIndex": 1,
-          "targetSets": 3,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "exerciseId": "trap_bar_deadlift",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Hamstring compound, heavy"
         },
         {
-          "exerciseId": "seated_leg_extension_alternate_legs",
-          "exerciseName": "Seated leg extension_alternate legs",
-          "orderIndex": 2,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "cable_individual_glute_kickbacks",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 45,
+          "notes": "Glute, pump set"
         },
         {
-          "exerciseId": "dumbbell_romanian_deadlift",
-          "exerciseName": "Dumbbell Romanian Deadlift",
-          "orderIndex": 3,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "seated_leg_extension_both_legs",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Quad isolation, pump set"
         },
         {
-          "exerciseId": "kneeling_leg_curl_machine",
-          "exerciseName": "Kneeling leg curl machine",
-          "orderIndex": 4,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "high_cable_kneeling_crunch",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Core, pump set, belly fat goal"
         },
         {
-          "exerciseId": "dumbbell_seated_calf_raise",
-          "exerciseName": "Dumbbell Seated Calf Raise",
-          "orderIndex": 5,
-          "targetSets": 4,
-          "targetRepsMin": 12,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
-        },
-        {
-          "exerciseId": "stationary_exercise_bike",
-          "exerciseName": "Stationary Exercise Bike",
-          "orderIndex": 6,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 40,
-          "targetWeight": 0.0
+          "exerciseId": "seated_calf_machine",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Calf, pump set"
         },
         {
           "exerciseId": "gym_elliptical_machine_normal_speed",
-          "exerciseName": "Gym Elliptical Machine Normal Speed",
-          "orderIndex": 7,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 35,
-          "targetWeight": 0.0
+          "sets": 1,
+          "reps": "30 min",
+          "restSeconds": 0,
+          "notes": "LISS cardio"
+        },
+        {
+          "exerciseId": "jump_rope_basic_jump",
+          "sets": 1,
+          "reps": "10x20 sec",
+          "restSeconds": 0,
+          "notes": "HIIT cardio"
         }
       ]
     },
     {
       "dayNumber": 9,
       "name": "Push 3",
-      "description": "Rotation 3 \u2014 Push Day",
+      "description": "Rotation 3 \u2013 Push Day",
       "exercises": [
         {
-          "exerciseId": "dumbbell_incline_bench_press",
-          "exerciseName": "Dumbbell Incline Bench Press",
-          "orderIndex": 0,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_bench_press",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Chest compound, heavy"
         },
         {
-          "exerciseId": "hammer_strength_plate_loaded_combination_iso_lateral_chest_chest_press",
-          "exerciseName": "HAMMER STRENGTH Plate-Loaded Combination Iso-Lateral Chest - Chest Press",
-          "orderIndex": 1,
-          "targetSets": 3,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "exerciseId": "smith_machine_shoulder_press",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Shoulder press, heavy"
         },
         {
-          "exerciseId": "cable_low_fly",
-          "exerciseName": "Cable low fly",
-          "orderIndex": 2,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
-        },
-        {
-          "exerciseId": "arnold_press_dumbbell",
-          "exerciseName": "Arnold press dumbbell",
-          "orderIndex": 3,
-          "targetSets": 3,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "cable_upper_chest_crossover",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 45,
+          "notes": "Chest isolation, pump set"
         },
         {
           "exerciseId": "machine_lateral_raise",
-          "exerciseName": "Machine lateral raise",
-          "orderIndex": 4,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Shoulder isolation #1, pump, big shoulders"
         },
         {
-          "exerciseId": "dumbbell_overhead_extension_seated",
-          "exerciseName": "dumbbell overhead extension seated",
-          "orderIndex": 5,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "barbell_upright_row",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Shoulder isolation #2, pump, big shoulders"
+        },
+        {
+          "exerciseId": "barbell_lying_triceps_extension",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Tricep, pump set"
         },
         {
           "exerciseId": "stationary_exercise_bike",
-          "exerciseName": "Stationary Exercise Bike",
-          "orderIndex": 6,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 40,
-          "targetWeight": 0.0
+          "sets": 1,
+          "reps": "30 min",
+          "restSeconds": 0,
+          "notes": "LISS cardio"
         },
         {
-          "exerciseId": "gym_elliptical_machine_normal_speed",
-          "exerciseName": "Gym Elliptical Machine Normal Speed",
-          "orderIndex": 7,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 35,
-          "targetWeight": 0.0
+          "exerciseId": "gym_elliptical_machine_sprint_speed",
+          "sets": 1,
+          "reps": "10 min",
+          "restSeconds": 0,
+          "notes": "HIIT cardio"
         }
       ]
     },
     {
       "dayNumber": 10,
       "name": "Pull 4",
-      "description": "Rotation 4 \u2014 Pull Day",
+      "description": "Rotation 4 \u2013 Pull Day",
       "exercises": [
         {
+          "exerciseId": "v_bar_lat_pull_down",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Vertical pull, heavy compound"
+        },
+        {
           "exerciseId": "hammer_strength_plate_loaded_high_row_both_arms",
-          "exerciseName": "Hammer Strength Plate Loaded High Row Both Arms",
-          "orderIndex": 0,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Horizontal pull, heavy compound"
         },
         {
-          "exerciseId": "cable_pulldown",
-          "exerciseName": "Cable pulldown",
-          "orderIndex": 1,
-          "targetSets": 3,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_bent_arm_pullover",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Back isolation, pump set"
         },
         {
-          "exerciseId": "cable_straight_arm_pulldown",
-          "exerciseName": "Cable straight arm pulldown",
-          "orderIndex": 2,
-          "targetSets": 3,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_seated_preacher_curl",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Bicep, pump set"
         },
         {
-          "exerciseId": "dumbbell_hammer_curl",
-          "exerciseName": "Dumbbell Hammer Curl",
-          "orderIndex": 3,
-          "targetSets": 3,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "reverse_machine_fly",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Rear delt, pump set"
         },
         {
-          "exerciseId": "dumbbell_preacher_curl",
-          "exerciseName": "Dumbbell Preacher Curl",
-          "orderIndex": 4,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
-        },
-        {
-          "exerciseId": "cable_rear_drive",
-          "exerciseName": "Cable rear drive",
-          "orderIndex": 5,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "barbell_wrist_extension_on_knees",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Forearm, pump set"
         },
         {
           "exerciseId": "walking_fast",
-          "exerciseName": "Walking Fast",
-          "orderIndex": 6,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 40,
-          "targetWeight": 0.0
+          "sets": 1,
+          "reps": "30 min",
+          "restSeconds": 0,
+          "notes": "LISS cardio"
         },
         {
-          "exerciseId": "ski_ergometer_cross_country_ski_basic_pull",
-          "exerciseName": "Ski Ergometer Cross Country Ski Basic Pull",
-          "orderIndex": 7,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 35,
-          "targetWeight": 0.0
+          "exerciseId": "assault_airbike_sprint_speed",
+          "sets": 1,
+          "reps": "10 min",
+          "restSeconds": 0,
+          "notes": "HIIT cardio"
         }
       ]
     },
     {
       "dayNumber": 11,
       "name": "Legs 4",
-      "description": "Rotation 4 \u2014 Legs Day",
+      "description": "Rotation 4 \u2013 Legs Day",
       "exercises": [
         {
-          "exerciseId": "dumbbell_split_squat",
-          "exerciseName": "Dumbbell Split Squat",
-          "orderIndex": 0,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
-        },
-        {
-          "exerciseId": "leg_press_machine_close_stance",
-          "exerciseName": "Leg press machine close stance",
-          "orderIndex": 1,
-          "targetSets": 3,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
-        },
-        {
-          "exerciseId": "lever_leg_extension",
-          "exerciseName": "Lever Leg Extension",
-          "orderIndex": 2,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_goblet_squat",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Quad compound, heavy"
         },
         {
           "exerciseId": "barbell_romanian_deadlift",
-          "exerciseName": "Barbell romanian deadlift",
-          "orderIndex": 3,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Hamstring compound, heavy"
         },
         {
-          "exerciseId": "cable_hamstring_curl",
-          "exerciseName": "Cable Hamstring Curl",
-          "orderIndex": 4,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "barbell_hip_thrust",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 45,
+          "notes": "Glute, pump set"
+        },
+        {
+          "exerciseId": "seated_leg_extension_single_leg",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Quad isolation, pump set"
+        },
+        {
+          "exerciseId": "abdominal_crunches_machine",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Core, pump set, belly fat goal"
         },
         {
           "exerciseId": "calf_raise_leg_press_machine",
-          "exerciseName": "Calf raise leg press machine",
-          "orderIndex": 5,
-          "targetSets": 4,
-          "targetRepsMin": 12,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Calf, pump set"
         },
         {
-          "exerciseId": "walking_fast",
-          "exerciseName": "Walking Fast",
-          "orderIndex": 6,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 40,
-          "targetWeight": 0.0
+          "exerciseId": "gym_rowing_machine_fast_speed",
+          "sets": 1,
+          "reps": "30 min",
+          "restSeconds": 0,
+          "notes": "LISS cardio"
         },
         {
-          "exerciseId": "ski_ergometer_cross_country_ski_basic_pull",
-          "exerciseName": "Ski Ergometer Cross Country Ski Basic Pull",
-          "orderIndex": 7,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 35,
-          "targetWeight": 0.0
+          "exerciseId": "jump_rope_basic_jump",
+          "sets": 1,
+          "reps": "10x20 sec",
+          "restSeconds": 0,
+          "notes": "HIIT cardio"
         }
       ]
     },
     {
       "dayNumber": 12,
       "name": "Push 4",
-      "description": "Rotation 4 \u2014 Push Day",
+      "description": "Rotation 4 \u2013 Push Day",
       "exercises": [
         {
-          "exerciseId": "chest_press_machine",
-          "exerciseName": "Chest Press Machine",
-          "orderIndex": 0,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "chest_dip",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Chest compound, heavy"
         },
         {
-          "exerciseId": "smith_machine_press_flat",
-          "exerciseName": "Smith machine press flat",
-          "orderIndex": 1,
-          "targetSets": 3,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "exerciseId": "barbell_seated_overhead_press",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Shoulder press, heavy"
         },
         {
-          "exerciseId": "cable_middle_fly",
-          "exerciseName": "Cable middle fly",
-          "orderIndex": 2,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "pec_deck_fly_machine",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 45,
+          "notes": "Chest isolation, pump set"
         },
         {
-          "exerciseId": "dumbbell_seated_alternate_shoulder_press",
-          "exerciseName": "Dumbbell Seated Alternate Shoulder Press",
-          "orderIndex": 3,
-          "targetSets": 3,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "cable_lateral_raises",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Shoulder isolation #1, pump, big shoulders"
         },
         {
           "exerciseId": "cable_leaning_lateral_raise",
-          "exerciseName": "Cable leaning lateral raise",
-          "orderIndex": 4,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Shoulder isolation #2, pump, big shoulders"
         },
         {
-          "exerciseId": "cable_alternate_triceps_extension",
-          "exerciseName": "Cable alternate triceps extension",
-          "orderIndex": 5,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_kickback",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Tricep, pump set"
         },
         {
-          "exerciseId": "walking_fast",
-          "exerciseName": "Walking Fast",
-          "orderIndex": 6,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 40,
-          "targetWeight": 0.0
+          "exerciseId": "treadmill_jogging",
+          "sets": 1,
+          "reps": "30 min",
+          "restSeconds": 0,
+          "notes": "LISS cardio"
         },
         {
-          "exerciseId": "ski_ergometer_cross_country_ski_basic_pull",
-          "exerciseName": "Ski Ergometer Cross Country Ski Basic Pull",
-          "orderIndex": 7,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 35,
-          "targetWeight": 0.0
+          "exerciseId": "gym_elliptical_machine_sprint_speed",
+          "sets": 1,
+          "reps": "10 min",
+          "restSeconds": 0,
+          "notes": "HIIT cardio"
         }
       ]
     },
     {
       "dayNumber": 13,
       "name": "Pull 5",
-      "description": "Rotation 5 \u2014 Pull Day",
+      "description": "Rotation 5 \u2013 Pull Day",
       "exercises": [
         {
-          "exerciseId": "barbell_pendlay_row",
-          "exerciseName": "Barbell pendlay row",
-          "orderIndex": 0,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "lat_pull_down_close_grip",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Vertical pull, heavy compound"
         },
         {
-          "exerciseId": "cable_close_grip_front_lat_pulldown",
-          "exerciseName": "Cable close grip front lat pulldown",
-          "orderIndex": 1,
-          "targetSets": 3,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "cable_low_seated_row",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Horizontal pull, heavy compound"
         },
         {
-          "exerciseId": "behind_neck_lat_pull_down_machine",
-          "exerciseName": "Behind neck lat pull down machine",
-          "orderIndex": 2,
-          "targetSets": 3,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "exerciseId": "cable_straight_arm_pulldown",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Back isolation, pump set"
         },
         {
-          "exerciseId": "ez_bar_biceps_curl_normal_grip",
-          "exerciseName": "Ez bar biceps curl normal grip",
-          "orderIndex": 3,
-          "targetSets": 3,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "cable_preacher_curl",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Bicep, pump set"
         },
         {
-          "exerciseId": "cable_reverse_curl",
-          "exerciseName": "Cable reverse curl",
-          "orderIndex": 4,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "cable_rear_delt_fly",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Rear delt, pump set"
         },
         {
-          "exerciseId": "seated_dumbbell_rear_delt_fly",
-          "exerciseName": "Seated dumbbell rear delt fly",
-          "orderIndex": 5,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_farmer_walks",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Forearm, pump set"
         },
         {
-          "exerciseId": "treadmill_jogging",
-          "exerciseName": "Treadmill Jogging",
-          "orderIndex": 6,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 35,
-          "targetWeight": 0.0
+          "exerciseId": "treadmill_running",
+          "sets": 1,
+          "reps": "30 min",
+          "restSeconds": 0,
+          "notes": "LISS cardio"
         },
         {
-          "exerciseId": "stationary_exercise_bike",
-          "exerciseName": "Stationary Exercise Bike",
-          "orderIndex": 7,
-          "targetSets": 1,
-          "targetRepsMin": 25,
-          "targetRepsMax": 30,
-          "targetWeight": 0.0
+          "exerciseId": "assault_airbike_sprint_speed",
+          "sets": 1,
+          "reps": "10 min",
+          "restSeconds": 0,
+          "notes": "HIIT cardio"
         }
       ]
     },
     {
       "dayNumber": 14,
       "name": "Legs 5",
-      "description": "Rotation 5 \u2014 Legs Day",
+      "description": "Rotation 5 \u2013 Legs Day",
       "exercises": [
         {
-          "exerciseId": "dumbbell_rear_lunge",
-          "exerciseName": "Dumbbell Rear Lunge",
-          "orderIndex": 0,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "hack_squat_machine_squat",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Quad compound, heavy"
         },
         {
-          "exerciseId": "dumbbell_lunge_alternating_on_the_spot",
-          "exerciseName": "Dumbbell lunge alternating on the spot",
-          "orderIndex": 1,
-          "targetSets": 3,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_romanian_deadlift",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Hamstring compound, heavy"
         },
         {
-          "exerciseId": "lever_leg_extension",
-          "exerciseName": "Lever Leg Extension",
-          "orderIndex": 2,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "cable_pull_through",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 45,
+          "notes": "Glute, pump set"
         },
         {
-          "exerciseId": "dumbbell_stiff_leg_deadlift",
-          "exerciseName": "Dumbbell Stiff Leg Deadlift",
-          "orderIndex": 3,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "seated_leg_extension_both_legs",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Quad isolation, pump set"
         },
         {
-          "exerciseId": "exercise_ball_leg_curl",
-          "exerciseName": "Exercise Ball Leg Curl",
-          "orderIndex": 4,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "captains_chair_leg_raise",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Core, pump set, belly fat goal"
         },
         {
-          "exerciseId": "elevated_standing_calf_raise",
-          "exerciseName": "Elevated Standing Calf Raise",
-          "orderIndex": 5,
-          "targetSets": 4,
-          "targetRepsMin": 12,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "seated_calf_machine",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Calf, pump set"
         },
         {
-          "exerciseId": "treadmill_jogging",
-          "exerciseName": "Treadmill Jogging",
-          "orderIndex": 6,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 35,
-          "targetWeight": 0.0
+          "exerciseId": "gym_elliptical_machine_fast_speed",
+          "sets": 1,
+          "reps": "30 min",
+          "restSeconds": 0,
+          "notes": "LISS cardio"
         },
         {
-          "exerciseId": "stationary_exercise_bike",
-          "exerciseName": "Stationary Exercise Bike",
-          "orderIndex": 7,
-          "targetSets": 1,
-          "targetRepsMin": 25,
-          "targetRepsMax": 30,
-          "targetWeight": 0.0
+          "exerciseId": "jump_rope_basic_jump",
+          "sets": 1,
+          "reps": "10x20 sec",
+          "restSeconds": 0,
+          "notes": "HIIT cardio"
         }
       ]
     },
     {
       "dayNumber": 15,
       "name": "Push 5",
-      "description": "Rotation 5 \u2014 Push Day",
+      "description": "Rotation 5 \u2013 Push Day",
       "exercises": [
         {
-          "exerciseId": "smith_machine_press_decline",
-          "exerciseName": "Smith machine press decline",
-          "orderIndex": 0,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_incline_bench_press",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Chest compound, heavy"
         },
         {
-          "exerciseId": "barbell_bench_press",
-          "exerciseName": "Barbell bench press",
-          "orderIndex": 1,
-          "targetSets": 3,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_seated_shoulder_press",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Shoulder press, heavy"
         },
         {
-          "exerciseId": "cable_bench_fly_press",
-          "exerciseName": "Cable bench fly press",
-          "orderIndex": 2,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_fly_flat_bench",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 45,
+          "notes": "Chest isolation, pump set"
         },
         {
-          "exerciseId": "iso_lateral_shoulder_press_single_arm",
-          "exerciseName": "Iso Lateral Shoulder Press Single Arm",
-          "orderIndex": 3,
-          "targetSets": 3,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "machine_lateral_raise",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Shoulder isolation #1, pump, big shoulders"
         },
         {
-          "exerciseId": "dumbbell_front_raise",
-          "exerciseName": "Dumbbell Front Raise",
-          "orderIndex": 4,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_seated_lateral_raise",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Shoulder isolation #2, pump, big shoulders"
         },
         {
-          "exerciseId": "dumbbell_kickback",
-          "exerciseName": "Dumbbell Kickback",
-          "orderIndex": 5,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "bench_dip_knees_bent",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Tricep, pump set"
         },
         {
-          "exerciseId": "treadmill_jogging",
-          "exerciseName": "Treadmill Jogging",
-          "orderIndex": 6,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 35,
-          "targetWeight": 0.0
+          "exerciseId": "walking",
+          "sets": 1,
+          "reps": "30 min",
+          "restSeconds": 0,
+          "notes": "LISS cardio"
         },
         {
-          "exerciseId": "stationary_exercise_bike",
-          "exerciseName": "Stationary Exercise Bike",
-          "orderIndex": 7,
-          "targetSets": 1,
-          "targetRepsMin": 25,
-          "targetRepsMax": 30,
-          "targetWeight": 0.0
+          "exerciseId": "gym_elliptical_machine_sprint_speed",
+          "sets": 1,
+          "reps": "10 min",
+          "restSeconds": 0,
+          "notes": "HIIT cardio"
         }
       ]
     },
     {
       "dayNumber": 16,
       "name": "Pull 6",
-      "description": "Rotation 6 \u2014 Pull Day",
+      "description": "Rotation 6 \u2013 Pull Day",
       "exercises": [
         {
-          "exerciseId": "dumbbell_bent_over_row",
-          "exerciseName": "Dumbbell Bent-Over Row",
-          "orderIndex": 0,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
-        },
-        {
           "exerciseId": "assisted_pull_up_wide_grip",
-          "exerciseName": "Assisted pull up wide grip",
-          "orderIndex": 1,
-          "targetSets": 3,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Vertical pull, heavy compound"
         },
         {
-          "exerciseId": "cable_lying_extension_pullover_with_cables_attachment",
-          "exerciseName": "cable lying extension pullover (with cables attachment)",
-          "orderIndex": 2,
-          "targetSets": 3,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "exerciseId": "barbell_bent_over_row_pronated_grip",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Horizontal pull, heavy compound"
         },
         {
-          "exerciseId": "barbell_biceps_curl",
-          "exerciseName": "Barbell biceps curl",
-          "orderIndex": 3,
-          "targetSets": 3,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_bent_arm_pullover",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Back isolation, pump set"
         },
         {
-          "exerciseId": "dumbbell_incline_alternate_bicep_curl",
-          "exerciseName": "Dumbbell Incline Alternate Bicep Curl",
-          "orderIndex": 4,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "incline_dumbbell_curl",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Bicep, pump set"
         },
         {
-          "exerciseId": "dumbbell_incline_rear_lateral_raise",
-          "exerciseName": "Dumbbell Incline Rear Lateral Raise",
-          "orderIndex": 5,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "dumbbell_rear_lateral_raise",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Rear delt, pump set"
         },
         {
-          "exerciseId": "walking",
-          "exerciseName": "Walking",
-          "orderIndex": 6,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 40,
-          "targetWeight": 0.0
+          "exerciseId": "wrist_extension_dumbbell",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Forearm, pump set"
         },
         {
-          "exerciseId": "briskly_walking",
-          "exerciseName": "Briskly walking",
-          "orderIndex": 7,
-          "targetSets": 1,
-          "targetRepsMin": 20,
-          "targetRepsMax": 25,
-          "targetWeight": 0.0
+          "exerciseId": "stationary_exercise_bike",
+          "sets": 1,
+          "reps": "30 min",
+          "restSeconds": 0,
+          "notes": "LISS cardio"
+        },
+        {
+          "exerciseId": "assault_airbike_sprint_speed",
+          "sets": 1,
+          "reps": "10 min",
+          "restSeconds": 0,
+          "notes": "HIIT cardio"
         }
       ]
     },
     {
       "dayNumber": 17,
       "name": "Legs 6",
-      "description": "Rotation 6 \u2014 Legs Day",
+      "description": "Rotation 6 \u2013 Legs Day",
       "exercises": [
         {
-          "exerciseId": "barbell_box_squat",
-          "exerciseName": "Barbell box squat",
-          "orderIndex": 0,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "leg_press_machine_normal_stance",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Quad compound, heavy"
         },
         {
-          "exerciseId": "barbell_full_squat",
-          "exerciseName": "Barbell full squat",
-          "orderIndex": 1,
-          "targetSets": 3,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "exerciseId": "trap_bar_deadlift",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Hamstring compound, heavy"
+        },
+        {
+          "exerciseId": "cable_individual_glute_kickbacks",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 45,
+          "notes": "Glute, pump set"
         },
         {
           "exerciseId": "seated_leg_extension_single_leg",
-          "exerciseName": "Seated leg extension single leg",
-          "orderIndex": 2,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Quad isolation, pump set"
         },
         {
-          "exerciseId": "barbell_staggered_deadlift",
-          "exerciseName": "Barbell Staggered Deadlift",
-          "orderIndex": 3,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "lying_leg_raise",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Core, pump set, belly fat goal"
         },
         {
-          "exerciseId": "mts_iso_lateral_kneeling_leg_curl",
-          "exerciseName": "MTS ISO-LATERAL KNEELING LEG CURL",
-          "orderIndex": 4,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "calf_raise_leg_press_machine",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Calf, pump set"
         },
         {
-          "exerciseId": "smith_machine_calf_raise",
-          "exerciseName": "Smith machine calf raise",
-          "orderIndex": 5,
-          "targetSets": 4,
-          "targetRepsMin": 12,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "gym_rowing_machine_normal_speed",
+          "sets": 1,
+          "reps": "30 min",
+          "restSeconds": 0,
+          "notes": "LISS cardio"
         },
         {
-          "exerciseId": "walking",
-          "exerciseName": "Walking",
-          "orderIndex": 6,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 40,
-          "targetWeight": 0.0
-        },
-        {
-          "exerciseId": "briskly_walking",
-          "exerciseName": "Briskly walking",
-          "orderIndex": 7,
-          "targetSets": 1,
-          "targetRepsMin": 20,
-          "targetRepsMax": 25,
-          "targetWeight": 0.0
+          "exerciseId": "jump_rope_basic_jump",
+          "sets": 1,
+          "reps": "10x20 sec",
+          "restSeconds": 0,
+          "notes": "HIIT cardio"
         }
       ]
     },
     {
       "dayNumber": 18,
       "name": "Push 6",
-      "description": "Rotation 6 \u2014 Push Day",
+      "description": "Rotation 6 \u2013 Push Day",
       "exercises": [
         {
-          "exerciseId": "dumbbell_decline_bench_press",
-          "exerciseName": "Dumbbell Decline Bench Press",
-          "orderIndex": 0,
-          "targetSets": 4,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "chest_press_machine",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Chest compound, heavy"
         },
         {
-          "exerciseId": "chest_dip_machine",
-          "exerciseName": "Chest dip machine",
-          "orderIndex": 1,
-          "targetSets": 3,
-          "targetRepsMin": 12,
-          "targetRepsMax": 15,
-          "targetWeight": 0.0
+          "exerciseId": "smith_machine_shoulder_press",
+          "sets": 4,
+          "reps": "6-8",
+          "restSeconds": 120,
+          "notes": "Shoulder press, heavy"
         },
         {
-          "exerciseId": "dumbbell_floor_fly",
-          "exerciseName": "Dumbbell floor Fly",
-          "orderIndex": 2,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "cable_middle_fly",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 45,
+          "notes": "Chest isolation, pump set"
         },
         {
-          "exerciseId": "dumbbell_standing_overhead_press",
-          "exerciseName": "Dumbbell Standing Overhead Press",
-          "orderIndex": 3,
-          "targetSets": 3,
-          "targetRepsMin": 6,
-          "targetRepsMax": 8,
-          "targetWeight": 0.0
+          "exerciseId": "cable_lateral_raises",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Shoulder isolation #1, pump, big shoulders"
         },
         {
-          "exerciseId": "leaning_dumbbell_lateral_raise",
-          "exerciseName": "Leaning Dumbbell Lateral Raise",
-          "orderIndex": 4,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "cable_leaning_lateral_raise",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 40,
+          "notes": "Shoulder isolation #2, pump, big shoulders"
         },
         {
-          "exerciseId": "bench_dip_knees_bent",
-          "exerciseName": "Bench dip (knees bent)",
-          "orderIndex": 5,
-          "targetSets": 3,
-          "targetRepsMin": 15,
-          "targetRepsMax": 20,
-          "targetWeight": 0.0
+          "exerciseId": "cable_overhead_extension_rope",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 35,
+          "notes": "Tricep, pump set"
         },
         {
-          "exerciseId": "walking",
-          "exerciseName": "Walking",
-          "orderIndex": 6,
-          "targetSets": 1,
-          "targetRepsMin": 30,
-          "targetRepsMax": 40,
-          "targetWeight": 0.0
+          "exerciseId": "treadmill_jogging",
+          "sets": 1,
+          "reps": "30 min",
+          "restSeconds": 0,
+          "notes": "LISS cardio"
         },
         {
-          "exerciseId": "briskly_walking",
-          "exerciseName": "Briskly walking",
-          "orderIndex": 7,
-          "targetSets": 1,
-          "targetRepsMin": 20,
-          "targetRepsMax": 25,
-          "targetWeight": 0.0
+          "exerciseId": "gym_elliptical_machine_sprint_speed",
+          "sets": 1,
+          "reps": "10 min",
+          "restSeconds": 0,
+          "notes": "HIIT cardio"
         }
       ]
     }

@@ -1,0 +1,243 @@
+{
+  "version": 1,
+  "exportedAt": "2026-03-17T10:00:00.000Z",
+  "program": {
+    "name": "Full Body – 3 Day Simple",
+    "description": "Simple 3-day full body program. Each day covers all major muscle groups with basic compound and isolation exercises.",
+    "daysPerWeek": 3,
+    "type": "custom"
+  },
+  "days": [
+    {
+      "dayNumber": 1,
+      "name": "Full Body A",
+      "description": "Full Body Day A – Chest/Back/Shoulders/Arms/Legs/Core",
+      "exercises": [
+        {
+          "exerciseId": "barbell_full_squat",
+          "sets": 4,
+          "reps": "8-10",
+          "restSeconds": 120,
+          "notes": "Quad compound – go deep, controlled"
+        },
+        {
+          "exerciseId": "barbell_bench_press",
+          "sets": 4,
+          "reps": "8-10",
+          "restSeconds": 120,
+          "notes": "Chest compound"
+        },
+        {
+          "exerciseId": "barbell_bent_over_row_pronated_grip",
+          "sets": 4,
+          "reps": "8-10",
+          "restSeconds": 90,
+          "notes": "Back compound – pronated grip"
+        },
+        {
+          "exerciseId": "barbell_seated_overhead_press",
+          "sets": 3,
+          "reps": "8-12",
+          "restSeconds": 90,
+          "notes": "Shoulder press"
+        },
+        {
+          "exerciseId": "seated_leg_curl_machine",
+          "sets": 3,
+          "reps": "10-12",
+          "restSeconds": 60,
+          "notes": "Hamstring isolation"
+        },
+        {
+          "exerciseId": "lateral_raises_dumbbell",
+          "sets": 3,
+          "reps": "12-15",
+          "restSeconds": 60,
+          "notes": "Side delt isolation"
+        },
+        {
+          "exerciseId": "barbell_biceps_curl",
+          "sets": 3,
+          "reps": "10-12",
+          "restSeconds": 60,
+          "notes": "Biceps"
+        },
+        {
+          "exerciseId": "cable_pushdown",
+          "sets": 3,
+          "reps": "10-12",
+          "restSeconds": 60,
+          "notes": "Triceps"
+        },
+        {
+          "exerciseId": "barbell_wrist_curl_on_knees",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 45,
+          "notes": "Forearm curl"
+        },
+        {
+          "exerciseId": "high_cable_kneeling_crunch",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 45,
+          "notes": "Core"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "name": "Full Body B",
+      "description": "Full Body Day B – Chest/Back/Shoulders/Arms/Legs/Core",
+      "exercises": [
+        {
+          "exerciseId": "hack_squat_machine_squat",
+          "sets": 4,
+          "reps": "8-10",
+          "restSeconds": 120,
+          "notes": "Quad compound"
+        },
+        {
+          "exerciseId": "dumbbell_incline_bench_press",
+          "sets": 4,
+          "reps": "8-10",
+          "restSeconds": 90,
+          "notes": "Upper chest compound"
+        },
+        {
+          "exerciseId": "lat_pull_down_wide_grip",
+          "sets": 4,
+          "reps": "8-10",
+          "restSeconds": 90,
+          "notes": "Vertical pull – back width"
+        },
+        {
+          "exerciseId": "dumbbell_seated_shoulder_press",
+          "sets": 3,
+          "reps": "8-12",
+          "restSeconds": 90,
+          "notes": "Shoulder press"
+        },
+        {
+          "exerciseId": "barbell_romanian_deadlift",
+          "sets": 3,
+          "reps": "10-12",
+          "restSeconds": 90,
+          "notes": "Hamstring compound"
+        },
+        {
+          "exerciseId": "cable_lateral_raises",
+          "sets": 3,
+          "reps": "12-15",
+          "restSeconds": 60,
+          "notes": "Side delt isolation – constant tension"
+        },
+        {
+          "exerciseId": "dumbbell_hammer_curl",
+          "sets": 3,
+          "reps": "10-12",
+          "restSeconds": 60,
+          "notes": "Biceps + brachialis"
+        },
+        {
+          "exerciseId": "cable_overhead_extension_rope",
+          "sets": 3,
+          "reps": "10-12",
+          "restSeconds": 60,
+          "notes": "Triceps – long head stretch"
+        },
+        {
+          "exerciseId": "wrist_extension_dumbbell",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 45,
+          "notes": "Forearm extension"
+        },
+        {
+          "exerciseId": "captains_chair_leg_raise",
+          "sets": 3,
+          "reps": "12-15",
+          "restSeconds": 45,
+          "notes": "Core – lower abs"
+        }
+      ]
+    },
+    {
+      "dayNumber": 3,
+      "name": "Full Body C",
+      "description": "Full Body Day C – Chest/Back/Shoulders/Arms/Legs/Core",
+      "exercises": [
+        {
+          "exerciseId": "leg_press_machine_normal_stance",
+          "sets": 4,
+          "reps": "10-12",
+          "restSeconds": 120,
+          "notes": "Quad compound"
+        },
+        {
+          "exerciseId": "chest_dip",
+          "sets": 4,
+          "reps": "8-10",
+          "restSeconds": 90,
+          "notes": "Chest + triceps compound"
+        },
+        {
+          "exerciseId": "cable_low_seated_row",
+          "sets": 4,
+          "reps": "8-10",
+          "restSeconds": 90,
+          "notes": "Horizontal pull – back thickness"
+        },
+        {
+          "exerciseId": "smith_machine_shoulder_press",
+          "sets": 3,
+          "reps": "8-12",
+          "restSeconds": 90,
+          "notes": "Shoulder press"
+        },
+        {
+          "exerciseId": "mts_iso_lateral_kneeling_leg_curl",
+          "sets": 3,
+          "reps": "10-12",
+          "restSeconds": 60,
+          "notes": "Hamstring isolation"
+        },
+        {
+          "exerciseId": "machine_lateral_raise",
+          "sets": 3,
+          "reps": "12-15",
+          "restSeconds": 60,
+          "notes": "Side delt isolation"
+        },
+        {
+          "exerciseId": "ez_bar_biceps_curl_normal_grip",
+          "sets": 3,
+          "reps": "10-12",
+          "restSeconds": 60,
+          "notes": "Biceps"
+        },
+        {
+          "exerciseId": "barbell_lying_triceps_extension",
+          "sets": 3,
+          "reps": "10-12",
+          "restSeconds": 60,
+          "notes": "Triceps – skull crushers"
+        },
+        {
+          "exerciseId": "dumbbell_farmer_walks",
+          "sets": 3,
+          "reps": "1",
+          "restSeconds": 60,
+          "notes": "Forearm + grip – 30-40 second walks"
+        },
+        {
+          "exerciseId": "abdominal_crunches_machine",
+          "sets": 3,
+          "reps": "15-20",
+          "restSeconds": 45,
+          "notes": "Core"
+        }
+      ]
+    }
+  ]
+}
