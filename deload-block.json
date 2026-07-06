@@ -1,0 +1,304 @@
+{
+  "version": 1,
+  "exportedAt": "2026-07-06T12:50:20.510Z",
+  "program": {
+    "name": "Deload Block — 5-Day Recovery Rotation",
+    "description": "RUN THIS between phases or every 5-6 iterations of any main phase (~10-12 calendar weeks of training). Half the working sets, 60% of your normal seed loads, RPE 5-6 (leave 4-5 reps in reserve). 5 days total, then restart the main phase. Non-negotiable for advanced lifters — dropping loads for 1 week beats losing 3 weeks to injury or overreaching. Set app Progression Profile to CONSERVATIVE for this program. [Recommended app setting after import → Program Detail → Progression Profile = CONSERVATIVE.]",
+    "daysPerWeek": 5,
+    "type": "custom",
+    "progressionProfile": "conservative",
+    "progressionProfileReason": "Deload = deliberate under-stimulation. Zero pressure to add load."
+  },
+  "days": [
+    {
+      "dayNumber": 1,
+      "name": "Deload Push — Light Chest & Delts",
+      "description": "HALF the working sets, ~60% of usual loads, RPE 5-6 (leave 4-5 in reserve). This is not \"easy training\" — it's deliberate under-stimulation to let CNS + tendons recover. Full ROM, feel the muscle. No failure sets, no partials, no lengthened work.",
+      "exercises": [
+        {
+          "exerciseId": "cable_lateral_raises",
+          "exerciseName": "Cable lateral raises",
+          "primaryMuscle": "shoulders",
+          "equipment": "cable",
+          "targetSets": 2,
+          "targetRepsMin": 12,
+          "targetRepsMax": 15,
+          "targetRpe": 6,
+          "notes": "Light and controlled. Full ROM.",
+          "orderIndex": 0,
+          "targetWeight": 6
+        },
+        {
+          "exerciseId": "barbell_incline_bench_press",
+          "exerciseName": "Barbell incline bench press",
+          "primaryMuscle": "chest",
+          "equipment": "barbell",
+          "targetSets": 2,
+          "targetRepsMin": 6,
+          "targetRepsMax": 10,
+          "targetRpe": 6,
+          "notes": "~60% of your typical Phase-1 seed. Bar path only.",
+          "orderIndex": 1,
+          "targetWeight": 50
+        },
+        {
+          "exerciseId": "dumbbell_seated_shoulder_press",
+          "exerciseName": "Dumbbell Seated Shoulder Press",
+          "primaryMuscle": "shoulders",
+          "equipment": "dumbbell",
+          "targetSets": 2,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetRpe": 6,
+          "notes": "Light pressing, groove the movement.",
+          "orderIndex": 2,
+          "targetWeight": 15
+        },
+        {
+          "exerciseId": "reverse_machine_fly",
+          "exerciseName": "Reverse machine fly",
+          "primaryMuscle": "shoulders",
+          "equipment": "machine",
+          "targetSets": 2,
+          "targetRepsMin": 12,
+          "targetRepsMax": 15,
+          "targetRpe": 6,
+          "notes": "Rear delts, light squeeze.",
+          "orderIndex": 3,
+          "targetWeight": 18
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "name": "Deload Pull — Light Back & Biceps",
+      "description": "Same principle — light pull volume. Grip stays reasonable but no straps/hooks needed at these loads.",
+      "exercises": [
+        {
+          "exerciseId": "incline_dumbbell_curl",
+          "exerciseName": "Incline dumbbell curl",
+          "primaryMuscle": "biceps",
+          "equipment": "dumbbell",
+          "targetSets": 2,
+          "targetRepsMin": 10,
+          "targetRepsMax": 12,
+          "targetRpe": 6,
+          "notes": "Slow eccentric, feel the stretch, no forced reps.",
+          "orderIndex": 0,
+          "targetWeight": 10
+        },
+        {
+          "exerciseId": "lat_pull_down_wide_grip",
+          "exerciseName": "Lat pull down wide grip",
+          "primaryMuscle": "lats",
+          "equipment": "machine",
+          "targetSets": 2,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetRpe": 6,
+          "notes": "Wide grip, controlled.",
+          "orderIndex": 1,
+          "targetWeight": 55
+        },
+        {
+          "exerciseId": "cable_seated_row",
+          "exerciseName": "Cable seated row",
+          "primaryMuscle": "lats",
+          "equipment": "cable",
+          "targetSets": 2,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetRpe": 6,
+          "notes": "Mid-back, squeeze at contraction.",
+          "orderIndex": 2,
+          "targetWeight": 55
+        },
+        {
+          "exerciseId": "dumbbell_hammer_curl",
+          "exerciseName": "Dumbbell Hammer Curl",
+          "primaryMuscle": "biceps",
+          "equipment": "dumbbell",
+          "targetSets": 2,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetRpe": 6,
+          "notes": "Brachialis, light.",
+          "orderIndex": 3,
+          "targetWeight": 12
+        }
+      ]
+    },
+    {
+      "dayNumber": 3,
+      "name": "Deload Legs — Movement Quality",
+      "description": "Legs specifically benefit from a REAL deload since they hold the most fatigue. Sub-maximal squat + light hamstring work.",
+      "exercises": [
+        {
+          "exerciseId": "barbell_full_squat",
+          "exerciseName": "Barbell full squat",
+          "primaryMuscle": "quads",
+          "equipment": "barbell",
+          "targetSets": 2,
+          "targetRepsMin": 6,
+          "targetRepsMax": 10,
+          "targetRpe": 6,
+          "notes": "~60% of normal load. Depth + control only. No PRs, no belt.",
+          "orderIndex": 0,
+          "targetWeight": 70
+        },
+        {
+          "exerciseId": "barbell_romanian_deadlift",
+          "exerciseName": "Barbell romanian deadlift",
+          "primaryMuscle": "hamstrings",
+          "equipment": "barbell",
+          "targetSets": 2,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetRpe": 6,
+          "notes": "RDL for hamstrings — stretch, no failure.",
+          "orderIndex": 1,
+          "targetWeight": 45
+        },
+        {
+          "exerciseId": "lever_leg_extension",
+          "exerciseName": "Lever Leg Extension",
+          "primaryMuscle": "quads",
+          "equipment": "machine",
+          "targetSets": 2,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetRpe": 6,
+          "notes": "Light quad squeeze finisher.",
+          "orderIndex": 2,
+          "targetWeight": 50
+        },
+        {
+          "exerciseId": "hanging_knee_raises",
+          "exerciseName": "Hanging knee raises",
+          "primaryMuscle": "abs",
+          "equipment": "pull_up_bar",
+          "targetSets": 2,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetRpe": 6,
+          "notes": "Abs, easy.",
+          "orderIndex": 3
+        }
+      ]
+    },
+    {
+      "dayNumber": 4,
+      "name": "Deload Weak-Point — Reduced",
+      "description": "Weak-point pattern preserved but volume halved. Point is stimulus maintenance not overload.",
+      "exercises": [
+        {
+          "exerciseId": "cable_lateral_raises",
+          "exerciseName": "Cable lateral raises",
+          "primaryMuscle": "shoulders",
+          "equipment": "cable",
+          "targetSets": 2,
+          "targetRepsMin": 12,
+          "targetRepsMax": 15,
+          "targetRpe": 6,
+          "notes": "Light side delts.",
+          "orderIndex": 0,
+          "targetWeight": 6
+        },
+        {
+          "exerciseId": "cable_reverse_fly_on_crossover",
+          "exerciseName": "Cable reverse fly on crossover",
+          "primaryMuscle": "shoulders",
+          "equipment": "cable",
+          "targetSets": 2,
+          "targetRepsMin": 12,
+          "targetRepsMax": 15,
+          "targetRpe": 6,
+          "notes": "Rear delts light.",
+          "orderIndex": 1
+        },
+        {
+          "exerciseId": "barbell_preacher_curl",
+          "exerciseName": "Barbell preacher curl",
+          "primaryMuscle": "biceps",
+          "equipment": "barbell",
+          "targetSets": 2,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetRpe": 6,
+          "notes": "Preacher light.",
+          "orderIndex": 2,
+          "targetWeight": 25
+        },
+        {
+          "exerciseId": "biceps_curl_cable",
+          "exerciseName": "Biceps curl cable",
+          "primaryMuscle": "biceps",
+          "equipment": "cable",
+          "targetSets": 2,
+          "targetRepsMin": 10,
+          "targetRepsMax": 15,
+          "targetRpe": 6,
+          "notes": "Cable curl light.",
+          "orderIndex": 3
+        }
+      ]
+    },
+    {
+      "dayNumber": 5,
+      "name": "Deload Chest Detail + Wrap",
+      "description": "Final light session of the deload. Then either resume the main phase or roll into the next block.",
+      "exercises": [
+        {
+          "exerciseId": "pec_deck_fly_machine",
+          "exerciseName": "Pec deck fly machine",
+          "primaryMuscle": "chest",
+          "equipment": "machine",
+          "targetSets": 2,
+          "targetRepsMin": 12,
+          "targetRepsMax": 15,
+          "targetRpe": 6,
+          "notes": "Sternal squeeze, no failure.",
+          "orderIndex": 0
+        },
+        {
+          "exerciseId": "dumbbell_bench_press",
+          "exerciseName": "Dumbbell Bench Press",
+          "primaryMuscle": "chest",
+          "equipment": "dumbbell",
+          "targetSets": 2,
+          "targetRepsMin": 8,
+          "targetRepsMax": 12,
+          "targetRpe": 6,
+          "notes": "Mid chest, light.",
+          "orderIndex": 1,
+          "targetWeight": 22
+        },
+        {
+          "exerciseId": "cable_machine_low_to_high",
+          "exerciseName": "Cable machine low to high",
+          "primaryMuscle": "chest",
+          "equipment": "cable",
+          "targetSets": 2,
+          "targetRepsMin": 12,
+          "targetRepsMax": 15,
+          "targetRpe": 6,
+          "notes": "Upper chest fly.",
+          "orderIndex": 2
+        },
+        {
+          "exerciseId": "barbell_wrist_curl_on_knees",
+          "exerciseName": "Barbell wrist curl on knees",
+          "primaryMuscle": "forearms",
+          "equipment": "barbell",
+          "targetSets": 2,
+          "targetRepsMin": 12,
+          "targetRepsMax": 15,
+          "targetRpe": 6,
+          "notes": "Forearm light.",
+          "orderIndex": 3,
+          "targetWeight": 22
+        }
+      ]
+    }
+  ]
+}

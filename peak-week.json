@@ -1,0 +1,238 @@
+{
+  "version": 1,
+  "exportedAt": "2026-07-06T12:50:20.524Z",
+  "program": {
+    "name": "Peak Week — 7-Day Contest Preparation Protocol",
+    "description": "RUN THIS the 7 days before show day (T-7 → T-1, show on T-0). This is the ONLY place calendar days matter in the whole roadmap because the show is a fixed calendar event. Sequence: 2 depletion lift sessions (T-7 + T-5), 4 rest days (with progressive carb load T-4 → T-1), 1 optional light pump (T-2). Diet: low carb T-7/T-6, ramping carb load T-5 through T-2, high carb + reduced water T-1. Do a MOCK peak week 4 wks out to test your response. Do NOT use diuretics on your first show. Set app Progression Profile to CONSERVATIVE — no PRs this week. [Recommended app setting after import → Program Detail → Progression Profile = CONSERVATIVE.]",
+    "daysPerWeek": 7,
+    "type": "custom",
+    "progressionProfile": "conservative",
+    "progressionProfileReason": "Peak week is stimulus + super-compensation, not overload. No load progression."
+  },
+  "days": [
+    {
+      "dayNumber": 1,
+      "name": "T-7: Full-Body Volume Depletion",
+      "description": "Higher volume moderate-load full-body session to start burning muscle glycogen. Pair with LOW-CARB diet start (~100g carb). This kicks off super-compensation setup.",
+      "exercises": [
+        {
+          "exerciseId": "barbell_incline_bench_press",
+          "exerciseName": "Barbell incline bench press",
+          "primaryMuscle": "chest",
+          "equipment": "barbell",
+          "targetSets": 4,
+          "targetRepsMin": 12,
+          "targetRepsMax": 15,
+          "targetRpe": 7,
+          "notes": "Depletion volume — moderate load, high reps, minimize rest to 60s.",
+          "orderIndex": 0,
+          "targetWeight": 60
+        },
+        {
+          "exerciseId": "lat_pull_down_wide_grip",
+          "exerciseName": "Lat pull down wide grip",
+          "primaryMuscle": "lats",
+          "equipment": "machine",
+          "targetSets": 4,
+          "targetRepsMin": 12,
+          "targetRepsMax": 15,
+          "targetRpe": 7,
+          "notes": "Pump.",
+          "orderIndex": 1,
+          "targetWeight": 70
+        },
+        {
+          "exerciseId": "barbell_full_squat",
+          "exerciseName": "Barbell full squat",
+          "primaryMuscle": "quads",
+          "equipment": "barbell",
+          "targetSets": 3,
+          "targetRepsMin": 15,
+          "targetRepsMax": 20,
+          "targetRpe": 7,
+          "notes": "High-rep squat, sub-maximal load. Empty the tank.",
+          "orderIndex": 2,
+          "targetWeight": 80
+        },
+        {
+          "exerciseId": "cable_lateral_raises",
+          "exerciseName": "Cable lateral raises",
+          "primaryMuscle": "shoulders",
+          "equipment": "cable",
+          "targetSets": 4,
+          "targetRepsMin": 15,
+          "targetRepsMax": 20,
+          "targetRpe": 8,
+          "notes": "Side delts pump.",
+          "orderIndex": 3,
+          "targetWeight": 8
+        },
+        {
+          "exerciseId": "barbell_preacher_curl",
+          "exerciseName": "Barbell preacher curl",
+          "primaryMuscle": "biceps",
+          "equipment": "barbell",
+          "targetSets": 3,
+          "targetRepsMin": 12,
+          "targetRepsMax": 15,
+          "targetRpe": 8,
+          "notes": "Biceps pump.",
+          "orderIndex": 4,
+          "targetWeight": 32
+        },
+        {
+          "exerciseId": "cable_triceps_push_down_ez_bar",
+          "exerciseName": "Cable triceps push down ez bar",
+          "primaryMuscle": "triceps",
+          "equipment": "cable",
+          "targetSets": 3,
+          "targetRepsMin": 12,
+          "targetRepsMax": 15,
+          "targetRpe": 8,
+          "notes": "Triceps pump.",
+          "orderIndex": 5
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "name": "T-6: Rest / Posing Practice",
+      "description": "REST from lifting. 15-20 min posing practice — hold each mandatory 20-30 seconds. Continue low-carb. Sodium normal.",
+      "exercises": []
+    },
+    {
+      "dayNumber": 3,
+      "name": "T-5: Upper-Body Depletion",
+      "description": "Second depletion session, upper-body only. Same principle: high reps, minimize rest. Legs already flat from T-7.",
+      "exercises": [
+        {
+          "exerciseId": "dumbbell_incline_bench_press",
+          "exerciseName": "Dumbbell Incline Bench Press",
+          "primaryMuscle": "chest",
+          "equipment": "dumbbell",
+          "targetSets": 4,
+          "targetRepsMin": 12,
+          "targetRepsMax": 15,
+          "targetRpe": 8,
+          "notes": "Higher reps deplete upper chest.",
+          "orderIndex": 0,
+          "targetWeight": 25
+        },
+        {
+          "exerciseId": "lat_pull_down_close_grip",
+          "exerciseName": "Lat pull down close grip",
+          "primaryMuscle": "lats",
+          "equipment": "machine",
+          "targetSets": 4,
+          "targetRepsMin": 12,
+          "targetRepsMax": 15,
+          "targetRpe": 8,
+          "notes": "Back pump.",
+          "orderIndex": 1,
+          "targetWeight": 65
+        },
+        {
+          "exerciseId": "pec_deck_fly_machine",
+          "exerciseName": "Pec deck fly machine",
+          "primaryMuscle": "chest",
+          "equipment": "machine",
+          "targetSets": 3,
+          "targetRepsMin": 15,
+          "targetRepsMax": 20,
+          "targetRpe": 8,
+          "notes": "Sternal squeeze finisher.",
+          "orderIndex": 2
+        },
+        {
+          "exerciseId": "cable_reverse_fly_on_crossover",
+          "exerciseName": "Cable reverse fly on crossover",
+          "primaryMuscle": "shoulders",
+          "equipment": "cable",
+          "targetSets": 3,
+          "targetRepsMin": 15,
+          "targetRepsMax": 20,
+          "targetRpe": 8,
+          "notes": "Rear delt detail.",
+          "orderIndex": 3
+        },
+        {
+          "exerciseId": "leaning_dumbbell_lateral_raise",
+          "exerciseName": "Leaning Dumbbell Lateral Raise",
+          "primaryMuscle": "shoulders",
+          "equipment": "dumbbell",
+          "targetSets": 3,
+          "targetRepsMin": 15,
+          "targetRepsMax": 20,
+          "targetRpe": 8,
+          "notes": "Side delt pump.",
+          "orderIndex": 4,
+          "targetWeight": 8
+        }
+      ]
+    },
+    {
+      "dayNumber": 4,
+      "name": "T-4: Rest / Start Carb Load",
+      "description": "REST from lifting. Begin CARB LOAD: +50% carbs vs baseline (~250g). Sodium stays normal. Water stays high (~4L). Posing 15 min.",
+      "exercises": []
+    },
+    {
+      "dayNumber": 5,
+      "name": "T-3: Rest / Full Carb Load",
+      "description": "REST. Full carb load: +100% carbs vs baseline (~400g). Sodium slight increase. Water stays high. Posing 15 min. You should visibly begin to fill out from wed-thu.",
+      "exercises": []
+    },
+    {
+      "dayNumber": 6,
+      "name": "T-2: Optional Light Pump",
+      "description": "OPTIONAL 30-min session — ONLY if you're not filling out. Light pump for delts/biceps/upper back. Any hint of spillover: SKIP entirely. Carbs at +100%. Water start dropping (~2L).",
+      "exercises": [
+        {
+          "exerciseId": "cable_lateral_raises",
+          "exerciseName": "Cable lateral raises",
+          "primaryMuscle": "shoulders",
+          "equipment": "cable",
+          "targetSets": 2,
+          "targetRepsMin": 15,
+          "targetRepsMax": 20,
+          "targetRpe": 7,
+          "notes": "Light pump ONLY. Stop when muscle feels full.",
+          "orderIndex": 0,
+          "targetWeight": 6
+        },
+        {
+          "exerciseId": "barbell_preacher_curl",
+          "exerciseName": "Barbell preacher curl",
+          "primaryMuscle": "biceps",
+          "equipment": "barbell",
+          "targetSets": 2,
+          "targetRepsMin": 12,
+          "targetRepsMax": 15,
+          "targetRpe": 7,
+          "notes": "Light biceps pump.",
+          "orderIndex": 1,
+          "targetWeight": 25
+        },
+        {
+          "exerciseId": "lat_pull_down_wide_grip",
+          "exerciseName": "Lat pull down wide grip",
+          "primaryMuscle": "lats",
+          "equipment": "machine",
+          "targetSets": 2,
+          "targetRepsMin": 12,
+          "targetRepsMax": 15,
+          "targetRpe": 7,
+          "notes": "Light back pump.",
+          "orderIndex": 2,
+          "targetWeight": 55
+        }
+      ]
+    },
+    {
+      "dayNumber": 7,
+      "name": "T-1: Rest + Backstage Pump Prep",
+      "description": "REST. Carbs stay high but lower fat + fibre for gut. Water minimal (~500ml). Sodium normal. Last posing rehearsal. Practice backstage pump: bands, light DBs for delts + arms + chest fly, 15-20 min.",
+      "exercises": []
+    }
+  ]
+}

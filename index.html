@@ -1,1921 +1,681 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Bodybuilding Competition Prep Program</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: #0f1117;
-            color: #e6edf3;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            border-bottom: 3px solid #30363d;
-            padding-bottom: 30px;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            background: linear-gradient(135deg, #58a6ff, #79c0ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .subtitle {
-            color: #8b949e;
-            font-size: 1.1em;
-            margin-bottom: 20px;
-        }
-
-        .athlete-profile {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-            padding: 15px;
-            background: #1a1d27;
-            border-radius: 8px;
-        }
-
-        .profile-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 8px 0;
-            border-bottom: 1px solid #30363d;
-        }
-
-        .profile-item:last-child {
-            border-bottom: none;
-        }
-
-        .profile-label {
-            color: #79c0ff;
-            font-weight: 600;
-        }
-
-        .profile-value {
-            color: #e6edf3;
-        }
-
-        /* Timeline */
-        .timeline-container {
-            margin: 40px 0;
-            padding: 20px;
-            background: #1a1d27;
-            border-radius: 8px;
-            border-left: 4px solid #58a6ff;
-        }
-
-        .timeline {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .phase-badge {
-            padding: 15px;
-            background: #161b22;
-            border-radius: 6px;
-            border: 2px solid #30363d;
-            text-align: center;
-        }
-
-        .phase-badge h3 {
-            color: #79c0ff;
-            margin-bottom: 8px;
-            font-size: 1.1em;
-        }
-
-        .phase-badge .duration {
-            color: #8b949e;
-            font-size: 0.9em;
-            margin-bottom: 5px;
-        }
-
-        .phase-badge .sessions {
-            color: #58a6ff;
-            font-weight: 600;
-        }
-
-        /* Main phases grid */
-        .phases-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
-        }
-
-        .phase {
-            background: #1a1d27;
-            border: 2px solid #30363d;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .phase-header {
-            background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
-            padding: 25px;
-            border-bottom: 3px solid #58a6ff;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.3s;
-        }
-
-        .phase-header:hover {
-            background: linear-gradient(135deg, #1a1d27 0%, #161b22 100%);
-        }
-
-        .phase-header h2 {
-            font-size: 1.6em;
-            color: #79c0ff;
-        }
-
-        .phase-subtitle {
-            color: #8b949e;
-            font-size: 0.95em;
-            margin-top: 5px;
-        }
-
-        .phase-toggle {
-            width: 30px;
-            height: 30px;
-            background: #30363d;
-            border: none;
-            color: #79c0ff;
-            cursor: pointer;
-            border-radius: 4px;
-            font-size: 1.2em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
-
-        .phase-toggle:hover {
-            background: #58a6ff;
-            color: #0f1117;
-        }
-
-        .phase-content {
-            padding: 30px;
-            display: none;
-        }
-
-        .phase-content.active {
-            display: block;
-        }
-
-        .phase-overview {
-            background: #161b22;
-            padding: 20px;
-            border-radius: 6px;
-            margin-bottom: 30px;
-            border-left: 4px solid #58a6ff;
-        }
-
-        .phase-overview h3 {
-            color: #79c0ff;
-            margin-bottom: 10px;
-        }
-
-        .phase-overview p {
-            color: #8b949e;
-            margin-bottom: 8px;
-        }
-
-        .overview-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .overview-item {
-            padding: 10px;
-            background: #0f1117;
-            border-radius: 4px;
-            border-left: 3px solid #30363d;
-        }
-
-        .overview-item strong {
-            color: #79c0ff;
-        }
-
-        /* Rotation Tabs */
-        .rotation-tabs {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
-            border-bottom: 2px solid #30363d;
-            padding-bottom: 10px;
-        }
-
-        .rotation-tab {
-            padding: 10px 16px;
-            background: #161b22;
-            border: 2px solid #30363d;
-            border-bottom: none;
-            color: #8b949e;
-            cursor: pointer;
-            border-radius: 6px 6px 0 0;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .rotation-tab:hover {
-            color: #79c0ff;
-            border-color: #58a6ff;
-        }
-
-        .rotation-tab.active {
-            background: #1a1d27;
-            color: #58a6ff;
-            border-color: #58a6ff;
-        }
-
-        /* Workouts */
-        .workouts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-
-        .workout {
-            background: #161b22;
-            border: 2px solid #30363d;
-            border-radius: 6px;
-            overflow: hidden;
-            transition: all 0.3s;
-        }
-
-        .workout:hover {
-            border-color: #58a6ff;
-            box-shadow: 0 0 20px rgba(88, 166, 255, 0.1);
-        }
-
-        .workout-header {
-            background: #0f1117;
-            padding: 15px;
-            border-bottom: 2px solid #30363d;
-        }
-
-        .workout-header h3 {
-            color: #79c0ff;
-            font-size: 1.3em;
-        }
-
-        .workout-meta {
-            color: #8b949e;
-            font-size: 0.9em;
-            margin-top: 5px;
-        }
-
-        .exercises {
-            padding: 0;
-        }
-
-        .exercise {
-            padding: 15px;
-            border-bottom: 1px solid #30363d;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            transition: background 0.2s;
-        }
-
-        .exercise:last-child {
-            border-bottom: none;
-        }
-
-        .exercise:hover {
-            background: #0f1117;
-        }
-
-        .exercise-name {
-            flex: 1;
-        }
-
-        .exercise-name strong {
-            display: block;
-            color: #e6edf3;
-            margin-bottom: 5px;
-            font-size: 1em;
-        }
-
-        .exercise-details {
-            color: #8b949e;
-            font-size: 0.85em;
-            display: flex;
-            gap: 15px;
-            margin-top: 5px;
-            flex-wrap: wrap;
-        }
-
-        .exercise-details span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .exercise-meta {
-            text-align: right;
-            min-width: 100px;
-        }
-
-        .sets-reps {
-            color: #79c0ff;
-            font-weight: 600;
-            font-size: 0.95em;
-            margin-bottom: 5px;
-        }
-
-        .equipment-badge {
-            display: inline-block;
-            font-size: 0.75em;
-            padding: 3px 8px;
-            border-radius: 3px;
-            margin-right: 5px;
-            font-weight: 600;
-            margin-bottom: 5px;
-            color: #e6edf3;
-        }
-
-        .equipment-barbell {
-            background: rgba(88, 166, 255, 0.2);
-            color: #79c0ff;
-        }
-
-        .equipment-dumbbell {
-            background: rgba(121, 192, 255, 0.2);
-            color: #79c0ff;
-        }
-
-        .equipment-cable {
-            background: rgba(63, 185, 80, 0.2);
-            color: #3fb950;
-        }
-
-        .equipment-machine {
-            background: rgba(248, 81, 73, 0.2);
-            color: #f85149;
-        }
-
-        .equipment-bodyweight {
-            background: rgba(216, 153, 34, 0.2);
-            color: #d29922;
-        }
-
-        /* Loading spinner */
-        .loading-spinner {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid #30363d;
-            border-top-color: #58a6ff;
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        .loading-container {
-            text-align: center;
-            padding: 40px 20px;
-            color: #8b949e;
-        }
-
-        .error-message {
-            background: rgba(248, 81, 73, 0.1);
-            border-left: 4px solid #f85149;
-            padding: 15px;
-            border-radius: 4px;
-            color: #f85149;
-            margin: 20px 0;
-        }
-
-        /* Macro tables */
-        .macros-section {
-            margin-top: 30px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .macro-card {
-            background: #161b22;
-            border: 2px solid #30363d;
-            border-radius: 6px;
-            padding: 20px;
-            border-top: 4px solid #58a6ff;
-        }
-
-        .macro-card h4 {
-            color: #79c0ff;
-            margin-bottom: 15px;
-            font-size: 1.1em;
-        }
-
-        .macro-table {
-            width: 100%;
-        }
-
-        .macro-table tr {
-            border-bottom: 1px solid #30363d;
-        }
-
-        .macro-table tr:last-child {
-            border-bottom: none;
-        }
-
-        .macro-table td {
-            padding: 12px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .macro-label {
-            color: #8b949e;
-            font-weight: 500;
-        }
-
-        .macro-value {
-            color: #e6edf3;
-            font-weight: 600;
-        }
-
-        .macro-value.calories {
-            color: #58a6ff;
-            font-size: 1.2em;
-        }
-
-        /* Rest periods table */
-        .rest-guide {
-            background: #161b22;
-            border: 2px solid #30363d;
-            border-radius: 6px;
-            padding: 20px;
-            margin-top: 20px;
-            border-left: 4px solid #58a6ff;
-        }
-
-        .rest-guide h4 {
-            color: #79c0ff;
-            margin-bottom: 15px;
-        }
-
-        .rest-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .rest-table th {
-            background: #0f1117;
-            color: #79c0ff;
-            padding: 10px;
-            text-align: left;
-            border-bottom: 2px solid #30363d;
-        }
-
-        .rest-table td {
-            padding: 10px;
-            border-bottom: 1px solid #30363d;
-            color: #8b949e;
-        }
-
-        .rest-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .cardio-section {
-            margin-top: 20px;
-            padding: 15px;
-            background: #161b22;
-            border-radius: 8px;
-            border-left: 4px solid #f0883e;
-        }
-
-        .cardio-section h4 {
-            color: #f0883e;
-            margin-bottom: 12px;
-            font-size: 1.1em;
-        }
-
-        .cardio-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 10px;
-        }
-
-        .cardio-table th {
-            background: #0f1117;
-            color: #f0883e;
-            padding: 8px 10px;
-            text-align: left;
-            border-bottom: 2px solid #30363d;
-            font-size: 0.85em;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .cardio-table td {
-            padding: 8px 10px;
-            border-bottom: 1px solid #30363d;
-            color: #8b949e;
-            font-size: 0.9em;
-        }
-
-        .cardio-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .cardio-table .type-liss { color: #7ee787; }
-        .cardio-table .type-miss { color: #79c0ff; }
-        .cardio-table .type-hiit { color: #ff7b72; }
-
-        .cardio-exercise {
-            background: rgba(240, 136, 62, 0.05);
-            border-left: 3px solid #f0883e;
-        }
-
-        .cardio-note {
-            color: #8b949e;
-            font-size: 0.85em;
-            font-style: italic;
-            margin-top: 8px;
-            padding-top: 8px;
-            border-top: 1px solid #30363d;
-        }
-
-        /* Responsive */
-        @media (max-width: 1000px) {
-            .workouts-grid {
-                grid-template-columns: 1fr;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            .phase-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .phase-toggle {
-                align-self: flex-end;
-                margin-top: -30px;
-            }
-        }
-
-        /* Download Dropdown Menu */
-        .download-menu-container {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-
-        .download-button {
-            background: #1a1d27;
-            border: 2px solid #30363d;
-            color: #e6edf3;
-            padding: 10px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.95em;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s;
-        }
-
-        .download-button:hover {
-            background: #58a6ff;
-            color: #0f1117;
-            border-color: #58a6ff;
-        }
-
-        .download-dropdown {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: #1a1d27;
-            border: 2px solid #30363d;
-            border-radius: 6px;
-            min-width: 200px;
-            margin-top: 8px;
-            display: none;
-            flex-direction: column;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-        }
-
-        .download-dropdown.active {
-            display: flex;
-        }
-
-        .download-dropdown-item {
-            padding: 12px 16px;
-            color: #e6edf3;
-            cursor: pointer;
-            border-bottom: 1px solid #30363d;
-            transition: all 0.2s;
-            text-align: left;
-        }
-
-        .download-dropdown-item:last-child {
-            border-bottom: none;
-        }
-
-        .download-dropdown-item:hover {
-            background: #58a6ff;
-            color: #0f1117;
-        }
-
-        /* Copy JSON Button */
-        .copy-json-button {
-            background: #30363d;
-            border: 1px solid #30363d;
-            color: #e6edf3;
-            padding: 6px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.85em;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: all 0.2s;
-            margin-left: 12px;
-        }
-
-        .copy-json-button:hover {
-            background: #58a6ff;
-            color: #0f1117;
-            border-color: #58a6ff;
-        }
-
-        .copy-json-button.copied {
-            background: #3fb950;
-            color: #0f1117;
-            border-color: #3fb950;
-        }
-
-        .phase-header-content {
-            display: flex;
-            align-items: center;
-        }
-
-        .phase-header-text {
-            flex: 1;
-        }
-
-        .phase-header-buttons {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Advanced Bodybuilding Competition Prep</h1>
-            <p class="subtitle">40-Week Periodized Program | 3-Day Rotating Split</p>
-
-            <div class="athlete-profile">
-                <div class="profile-item">
-                    <span class="profile-label">Height</span>
-                    <span class="profile-value">181 cm</span>
-                </div>
-                <div class="profile-item">
-                    <span class="profile-label">Current Weight</span>
-                    <span class="profile-value">122 kg (25% BF)</span>
-                </div>
-                <div class="profile-item">
-                    <span class="profile-label">Lean Mass</span>
-                    <span class="profile-value">~91 kg</span>
-                </div>
-                <div class="profile-item">
-                    <span class="profile-label">Fat Mass</span>
-                    <span class="profile-value">~30 kg</span>
-                </div>
-                <div class="profile-item">
-                    <span class="profile-label">Training Status</span>
-                    <span class="profile-value">Advanced (4mo detraining)</span>
-                </div>
-                <div class="profile-item">
-                    <span class="profile-label">Split Structure</span>
-                    <span class="profile-value">Push / Pull / Legs (rotating)</span>
-                </div>
-            </div>
-        </header>
-
-        <!-- Timeline Overview -->
-        <div class="timeline-container">
-            <h3 style="color: #79c0ff; margin-bottom: 20px; font-size: 1.3em;">40-Week Timeline</h3>
-            <div class="timeline">
-                <div class="phase-badge">
-                    <h3>Phase 1</h3>
-                    <div class="duration">Weeks 1–4</div>
-                    <div class="sessions">RE-ENTRY</div>
-                    <div class="duration" style="margin-top: 8px;">~12 sessions</div>
-                </div>
-                <div class="phase-badge">
-                    <h3>Phase 2</h3>
-                    <div class="duration">Weeks 5–12</div>
-                    <div class="sessions">FOUNDATION</div>
-                    <div class="duration" style="margin-top: 8px;">~24 sessions</div>
-                </div>
-                <div class="phase-badge">
-                    <h3>Phase 3</h3>
-                    <div class="duration">Weeks 13–28</div>
-                    <div class="sessions">HYPERTROPHY + CUT</div>
-                    <div class="duration" style="margin-top: 8px;">~48 sessions</div>
-                </div>
-                <div class="phase-badge">
-                    <h3>Phase 4</h3>
-                    <div class="duration">Weeks 29–40+</div>
-                    <div class="sessions">CONTEST PREP</div>
-                    <div class="duration" style="margin-top: 8px;">12+ sessions</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Phases -->
-        <div class="phases-container">
-            <!-- PHASE 1: RE-ENTRY -->
-            <div class="phase">
-                <div class="phase-header" onclick="togglePhase(this)">
-                    <div>
-                        <h2>Phase 1: RE-ENTRY</h2>
-                        <div class="phase-subtitle">Weeks 1–4 | ~12 sessions | Rebuild work capacity & motor patterns</div>
-                    </div>
-                    <button class="copy-json-button" onclick="copyPhaseJson('phase1', this)" title="Copy phase JSON to clipboard">
-                        📋 Copy JSON
-                    </button>
-                    <button class="phase-toggle">+</button>
-                </div>
-                <div class="phase-content">
-                    <div class="phase-overview">
-                        <h3>Phase Goals & Guidelines</h3>
-                        <p><strong>Primary Objective:</strong> Rebuild work capacity, restore motor patterns, adapt connective tissue after detraining period</p>
-                        <p><strong>Training Focus:</strong> Machine-heavy work, basic compound patterns, joint health prioritized</p>
-                        <p><strong>Intensity:</strong> RPE 5–7 (50–65% of historical maxes)</p>
-                        <p><strong>Volume:</strong> 3 sets × 12–15 reps per exercise | 5–6 exercises per session</p>
-                        <p><strong>Duration:</strong> ~60 minutes per session</p>
-                        <div class="cardio-section">
-                            <h4>Cardio Protocol — Phase 1 (Weeks 1–8)</h4>
-                            <table class="cardio-table">
-                                <tr><th>Type</th><th>Modality</th><th>Duration</th><th>Frequency</th><th>Intensity / HR Zone</th><th>Timing</th></tr>
-                                <tr>
-                                    <td class="type-liss">LISS</td>
-                                    <td>Incline treadmill walk (10–12% grade, 5.5–6.5 km/h)</td>
-                                    <td>20–25 min</td>
-                                    <td>Every training day (3×/rotation)</td>
-                                    <td>Zone 2 (120–135 bpm) — conversational pace</td>
-                                    <td>Post-session</td>
-                                </tr>
-                                <tr>
-                                    <td class="type-liss">LISS</td>
-                                    <td>Outdoor walk or light cycling</td>
-                                    <td>30–45 min</td>
-                                    <td>1–2× on rest days (optional)</td>
-                                    <td>Zone 1–2 (100–130 bpm) — recovery pace</td>
-                                    <td>Any time</td>
-                                </tr>
-                            </table>
-                            <p class="cardio-note">Goal: Rebuild aerobic base without taxing recovery. Keep it easy — this phase is about reconnecting with movement. Avoid HIIT entirely; joints and connective tissue need time to re-adapt. Target ~8,000–10,000 daily steps on top of formal cardio.</p>
-                        </div>
-
-                        <div class="overview-row">
-                            <div class="overview-item">
-                                <strong>Rest Between Sets</strong><br>60–90 seconds
-                            </div>
-                            <div class="overview-item">
-                                <strong>Exercise Selection</strong><br>Machines & light barbells favored
-                            </div>
-                            <div class="overview-item">
-                                <strong>Recovery Focus</strong><br>Mobility & sleep priority
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Rotation tabs & workouts container -->
-                    <div class="rotation-tabs" id="phase1-tabs"></div>
-                    <div id="phase1-workouts" class="workouts-grid"></div>
-
-                    <!-- Phase 1 Macros -->
-                    <div class="macros-section">
-                        <div class="macro-card">
-                            <h4>Nutritional Guidelines</h4>
-                            <table class="macro-table">
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Total Calories</span>
-                                        <span class="macro-value calories">3,400 kcal</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Protein</span>
-                                        <span class="macro-value">298g (35%)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Carbohydrates</span>
-                                        <span class="macro-value">340g (40%)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Fat</span>
-                                        <span class="macro-value">94g (25%)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Water Intake</span>
-                                        <span class="macro-value" style="color: #58a6ff;">4.0L / day</span>
-                                    </td>
-                                </tr>
-                            </table>
-                            <p style="margin-top: 15px; color: #8b949e; font-size: 0.9em;"><strong>Strategy:</strong> Maintenance to slight surplus. Focus on muscle repletion and recovery. Prioritize whole foods and consistent meal timing.</p>
-                        </div>
-                    </div>
-
-                    <div class="rest-guide">
-                        <h4>Rest & Recovery Protocols — Phase 1</h4>
-                        <table class="rest-table">
-                            <thead>
-                                <tr>
-                                    <th>Exercise Type</th>
-                                    <th>Rest Duration</th>
-                                    <th>Notes</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Compound Lifts (Squat, Bench, Row)</td>
-                                    <td>90–120 seconds</td>
-                                    <td>Allow full nervous system recovery</td>
-                                </tr>
-                                <tr>
-                                    <td>Machine/Secondary Compounds</td>
-                                    <td>60–90 seconds</td>
-                                    <td>Slightly faster recovery</td>
-                                </tr>
-                                <tr>
-                                    <td>Isolation Exercises</td>
-                                    <td>45–60 seconds</td>
-                                    <td>Pump focus, less CNS fatigue</td>
-                                </tr>
-                                <tr>
-                                    <td>Between Workouts</td>
-                                    <td>48–72 hours</td>
-                                    <td>Allow muscular & nervous recovery before next session</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PHASE 2: FOUNDATION -->
-            <div class="phase">
-                <div class="phase-header" onclick="togglePhase(this)">
-                    <div>
-                        <h2>Phase 2: FOUNDATION</h2>
-                        <div class="phase-subtitle">Weeks 5–12 | ~24 sessions | Build strength & muscle baseline</div>
-                    </div>
-                    <button class="copy-json-button" onclick="copyPhaseJson('phase2', this)" title="Copy phase JSON to clipboard">
-                        📋 Copy JSON
-                    </button>
-                    <button class="phase-toggle">+</button>
-                </div>
-                <div class="phase-content">
-                    <div class="phase-overview">
-                        <h3>Phase Goals & Guidelines</h3>
-                        <p><strong>Primary Objective:</strong> Build foundational strength and hypertrophy baseline before intense cutting phases</p>
-                        <p><strong>Training Focus:</strong> Progressive overload on compounds, add more free weights, 6–8 exercises per session</p>
-                        <p><strong>Intensity:</strong> RPE 6–8 (65–80% of estimated maxes)</p>
-                        <p><strong>Volume:</strong> 3–4 sets × 8–12 reps per exercise</p>
-                        <p><strong>Duration:</strong> ~75 minutes per session</p>
-                        <div class="cardio-section">
-                            <h4>Cardio Protocol — Phase 2 (Weeks 9–16)</h4>
-                            <table class="cardio-table">
-                                <tr><th>Type</th><th>Modality</th><th>Duration</th><th>Frequency</th><th>Intensity / HR Zone</th><th>Timing</th></tr>
-                                <tr>
-                                    <td class="type-liss">LISS</td>
-                                    <td>Incline treadmill walk (12–15% grade, 6–7 km/h)</td>
-                                    <td>20 min</td>
-                                    <td>Every training day (3×/rotation)</td>
-                                    <td>Zone 2 (125–140 bpm)</td>
-                                    <td>Post-session</td>
-                                </tr>
-                                <tr>
-                                    <td class="type-miss">MISS</td>
-                                    <td>Elliptical, rowing machine, or stair climber</td>
-                                    <td>20–25 min</td>
-                                    <td>2×/week on rest days</td>
-                                    <td>Zone 2–3 (135–150 bpm) — moderate, slightly breathless</td>
-                                    <td>AM preferred (fasted optional)</td>
-                                </tr>
-                                <tr>
-                                    <td class="type-liss">LISS</td>
-                                    <td>Outdoor walk or light cycling</td>
-                                    <td>30–45 min</td>
-                                    <td>1× rest day (active recovery)</td>
-                                    <td>Zone 1–2 (100–130 bpm)</td>
-                                    <td>Any time</td>
-                                </tr>
-                            </table>
-                            <p class="cardio-note">Goal: Build aerobic capacity while supporting a caloric surplus for strength gains. Introduce moderate-intensity work on non-training days to improve cardiovascular conditioning without compromising recovery. Target 10,000+ daily steps.</p>
-                        </div>
-
-                        <div class="overview-row">
-                            <div class="overview-item">
-                                <strong>Rest Between Sets</strong><br>75–120 seconds
-                            </div>
-                            <div class="overview-item">
-                                <strong>Exercise Selection</strong><br>Increased barbell work
-                            </div>
-                            <div class="overview-item">
-                                <strong>Progress Tracking</strong><br>Log all weights & reps
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Rotation tabs & workouts container -->
-                    <div class="rotation-tabs" id="phase2-tabs"></div>
-                    <div id="phase2-workouts" class="workouts-grid"></div>
-
-                    <!-- Phase 2 Macros -->
-                    <div class="macros-section">
-                        <div class="macro-card">
-                            <h4>Nutritional Guidelines</h4>
-                            <table class="macro-table">
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Total Calories</span>
-                                        <span class="macro-value calories">3,650 kcal</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Protein</span>
-                                        <span class="macro-value">310g (34%)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Carbohydrates</span>
-                                        <span class="macro-value">390g (43%)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Fat</span>
-                                        <span class="macro-value">100g (25%)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Water Intake</span>
-                                        <span class="macro-value" style="color: #58a6ff;">4.5L / day</span>
-                                    </td>
-                                </tr>
-                            </table>
-                            <p style="margin-top: 15px; color: #8b949e; font-size: 0.9em;"><strong>Strategy:</strong> Slight surplus to support strength gains and muscle building. Increase carbs on heavy training days.</p>
-                        </div>
-                    </div>
-
-                    <div class="rest-guide">
-                        <h4>Rest & Recovery Protocols — Phase 2</h4>
-                        <table class="rest-table">
-                            <thead>
-                                <tr>
-                                    <th>Exercise Type</th>
-                                    <th>Rest Duration</th>
-                                    <th>Notes</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Heavy Compound (Main Lift)</td>
-                                    <td>120–180 seconds</td>
-                                    <td>Maximize strength gains</td>
-                                </tr>
-                                <tr>
-                                    <td>Secondary Compounds</td>
-                                    <td>90–120 seconds</td>
-                                    <td>Build volume gradually</td>
-                                </tr>
-                                <tr>
-                                    <td>Isolation Exercises</td>
-                                    <td>60–90 seconds</td>
-                                    <td>Maintain pump and volume</td>
-                                </tr>
-                                <tr>
-                                    <td>Between Workouts</td>
-                                    <td>48 hours</td>
-                                    <td>Adequate recovery between similar muscle groups</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PHASE 3A: HYPERTROPHY + CUT -->
-            <div class="phase">
-                <div class="phase-header" onclick="togglePhase(this)">
-                    <div>
-                        <h2>Phase 3A: HYPERTROPHY + CUT</h2>
-                        <div class="phase-subtitle">Weeks 13–20 | ~30 sessions | Maximize muscle size while cutting</div>
-                    </div>
-                    <button class="copy-json-button" onclick="copyPhaseJson('phase3a', this)" title="Copy phase JSON to clipboard">
-                        📋 Copy JSON
-                    </button>
-                    <button class="phase-toggle">+</button>
-                </div>
-                <div class="phase-content">
-                    <div class="phase-overview">
-                        <h3>Phase Goals & Guidelines</h3>
-                        <p><strong>Primary Objective:</strong> Maximize hypertrophy while beginning controlled cut; maintain or increase strength on compounds</p>
-                        <p><strong>Training Focus:</strong> High volume with moderate intensity; 7–9 exercises per session targeting all muscle groups</p>
-                        <p><strong>Intensity:</strong> RPE 6–7 (70–75% of 1RM); controlled tempos for time-under-tension</p>
-                        <p><strong>Volume:</strong> 3–5 sets × 8–15 reps per exercise (varied rep ranges)</p>
-                        <p><strong>Duration:</strong> ~90 minutes per session</p>
-                        <div class="cardio-section">
-                            <h4>Cardio Protocol — Phase 3A (Weeks 17–24)</h4>
-                            <table class="cardio-table">
-                                <tr><th>Type</th><th>Modality</th><th>Duration</th><th>Frequency</th><th>Intensity / HR Zone</th><th>Timing</th></tr>
-                                <tr>
-                                    <td class="type-liss">LISS</td>
-                                    <td>Incline treadmill walk (12–15% grade)</td>
-                                    <td>25 min</td>
-                                    <td>Every training day (3×/rotation)</td>
-                                    <td>Zone 2 (130–140 bpm)</td>
-                                    <td>Post-session</td>
-                                </tr>
-                                <tr>
-                                    <td class="type-miss">MISS</td>
-                                    <td>Stair climber, elliptical, or steady-state cycling</td>
-                                    <td>25–30 min</td>
-                                    <td>3×/week on rest or AM sessions</td>
-                                    <td>Zone 3 (140–155 bpm) — controlled breathing, sustainable effort</td>
-                                    <td>AM fasted or separate from lifting (2+ hrs gap)</td>
-                                </tr>
-                                <tr>
-                                    <td class="type-hiit">HIIT</td>
-                                    <td>Assault bike or rowing intervals (30s on / 60s off)</td>
-                                    <td>15 min (8–10 rounds)</td>
-                                    <td>1×/week</td>
-                                    <td>Zone 4–5 (160–175 bpm) work / Zone 2 recovery</td>
-                                    <td>Rest day or 6+ hrs from lifting</td>
-                                </tr>
-                            </table>
-                            <p class="cardio-note">Goal: Create a meaningful caloric deficit through increased cardio volume. MISS sessions become the primary deficit driver — they burn more per minute than LISS without the CNS fatigue of HIIT. Introduce one weekly HIIT session to maintain metabolic flexibility. Target 12,000+ daily steps. Monitor recovery closely — if strength drops significantly, reduce HIIT first.</p>
-                        </div>
-
-                        <div class="overview-row">
-                            <div class="overview-item">
-                                <strong>Rest Between Sets</strong><br>60–90 seconds
-                            </div>
-                            <div class="overview-item">
-                                <strong>Tempo Emphasis</strong><br>2s down, 1s pause, 1s up
-                            </div>
-                            <div class="overview-item">
-                                <strong>Volume Tracking</strong><br>Monitor total set × rep volume
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Rotation tabs & workouts container -->
-                    <div class="rotation-tabs" id="phase3a-tabs"></div>
-                    <div id="phase3a-workouts" class="workouts-grid"></div>
-
-                    <!-- Phase 3A Macros -->
-                    <div class="macros-section">
-                        <div class="macro-card">
-                            <h4>Nutritional Guidelines</h4>
-                            <table class="macro-table">
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Total Calories</span>
-                                        <span class="macro-value calories">3,200 kcal</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Protein</span>
-                                        <span class="macro-value">320g (40%)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Carbohydrates</span>
-                                        <span class="macro-value">280g (35%)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Fat</span>
-                                        <span class="macro-value">85g (25%)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Water Intake</span>
-                                        <span class="macro-value" style="color: #58a6ff;">5.0L / day</span>
-                                    </td>
-                                </tr>
-                            </table>
-                            <p style="margin-top: 15px; color: #8b949e; font-size: 0.9em;"><strong>Strategy:</strong> Moderate deficit (~300–400 kcal below maintenance). High protein to preserve muscle. Increase water and fiber for satiety.</p>
-                        </div>
-                    </div>
-
-                    <div class="rest-guide">
-                        <h4>Rest & Recovery Protocols — Phase 3A</h4>
-                        <table class="rest-table">
-                            <thead>
-                                <tr>
-                                    <th>Exercise Type</th>
-                                    <th>Rest Duration</th>
-                                    <th>Notes</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Main Compound</td>
-                                    <td>90–120 seconds</td>
-                                    <td>Maintain strength despite deficit</td>
-                                </tr>
-                                <tr>
-                                    <td>Secondary/Accessory Compounds</td>
-                                    <td>60–90 seconds</td>
-                                    <td>High-volume training for hypertrophy</td>
-                                </tr>
-                                <tr>
-                                    <td>Isolation Exercises</td>
-                                    <td>45–60 seconds</td>
-                                    <td>Maximize metabolic stress & pump</td>
-                                </tr>
-                                <tr>
-                                    <td>Between Workouts</td>
-                                    <td>48 hours</td>
-                                    <td>Adequate recovery on caloric deficit</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PHASE 3B: HYPERTROPHY + DEEP CUT -->
-            <div class="phase">
-                <div class="phase-header" onclick="togglePhase(this)">
-                    <div>
-                        <h2>Phase 3B: HYPERTROPHY + DEEP CUT</h2>
-                        <div class="phase-subtitle">Weeks 21–28 | ~30 sessions | Aggressive cut, muscle preservation</div>
-                    </div>
-                    <button class="copy-json-button" onclick="copyPhaseJson('phase3b', this)" title="Copy phase JSON to clipboard">
-                        📋 Copy JSON
-                    </button>
-                    <button class="phase-toggle">+</button>
-                </div>
-                <div class="phase-content">
-                    <div class="phase-overview">
-                        <h3>Phase Goals & Guidelines</h3>
-                        <p><strong>Primary Objective:</strong> Aggressive fat loss while maximizing muscle preservation through strategic high-volume training</p>
-                        <p><strong>Training Focus:</strong> Maintain volume despite aggressive deficit; focus on strength maintenance on compounds; 7–9 exercises/session</p>
-                        <p><strong>Intensity:</strong> RPE 6–7 (70–75% of 1RM); high metabolic stress and pump work</p>
-                        <p><strong>Volume:</strong> 3–5 sets × 10–20 reps per exercise (higher reps for deficit adaptation)</p>
-                        <p><strong>Duration:</strong> ~90 minutes per session</p>
-                        <div class="cardio-section">
-                            <h4>Cardio Protocol — Phase 3B (Weeks 25–32)</h4>
-                            <table class="cardio-table">
-                                <tr><th>Type</th><th>Modality</th><th>Duration</th><th>Frequency</th><th>Intensity / HR Zone</th><th>Timing</th></tr>
-                                <tr>
-                                    <td class="type-liss">LISS</td>
-                                    <td>Incline treadmill walk (15% grade) or outdoor brisk walk</td>
-                                    <td>30 min</td>
-                                    <td>Every training day (3×/rotation)</td>
-                                    <td>Zone 2 (130–140 bpm)</td>
-                                    <td>Post-session</td>
-                                </tr>
-                                <tr>
-                                    <td class="type-miss">MISS</td>
-                                    <td>Stair climber, elliptical, rowing machine, or cycling</td>
-                                    <td>30–35 min</td>
-                                    <td>4×/week (rest days + 1 AM double)</td>
-                                    <td>Zone 3 (140–155 bpm)</td>
-                                    <td>AM fasted (25g BCAA/EAA pre-session recommended)</td>
-                                </tr>
-                                <tr>
-                                    <td class="type-hiit">HIIT</td>
-                                    <td>Assault bike, sled push, or battle ropes (20s on / 40s off)</td>
-                                    <td>15–18 min (10–12 rounds)</td>
-                                    <td>2×/week</td>
-                                    <td>Zone 4–5 (165–180 bpm) work / Zone 2 recovery</td>
-                                    <td>Separate session (AM) or rest day</td>
-                                </tr>
-                                <tr>
-                                    <td class="type-liss">LISS</td>
-                                    <td>Evening walk</td>
-                                    <td>20–30 min</td>
-                                    <td>Daily (non-negotiable)</td>
-                                    <td>Zone 1 (100–120 bpm) — digestion/recovery walk</td>
-                                    <td>Post-dinner</td>
-                                </tr>
-                            </table>
-                            <p class="cardio-note">Goal: Aggressive deficit through combined cardio volume (~5–7 hrs/week total). MISS is the workhorse — maximize time in Zone 3 for fat oxidation. HIIT at 2×/week to maintain metabolic rate as calories drop. Daily evening walks are mandatory for NEAT and digestion. Target 14,000+ daily steps. If feeling flat or strength drops &gt;10%, pull back one HIIT session and add LISS instead. Consider BCAA/EAA supplementation before fasted cardio to protect muscle.</p>
-                        </div>
-
-                        <div class="overview-row">
-                            <div class="overview-item">
-                                <strong>Rest Between Sets</strong><br>45–75 seconds
-                            </div>
-                            <div class="overview-item">
-                                <strong>RPE Strategy</strong><br>Stay 1–2 reps from failure
-                            </div>
-                            <div class="overview-item">
-                                <strong>Monitoring</strong><br>Watch for strength drops; adjust volume
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Rotation tabs & workouts container -->
-                    <div class="rotation-tabs" id="phase3b-tabs"></div>
-                    <div id="phase3b-workouts" class="workouts-grid"></div>
-
-                    <!-- Phase 3B Macros -->
-                    <div class="macros-section">
-                        <div class="macro-card">
-                            <h4>Nutritional Guidelines</h4>
-                            <table class="macro-table">
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Total Calories</span>
-                                        <span class="macro-value calories">2,800 kcal</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Protein</span>
-                                        <span class="macro-value">330g (47%)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Carbohydrates</span>
-                                        <span class="macro-value">220g (31%)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Fat</span>
-                                        <span class="macro-value">70g (22%)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Water Intake</span>
-                                        <span class="macro-value" style="color: #58a6ff;">5.5L / day</span>
-                                    </td>
-                                </tr>
-                            </table>
-                            <p style="margin-top: 15px; color: #8b949e; font-size: 0.9em;"><strong>Strategy:</strong> Aggressive deficit (~600–800 kcal below maintenance). Very high protein (1.8–2.2 g/lb LBM) to preserve muscle. Consider small carb refeeds on heavy training days.</p>
-                        </div>
-                    </div>
-
-                    <div class="rest-guide">
-                        <h4>Rest & Recovery Protocols — Phase 3B</h4>
-                        <table class="rest-table">
-                            <thead>
-                                <tr>
-                                    <th>Exercise Type</th>
-                                    <th>Rest Duration</th>
-                                    <th>Notes</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Main Compound (Heavy)</td>
-                                    <td>120–150 seconds</td>
-                                    <td>Preserve strength at all costs</td>
-                                </tr>
-                                <tr>
-                                    <td>Secondary Compounds</td>
-                                    <td>75–90 seconds</td>
-                                    <td>High volume despite caloric deficit</td>
-                                </tr>
-                                <tr>
-                                    <td>Isolation Exercises</td>
-                                    <td>45–60 seconds</td>
-                                    <td>Maintain pump and metabolic stress</td>
-                                </tr>
-                                <tr>
-                                    <td>Between Workouts</td>
-                                    <td>48–72 hours</td>
-                                    <td>Extended recovery on aggressive deficit</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PHASE 4: CONTEST PREP -->
-            <div class="phase">
-                <div class="phase-header" onclick="togglePhase(this)">
-                    <div>
-                        <h2>Phase 4: CONTEST PREP</h2>
-                        <div class="phase-subtitle">Weeks 29–40+ | ~30 sessions | Final conditioning & peaking</div>
-                    </div>
-                    <button class="copy-json-button" onclick="copyPhaseJson('phase4', this)" title="Copy phase JSON to clipboard">
-                        📋 Copy JSON
-                    </button>
-                    <button class="phase-toggle">+</button>
-                </div>
-                <div class="phase-content">
-                    <div class="phase-overview">
-                        <h3>Phase Goals & Guidelines</h3>
-                        <p><strong>Primary Objective:</strong> Achieve competition-ready conditioning while maintaining maximum muscle mass and strength</p>
-                        <p><strong>Training Focus:</strong> Strength maintenance (heavy compounds) + high-volume pump work for vascularity; 6–8 exercises/session</p>
-                        <p><strong>Intensity:</strong> RPE 5–7; vary: 3–4 heavy compounds at RPE 7, then pump work at RPE 6 with shorter rest</p>
-                        <p><strong>Volume:</strong> 3–4 sets × 6–8 reps (compounds), 3–4 sets × 12–20 reps (pump work)</p>
-                        <p><strong>Duration:</strong> ~80 minutes per session (shorter, more focused)</p>
-                        <div class="cardio-section">
-                            <h4>Cardio Protocol — Phase 4 (Weeks 33–40)</h4>
-                            <table class="cardio-table">
-                                <tr><th>Type</th><th>Modality</th><th>Duration</th><th>Frequency</th><th>Intensity / HR Zone</th><th>Timing</th></tr>
-                                <tr>
-                                    <td class="type-liss">LISS</td>
-                                    <td>Incline treadmill walk or outdoor walk</td>
-                                    <td>30–40 min</td>
-                                    <td>Every training day (3×/rotation)</td>
-                                    <td>Zone 2 (125–140 bpm)</td>
-                                    <td>Post-session</td>
-                                </tr>
-                                <tr>
-                                    <td class="type-miss">MISS</td>
-                                    <td>Stair climber, elliptical, or steady cycling</td>
-                                    <td>30–40 min</td>
-                                    <td>5×/week (AM sessions)</td>
-                                    <td>Zone 2–3 (135–150 bpm) — drop intensity from 3B to preserve muscle</td>
-                                    <td>AM fasted (EAA mandatory pre-session)</td>
-                                </tr>
-                                <tr>
-                                    <td class="type-hiit">HIIT</td>
-                                    <td>Assault bike or rowing (15s on / 45s off)</td>
-                                    <td>12 min (8 rounds)</td>
-                                    <td>1×/week (Weeks 33–37 only)</td>
-                                    <td>Zone 4 (160–170 bpm) — reduced from Phase 3B</td>
-                                    <td>Separate session, early in the week</td>
-                                </tr>
-                                <tr>
-                                    <td class="type-liss">LISS</td>
-                                    <td>Evening walk</td>
-                                    <td>30–45 min</td>
-                                    <td>Daily (non-negotiable)</td>
-                                    <td>Zone 1 (100–120 bpm)</td>
-                                    <td>Post-dinner</td>
-                                </tr>
-                            </table>
-                            <p class="cardio-note"><strong>Peak Week (Week 39–40):</strong> Drop ALL HIIT. LISS only — 30–40 min walks, 2× daily if needed. Reduce total cardio volume by ~30% in final 5 days. Goal is glycogen preservation and flat-free presentation. Monitor posing practice energy expenditure as part of total activity budget.</p>
-                            <p class="cardio-note">Goal: Maintain deficit through volume (not intensity). HIIT is reduced then eliminated — CNS recovery is critical during extreme caloric restriction. MISS intensity drops slightly from Phase 3B to prevent cortisol spikes and muscle catabolism. EAA before every fasted session is non-negotiable. Target 15,000+ daily steps Weeks 33–37, then taper to 10,000–12,000 in peak week. Total cardio volume: ~7–9 hrs/week (Weeks 33–37), tapering to ~4–5 hrs (Week 38–40).</p>
-                        </div>
-
-                        <div class="overview-row">
-                            <div class="overview-item">
-                                <strong>Rest Between Sets</strong><br>2–3 min (heavy), 45s (pump)
-                            </div>
-                            <div class="overview-item">
-                                <strong>Deload Week</strong><br>Every 4 weeks or before peak week
-                            </div>
-                            <div class="overview-item">
-                                <strong>Peaking Strategy</strong><br>Reduce volume 7 days before show
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Rotation tabs & workouts container -->
-                    <div class="rotation-tabs" id="phase4-tabs"></div>
-                    <div id="phase4-workouts" class="workouts-grid"></div>
-
-                    <!-- Phase 4 Macros -->
-                    <div class="macros-section">
-                        <div class="macro-card">
-                            <h4>Nutritional Guidelines</h4>
-                            <table class="macro-table">
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Total Calories</span>
-                                        <span class="macro-value calories">2,400 kcal</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Protein</span>
-                                        <span class="macro-value">340g (57%)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Carbohydrates</span>
-                                        <span class="macro-value">150g (25%)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Fat</span>
-                                        <span class="macro-value">65g (24%)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="macro-label">Water Intake</span>
-                                        <span class="macro-value" style="color: #58a6ff;">6.0L+ / day</span>
-                                    </td>
-                                </tr>
-                            </table>
-                            <p style="margin-top: 15px; color: #8b949e; font-size: 0.9em;"><strong>Strategy:</strong> Severe deficit (~1000 kcal below maintenance). Maximize protein. Manipulate sodium, carbs, and water in final days per coach guidance. Consider carb loading 1–2 days before show.</p>
-                        </div>
-                    </div>
-
-                    <div class="rest-guide">
-                        <h4>Rest & Recovery Protocols — Phase 4</h4>
-                        <table class="rest-table">
-                            <thead>
-                                <tr>
-                                    <th>Exercise Type</th>
-                                    <th>Rest Duration</th>
-                                    <th>Notes</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Heavy Compounds</td>
-                                    <td>2–3 minutes</td>
-                                    <td>Preserve strength on core lifts</td>
-                                </tr>
-                                <tr>
-                                    <td>Pump/Isolation Work</td>
-                                    <td>45–60 seconds</td>
-                                    <td>High metabolic stress for vascularity</td>
-                                </tr>
-                                <tr>
-                                    <td>Between Workouts</td>
-                                    <td>72 hours (when possible)</td>
-                                    <td>Maximize recovery on severe deficit</td>
-                                </tr>
-                                <tr>
-                                    <td>Peak Week</td>
-                                    <td>Full rest days or deload</td>
-                                    <td>Minimize fatigue going into show</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- JSON Utility Section -->
-    <div class="container" style="margin-top: 50px;">
-        <div class="phase-section">
-            <div class="phase-header" onclick="togglePhase(this)" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-left: 4px solid #7c3aed;">
-                <span class="phase-toggle">+</span>
-                <div>
-                    <h2 style="color: #a78bfa;">JSON Utility</h2>
-                    <p style="color: #9ca3af; font-size: 0.9em;">Select any program JSON, view and copy its contents</p>
-                </div>
-            </div>
-            <div class="phase-content">
-                <div style="padding: 20px;">
-                    <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 16px; flex-wrap: wrap;">
-                        <select id="jsonUtilitySelect" onchange="loadJsonUtility()" style="padding: 10px 16px; background: #1e1e2e; color: #e0e0e0; border: 1px solid #444; border-radius: 6px; font-size: 14px; min-width: 280px; cursor: pointer;">
-                            <option value="">— Select a program —</option>
-                        </select>
-                        <button onclick="copyJsonUtility(this)" style="padding: 10px 20px; background: #7c3aed; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; white-space: nowrap;">Copy JSON</button>
-                        <button onclick="downloadJsonUtility()" style="padding: 10px 20px; background: #444; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; white-space: nowrap;">Download</button>
-                    </div>
-                    <pre id="jsonUtilityOutput" style="background: #0d1117; color: #c9d1d9; padding: 20px; border-radius: 8px; border: 1px solid #333; max-height: 500px; overflow: auto; font-size: 12px; line-height: 1.5; white-space: pre-wrap; word-wrap: break-word;">Select a program from the dropdown to view its JSON content.</pre>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Download Menu -->
-    <div class="download-menu-container">
-        <button class="download-button" onclick="toggleDownloadMenu()">
-            ⬇️ Download
-        </button>
-        <div class="download-dropdown" id="downloadMenu">
-            <div class="download-dropdown-item" onclick="downloadPhaseJson('phase1', 'phase1_reentry.json')">Phase 1 — Re-Entry</div>
-            <div class="download-dropdown-item" onclick="downloadPhaseJson('phase2', 'phase2_foundation.json')">Phase 2 — Foundation</div>
-            <div class="download-dropdown-item" onclick="downloadPhaseJson('phase3a', 'phase3a_hypertrophy_cut.json')">Phase 3A — Hypertrophy Cut</div>
-            <div class="download-dropdown-item" onclick="downloadPhaseJson('phase3b', 'phase3b_hypertrophy_deep_cut.json')">Phase 3B — Hypertrophy Deep Cut</div>
-            <div class="download-dropdown-item" onclick="downloadPhaseJson('phase4', 'phase4_contest_prep.json')">Phase 4 — Contest Prep</div>
-            <div class="download-dropdown-item" onclick="downloadPhaseJson('fullbody', 'fullbody_3day.json')">Full Body — 3 Day</div>
-        </div>
-    </div>
-
-    <script>
-        // Phase JSON file mapping
-        const PHASE_FILES = {
-            phase1: 'phase1_reentry.json',
-            phase2: 'phase2_foundation.json',
-            phase3a: 'phase3a_hypertrophy_cut.json',
-            phase3b: 'phase3b_hypertrophy_deep_cut.json',
-            phase4: 'phase4_contest_prep.json',
-            fullbody: 'fullbody_3day.json'
-        };
-
-        // Cache for loaded JSON data
-        const PHASE_DATA = {};
-
-        // Load all JSON files on page load
-        async function loadPhaseData() {
-            const entries = Object.entries(PHASE_FILES);
-            const results = await Promise.allSettled(
-                entries.map(([key, file]) =>
-                    fetch(file)
-                        .then(r => {
-                            if (!r.ok) throw new Error(`${file}: ${r.status}`);
-                            return r.json();
-                        })
-                        .then(data => {
-                            PHASE_DATA[key] = data;
-                            renderPhaseWorkouts(key, data);
-                        })
-                )
-            );
-
-            const failed = results.filter(r => r.status === 'rejected');
-            if (failed.length > 0) {
-                console.warn('Some JSON files could not be loaded:', failed.map(r => r.reason?.message || 'Unknown error'));
-            }
-
-            // Update UI to show files are ready
-            document.querySelectorAll('.copy-json-button').forEach(btn => {
-                const phaseKey = btn.getAttribute('onclick').match(/'(\w+)'/)?.[1];
-                if (phaseKey && PHASE_DATA[phaseKey]) {
-                    btn.classList.add('ready');
-                } else if (phaseKey) {
-                    btn.style.opacity = '0.4';
-                    btn.title = 'JSON file not found';
-                }
-            });
-        }
-
-        // Derive equipment type from exerciseId
-        function getEquipmentType(exerciseId) {
-            if (exerciseId.startsWith('barbell_')) return 'barbell';
-            if (exerciseId.startsWith('dumbbell_')) return 'dumbbell';
-            if (exerciseId.startsWith('cable_')) return 'cable';
-            if (exerciseId.includes('machine') || exerciseId.startsWith('seated_') || exerciseId.includes('leg_press')) return 'machine';
-            return 'bodyweight';
-        }
-
-        // Get equipment badge HTML
-        function getEquipmentBadge(equipmentType) {
-            const badges = {
-                barbell: '🏋️ Barbell',
-                dumbbell: '🏋️ Dumbbell',
-                cable: '📏 Cable',
-                machine: '⚙️ Machine',
-                bodyweight: '🤸 Bodyweight'
-            };
-            return badges[equipmentType] || badges.bodyweight;
-        }
-
-        // Timed/cardio exercise detection and duration descriptions
-        const TIMED_EXERCISES = {
-            'walking': { desc: '30-40 min steady walk, 5-6 km/h pace' },
-            'walking_fast': { desc: '20-35 min brisk walk, 6-7 km/h, 10-12% incline on treadmill' },
-            'treadmill_jogging': { desc: '20-40 min light jog, 7-9 km/h, Zone 2 HR (125-140 bpm)' },
-            'treadmill_running': { desc: '25-30 min run, 9-12 km/h, Zone 2-3 HR (135-155 bpm)' },
-            'running': { desc: '25-30 min steady run, moderate pace, Zone 2-3 HR' },
-            'stationary_exercise_bike': { desc: '20-35 min cycling, moderate resistance, 70-90 RPM' },
-            'gym_elliptical_machine_normal_speed': { desc: '15-35 min elliptical, moderate resistance, steady pace' },
-            'gym_elliptical_machine_fast_speed': { desc: '20-25 min elliptical, high resistance, fast pace, Zone 3 HR' },
-            'gym_elliptical_machine_sprint_speed': { desc: '15-18 min elliptical sprints: 30s all-out / 60s recovery' },
-            'gym_rowing_machine_normal_speed': { desc: '15-35 min rowing, 22-26 strokes/min, steady pace' },
-            'gym_rowing_machine_fast_speed': { desc: '20-25 min rowing, 28-32 strokes/min, Zone 3 HR' },
-            'gym_rowing_machine_sprint_speed': { desc: '15 min rowing sprints: 30s max effort / 60s easy' },
-            'assault_airbike_normal_speed': { desc: '12-15 min steady pace, moderate resistance' },
-            'assault_airbike_fast_speed': { desc: 'HIIT: 8 rounds × 30s sprint / 60s recovery (~15 min total)' },
-            'assault_airbike_sprint_speed': { desc: 'HIIT: 10 rounds × 20s all-out / 40s recovery (~10 min total)' },
-            'burpee': { desc: '3 sets × 10-15 reps, 30s rest between sets' },
-            'burpee_squat': { desc: '3 sets × 10-15 reps, 30s rest between sets' },
-            'jumping_jack': { desc: '3 sets × 30-45 sec continuous, 20s rest between sets' },
-            'jump_rope_basic_jump': { desc: '3 sets × 60-90 sec continuous, 30s rest between sets' },
-            'jump_rope_alternating_foot': { desc: '3 sets × 60-90 sec, 30s rest between sets' },
-            'star_jump': { desc: '3 sets × 15-20 reps, 30s rest between sets' },
-            'ski_ergometer_cross_country_ski_basic_pull': { desc: '15-20 min steady pull, moderate resistance' },
-            'ski_ergometer_cross_country_ski_alternating_arm_pull': { desc: '15-20 min alternating arms, moderate pace' },
-            'dumbbell_farmer_walks': { desc: '3 sets × 40-60m walk (or 30-45 sec), heavy dumbbells' },
-        };
-
-        function isTimedExercise(exerciseId) {
-            return TIMED_EXERCISES.hasOwnProperty(exerciseId);
-        }
-
-        function getTimedDescription(exerciseId) {
-            return TIMED_EXERCISES[exerciseId]?.desc || '';
-        }
-
-        // Render exercises for a specific day
-        function renderDay(dayData) {
-            const dayType = dayData.name.split(' ')[0]; // Pull, Legs, or Push
-
-            const workoutHtml = `
-                <div class="workout">
-                    <div class="workout-header">
-                        <h3>${dayData.name}</h3>
-                        <div class="workout-meta">${dayData.description || ''}</div>
-                    </div>
-                    <div class="exercises">
-                        ${dayData.exercises.map(ex => {
-                            const equipment = getEquipmentType(ex.exerciseId);
-                            const timed = isTimedExercise(ex.exerciseId);
-                            const timedDesc = timed ? getTimedDescription(ex.exerciseId) : '';
-                            return `
-                                <div class="exercise${timed ? ' cardio-exercise' : ''}">
-                                    <div class="exercise-name">
-                                        <span class="equipment-badge equipment-${equipment}">${getEquipmentBadge(equipment)}</span>
-                                        <strong>${ex.exerciseName}</strong>
-                                        ${timedDesc ? `<div class="exercise-details" style="color: #f0883e; font-style: italic;"><span>${timedDesc}</span></div>` : ''}
-                                    </div>
-                                    <div class="exercise-meta">
-                                        <div class="sets-reps">${timed ? (ex.targetSets === 1 ? ex.targetRepsMin + '-' + ex.targetRepsMax + ' min' : ex.targetSets + ' × ' + ex.targetRepsMin + '-' + ex.targetRepsMax) : ex.targetSets + ' × ' + ex.targetRepsMin + '-' + ex.targetRepsMax}</div>
-                                    </div>
-                                </div>
-                            `;
-                        }).join('')}
-                    </div>
-                </div>
-            `;
-
-            return { dayType, html: workoutHtml };
-        }
-
-        // Render phase workouts with rotation tabs
-        function renderPhaseWorkouts(phaseKey, phaseData) {
-            const tabsContainer = document.getElementById(`${phaseKey}-tabs`);
-            const workoutsContainer = document.getElementById(`${phaseKey}-workouts`);
-
-            if (!tabsContainer || !workoutsContainer) return;
-
-            // Group days by rotation (1-6)
-            const rotations = {};
-            for (let i = 0; i < phaseData.days.length; i++) {
-                const rotationNum = Math.floor(i / 3) + 1; // Days 0,1,2 → Rotation 1, etc.
-                if (!rotations[rotationNum]) rotations[rotationNum] = [];
-                rotations[rotationNum].push(phaseData.days[i]);
-            }
-
-            // Create tabs
-            Object.keys(rotations).forEach(rotNum => {
-                const tab = document.createElement('button');
-                tab.className = 'rotation-tab' + (rotNum === '1' ? ' active' : '');
-                tab.textContent = `Rotation ${rotNum}`;
-                tab.onclick = () => showRotation(phaseKey, rotNum);
-                tabsContainer.appendChild(tab);
-            });
-
-            // Store rotations in window for access
-            if (!window.phaseRotations) window.phaseRotations = {};
-            window.phaseRotations[phaseKey] = rotations;
-
-            // Show first rotation by default
-            showRotation(phaseKey, '1');
-        }
-
-        // Show a specific rotation
-        function showRotation(phaseKey, rotationNum) {
-            const workoutsContainer = document.getElementById(`${phaseKey}-workouts`);
-            const tabsContainer = document.getElementById(`${phaseKey}-tabs`);
-
-            // Update active tab
-            tabsContainer.querySelectorAll('.rotation-tab').forEach((tab, idx) => {
-                if (idx === parseInt(rotationNum) - 1) {
-                    tab.classList.add('active');
-                } else {
-                    tab.classList.remove('active');
-                }
-            });
-
-            // Get days for this rotation
-            const rotations = window.phaseRotations[phaseKey];
-            const days = rotations[rotationNum];
-
-            // Render workouts
-            workoutsContainer.innerHTML = days.map(day => renderDay(day).html).join('');
-        }
-
-        // Download a phase JSON file directly
-        function downloadPhaseJson(phaseKey, filename) {
-            if (PHASE_DATA[phaseKey]) {
-                const jsonString = JSON.stringify(PHASE_DATA[phaseKey], null, 2);
-                const blob = new Blob([jsonString], { type: 'application/json' });
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = filename;
-                a.click();
-                URL.revokeObjectURL(url);
-            } else {
-                const a = document.createElement('a');
-                a.href = filename;
-                a.download = filename;
-                a.click();
-            }
-            document.getElementById('downloadMenu').classList.remove('active');
-        }
-
-        // Copy phase JSON to clipboard
-        function copyPhaseJson(phaseKey, button) {
-            const originalText = button.innerHTML;
-
-            if (!PHASE_DATA[phaseKey]) {
-                fetch(PHASE_FILES[phaseKey])
-                    .then(r => r.json())
-                    .then(data => {
-                        PHASE_DATA[phaseKey] = data;
-                        doCopy(data, button, originalText);
-                    })
-                    .catch(() => {
-                        button.innerHTML = '✗ Not found';
-                        setTimeout(() => { button.innerHTML = originalText; }, 2000);
-                    });
-                return;
-            }
-
-            doCopy(PHASE_DATA[phaseKey], button, originalText);
-        }
-
-        function doCopy(data, button, originalText) {
-            const jsonString = JSON.stringify(data, null, 2);
-            navigator.clipboard.writeText(jsonString).then(() => {
-                button.innerHTML = '✓ Copied!';
-                button.style.background = '#238636';
-                button.style.borderColor = '#3fb950';
-                setTimeout(() => {
-                    button.innerHTML = originalText;
-                    button.style.background = '';
-                    button.style.borderColor = '';
-                }, 2000);
-            }).catch(() => {
-                const ta = document.createElement('textarea');
-                ta.value = jsonString;
-                document.body.appendChild(ta);
-                ta.select();
-                document.execCommand('copy');
-                document.body.removeChild(ta);
-                button.innerHTML = '✓ Copied!';
-                button.style.background = '#238636';
-                setTimeout(() => {
-                    button.innerHTML = originalText;
-                    button.style.background = '';
-                }, 2000);
-            });
-        }
-
-        // Toggle download menu
-        function toggleDownloadMenu() {
-            document.getElementById('downloadMenu').classList.toggle('active');
-        }
-
-        // Close download menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!e.target.closest('.download-menu-container')) {
-                document.getElementById('downloadMenu').classList.remove('active');
-            }
-        });
-
-        // Toggle phase sections
-        function togglePhase(headerElement) {
-            const content = headerElement.nextElementSibling;
-            const toggle = headerElement.querySelector('.phase-toggle');
-
-            if (content.classList.contains('active')) {
-                content.classList.remove('active');
-                toggle.textContent = '+';
-            } else {
-                content.classList.add('active');
-                toggle.textContent = '−';
-            }
-        }
-
-        // JSON Utility functions
-        function populateJsonUtilityDropdown() {
-            const select = document.getElementById('jsonUtilitySelect');
-            const labels = {
-                phase1: 'Phase 1 – Re-Entry',
-                phase2: 'Phase 2 – Foundation',
-                phase3a: 'Phase 3A – Hypertrophy Cut',
-                phase3b: 'Phase 3B – Deep Cut',
-                phase4: 'Phase 4 – Contest Prep',
-                fullbody: 'Full Body – 3 Day'
-            };
-            Object.entries(PHASE_FILES).forEach(([key, file]) => {
-                const opt = document.createElement('option');
-                opt.value = key;
-                opt.textContent = labels[key] || file;
-                select.appendChild(opt);
-            });
-        }
-
-        function loadJsonUtility() {
-            const select = document.getElementById('jsonUtilitySelect');
-            const output = document.getElementById('jsonUtilityOutput');
-            const key = select.value;
-            if (!key) {
-                output.textContent = 'Select a program from the dropdown to view its JSON content.';
-                return;
-            }
-            if (PHASE_DATA[key]) {
-                output.textContent = JSON.stringify(PHASE_DATA[key], null, 2);
-                return;
-            }
-            output.textContent = 'Loading...';
-            fetch(PHASE_FILES[key])
-                .then(r => r.json())
-                .then(data => {
-                    PHASE_DATA[key] = data;
-                    output.textContent = JSON.stringify(data, null, 2);
-                })
-                .catch(() => {
-                    output.textContent = 'Error: Could not load ' + PHASE_FILES[key];
-                });
-        }
-
-        function copyJsonUtility(button) {
-            const output = document.getElementById('jsonUtilityOutput');
-            const select = document.getElementById('jsonUtilitySelect');
-            if (!select.value) return;
-            const text = output.textContent;
-            const originalText = button.textContent;
-            navigator.clipboard.writeText(text).then(() => {
-                button.textContent = '✓ Copied!';
-                button.style.background = '#238636';
-                setTimeout(() => { button.textContent = originalText; button.style.background = '#7c3aed'; }, 2000);
-            }).catch(() => {
-                const ta = document.createElement('textarea');
-                ta.value = text;
-                document.body.appendChild(ta);
-                ta.select();
-                document.execCommand('copy');
-                document.body.removeChild(ta);
-                button.textContent = '✓ Copied!';
-                button.style.background = '#238636';
-                setTimeout(() => { button.textContent = originalText; button.style.background = '#7c3aed'; }, 2000);
-            });
-        }
-
-        function downloadJsonUtility() {
-            const select = document.getElementById('jsonUtilitySelect');
-            const key = select.value;
-            if (!key) return;
-            downloadPhaseJson(key, PHASE_FILES[key]);
-        }
-
-        // Load JSON data when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            loadPhaseData();
-            populateJsonUtilityDropdown();
-        });
-    </script>
-</body>
-</html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Natural Bodybuilding Roadmap — Competition Prep Plan</title>
+<style>
+:root{--bg:#0b0e14;--card:#141925;--card2:#1b2230;--bd:#28303f;--tx:#e6edf3;--mut:#9aa7b8;--acc:#22c55e;--blue:#3b82f6;--amber:#f59e0b;--purple:#a855f7;--red:#ef4444}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;padding:16px}
+.wrap{max-width:1180px;margin:0 auto}
+h1{font-size:2rem;letter-spacing:-.5px}
+h2{font-size:1.4rem;margin:0 0 4px;display:flex;align-items:center;gap:10px}
+h2 .n{background:var(--card2);color:var(--mut);font-size:.85rem;border:1px solid var(--bd);border-radius:8px;padding:2px 9px}
+section{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:22px;margin:16px 0}
+.sub{color:var(--mut);margin-bottom:16px;font-size:.95rem}
+header{text-align:center;padding:30px 16px 10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
+.chip{background:var(--card2);border:1px solid var(--bd);border-radius:999px;padding:5px 13px;font-size:.85rem;color:var(--tx)}
+.chip b{color:var(--acc)}
+.banner{background:linear-gradient(135deg,#3a2410,#2a1a0a);border:1px solid var(--amber);border-radius:14px;padding:16px 20px;margin:18px 0;color:#ffe6c2}
+.banner b{color:var(--amber)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.box{background:var(--card2);border:1px solid var(--bd);border-radius:12px;padding:16px}
+.box h3{font-size:1rem;margin-bottom:8px}
+.box.weak{border-left:3px solid var(--amber)}
+.box.strong{border-left:3px solid var(--blue)}
+ul{padding-left:18px;margin:6px 0} li{margin:3px 0}
+.macro{text-align:center}
+.macro .big{font-size:1.7rem;font-weight:700;color:var(--acc)}
+.macro .lbl{color:var(--mut);font-size:.8rem;text-transform:uppercase;letter-spacing:.5px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:8px}
+th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--bd);vertical-align:top}
+th{color:var(--mut);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.4px}
+td.ml{font-weight:600} td.nt{color:var(--mut);font-size:.82rem} td.exn{min-width:150px}
+.wp{background:var(--amber);color:#1a1206;font-size:.66rem;border-radius:5px;padding:1px 5px;font-weight:700;vertical-align:middle}
+.timeline{display:flex;flex-wrap:wrap;gap:8px}
+.tl{flex:1;min-width:150px;background:var(--card2);border:1px solid var(--bd);border-top:3px solid var(--c);border-radius:10px;padding:12px}
+.tl .ph{font-weight:700;color:var(--c)} .tl .wn{color:var(--mut);font-size:.78rem} .tl .bf{font-size:1.1rem;font-weight:700;margin-top:6px}
+details.prog{background:var(--card2);border:1px solid var(--bd);border-left:3px solid var(--c);border-radius:12px;margin:12px 0;padding:0}
+details.prog>summary{cursor:pointer;padding:16px 18px;font-size:1.08rem;font-weight:600;list-style:none;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+details.prog>summary::-webkit-details-marker{display:none}
+details.prog>summary::before{content:'▸';color:var(--c);font-size:1.1rem}
+details.prog[open]>summary::before{content:'▾'}
+.ptag{color:#06120a;font-weight:800;font-size:.72rem;border-radius:6px;padding:2px 8px}
+.pwk{color:var(--mut);font-size:.8rem;font-weight:400;margin-left:auto}
+.ptagline{padding:0 18px;color:var(--tx);font-style:italic;margin:-4px 0 8px}
+.pdesc{padding:0 18px 6px;color:var(--mut);font-size:.85rem}
+.import{margin:8px 18px;background:#0d1a12;border:1px solid #1d3a26;border-radius:9px;padding:10px 12px;font-size:.84rem}
+.import code{background:#0b0e14;border:1px solid var(--bd);border-radius:5px;padding:1px 6px;color:var(--acc)}
+.btns{display:flex;gap:8px;margin-top:9px}
+.btn{background:var(--card2);color:var(--tx);border:1px solid var(--bd);border-radius:8px;padding:7px 14px;font-size:.84rem;font-weight:600;cursor:pointer;transition:.15s}
+.btn:hover{border-color:var(--acc);color:var(--acc)}
+.btn.copy{background:#0d1a12;border-color:#1d3a26}
+.btn.big{padding:10px 18px;font-size:.95rem;background:linear-gradient(135deg,#16351f,#0d1a12);border-color:var(--acc);color:#bdf5cf}
+.toolbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:6px 0 14px}
+.toolbar .hint{color:var(--mut);font-size:.82rem}
+.day{margin:10px 18px 18px;background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:12px}
+.day h4{color:var(--c);font-size:.98rem} .daydesc{color:var(--mut);font-size:.82rem;margin:3px 0 4px}
+.note-pos{border-left:3px solid var(--purple)}
+.src{font-size:.8rem;color:var(--mut);columns:2;column-gap:24px} .src a{color:#6ea8fe;text-decoration:none}
+.warn{color:var(--amber)} .ok{color:var(--acc)} .bad{color:var(--red)}
+.gap{background:#1a1420;border-left:3px solid var(--purple)}
+code.k{color:var(--acc)}
+@media(max-width:640px){.src{columns:1}.pwk{margin-left:0}}
+
+select.picker{background:var(--card2);color:var(--tx);border:1px solid var(--bd);border-radius:8px;padding:8px 14px;font-size:.88rem;font-weight:600;min-width:260px;cursor:pointer}
+select.picker:focus{outline:none;border-color:var(--acc)}
+.progView{background:#0b0e14;border:1px solid var(--bd);border-radius:10px;padding:12px 14px;margin-top:14px;max-height:360px;overflow:auto;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.76rem;line-height:1.5;color:var(--mut);white-space:pre-wrap;word-break:break-word;display:none}
+.progView.on{display:block;color:var(--tx)}
+.pfsub{color:var(--mut);font-size:.82rem;margin-top:8px}
+.profchip{margin:8px 18px;background:#0d1a2a;border:1px solid #1d3a4a;border-radius:9px;padding:10px 12px;font-size:.85rem;color:var(--tx)}
+</style></head>
+<body><div class="wrap">
+
+<header>
+<h1>🏆 Natural Bodybuilding Roadmap</h1>
+<p class="sub">Evidence-based body-recomposition & competition-prep plan · built from your profile, training logs & measurements</p>
+<div class="chips">
+<span class="chip">Male · <b>34</b></span><span class="chip"><b>181</b> cm</span><span class="chip"><b>118.3</b> kg</span>
+<span class="chip">~<b>31.7%</b> body fat</span><span class="chip">LBM ~<b>80.8</b> kg</span><span class="chip">FFMI ~<b>24.7</b></span><span class="chip">Advanced lifter</span>
+<span class="chip">Target: <b>Classic Physique</b></span>
+</div>
+</header>
+
+<div class="banner">
+⚠️ <b>Read this first — the honest reality.</b> At <b>118.3 kg / ~31.7% body fat</b> you carry ~<b>37.5 kg of fat</b> on ~<b>80.8 kg of lean mass</b> — FFMI ~<b>24.7</b>, still near the natural ceiling. A realistic natural stage weight is <b>~87–90 kg in contest condition</b> (~5–6% BF). The job is losing ~<b>28–31 kg of fat</b> while holding/building muscle — a <b>~30-month project</b> (~67 rotation cycles / ~335 training sessions). Real contest prep is only the final 10-12 iterations. You are at the <b>start of the runway</b>. Patience beats intensity.
+</div>
+
+<section id="timeline">
+<h2><span class="n">1</span>The Roadmap</h2>
+<p class="sub">Four sequenced phases mapped onto the fat-loss → build → prep journey. The plan is <b>iteration-based, not week-based</b>: 1 iteration = the 10-day training rotation of a phase (~14 calendar days at 5 sessions/wk). Move to the next phase by <b>condition (BF%)</b>, not by iteration count — the numbers below are realistic estimates.</p>
+<div class="timeline">
+<div class="tl" style="--c:var(--blue)"><div class="ph">Phase 1 · Foundation</div><div class="wn">~3 iterations (~6 wks)</div><div class="bf">~31.7% BF</div><div class="wn">Rebuild capacity, cardio base, weak-point bias.</div></div>
+<div class="tl" style="--c:var(--acc)"><div class="ph">Phase 2 · Recomp</div><div class="wn">~28 iterations (~13 mo)</div><div class="bf">31.7% → ~15%</div><div class="wn">Deficit blocks + MATADOR breaks. The main grind. 23 kg lost.</div></div>
+<div class="tl" style="--c:var(--purple)"><div class="ph">Phase 3 · Lean-Gain Bridge</div><div class="wn">~26 iterations (~12 mo)</div><div class="bf">~12–15%</div><div class="wn">Slight surplus, muscle grows in. Bridge to prep-ready.</div></div>
+<div class="tl" style="--c:var(--amber)"><div class="ph">Phase 4 · Contest Prep</div><div class="wn">~10 iterations (~5 mo)</div><div class="bf">12% → 5–6%</div><div class="wn">Strip last fat, hold muscle, posing.</div></div>
+<div class="tl" style="--c:var(--red)"><div class="ph">🎯 Stage</div><div class="wn">Peak week (7 days)</div><div class="bf">~87–90 kg</div><div class="wn">Rehearsed carb/water peak. Then reverse diet.</div></div>
+</div>
+
+<div class="box" style="margin-top:16px;border-left:3px solid var(--amber)">
+<h3>📅 Realistic stage-ready timeline — starting July 2026</h3>
+<div class="grid g3" style="margin-top:10px">
+<div class="box" style="background:#0d1a12;border-color:#1d3a26"><h3 class="ok">Fastest realistic</h3><p style="font-size:.9rem;color:var(--mut)">Zero setbacks · adherence >90% · minimal life disruption</p><p style="font-size:1.4rem;font-weight:700;color:var(--acc);margin-top:8px">Q1 2029 (~30 mo)</p></div>
+<div class="box" style="background:#1a1420;border-color:#3a1d4a"><h3 style="color:var(--purple)">Most likely</h3><p style="font-size:.9rem;color:var(--mut)">Normal life: illness weeks, travel, 1–2 injuries handled</p><p style="font-size:1.4rem;font-weight:700;color:var(--purple);margin-top:8px">Q2–Q3 2029 (~34 mo)</p></div>
+<div class="box" style="background:#3a2410;border-color:var(--amber)"><h3 class="warn">Conservative</h3><p style="font-size:.9rem;color:var(--mut)">Serious layoff/injury · slow leaner phase · extra bridge time</p><p style="font-size:1.4rem;font-weight:700;color:var(--amber);margin-top:8px">Q1 2030 (~42 mo)</p></div>
+</div>
+<p style="font-size:.85rem;color:var(--mut);margin-top:12px"><b>What drives the range:</b> Phase 2 is the wildcard — losing 23 kg of fat at 0.5%/wk with mandatory diet breaks realistically takes 12–16 months. Adherence >85% is the single biggest lever. Phase 3 (bridge) can compress or expand by 6 months depending on how much extra muscle is genuinely needed to look competitive at 90 kg. <b>Every setback of &gt;2 weeks pushes the show ~1 month later</b> — no way around it as a natural.</p>
+<p style="font-size:.85rem;color:var(--mut);margin-top:8px"><b>Milestones to watch (not calendar dates):</b></p>
+<ul style="font-size:.85rem;color:var(--mut);margin-top:4px">
+<li><b>Iteration 6 (~end of Phase 1):</b> should be at ~113 kg / ~29% BF · belly fold ~38 mm</li>
+<li><b>Iteration 20 (~mid Phase 2):</b> should be at ~103 kg / ~22% BF · biceps girth trending UP</li>
+<li><b>Iteration 30 (~end of Phase 2):</b> ~95 kg / ~15% BF · abs visible standing relaxed → begin bridge</li>
+<li><b>Iteration 55 (~end of Phase 3):</b> ~93 kg / ~12% BF, muscle looks visibly fuller → begin prep</li>
+<li><b>Iteration 65 (~T-6 wks):</b> ~89 kg / ~7% BF, striations begin</li>
+<li><b>Peak week:</b> ~87–90 kg stage weight, 5–6% BF</li>
+</ul>
+</div>
+</section>
+
+<section id="body">
+<h2><span class="n">2</span>Your Body — Analysis</h2>
+<p class="sub">From your measurement log and self-assessment. The plan is built around fixing proportion, not just losing weight.</p>
+<div class="grid g2">
+<div class="box weak"><h3 class="warn">⬆ Bring up (priority)</h3><ul>
+<li><b>Side & rear delts</b> — "flat" shoulders = a width/cap problem. Fixed with lateral & rear-delt volume 3×/week, not pressing.</li>
+<li><b>Upper & mid chest</b> — incline-biased pressing + cable flyes; "inner" separation appears as body fat drops.</li>
+<li><b>Biceps</b> — lagging vs your big triceps (your log shows biceps girth <b>trending down</b>). Led first on pull days, lengthened-position bias.</li>
+<li><b>Forearms</b> — minor; covered by hammer/reverse curls + wrist work.</li>
+</ul></div>
+<div class="box strong"><h3 style="color:var(--blue)">➡ Maintain (already strong)</h3><ul>
+<li><b>Legs (74 cm thighs)</b> — heavy, low-volume maintenance. Adding size would <b>hurt</b> Classic-Physique proportion and steal recovery.</li>
+<li><b>Back</b> — well developed; kept at maintenance, still fed by rows/pulldowns.</li>
+<li><b>Triceps</b> — big; minimal direct work, covered by pressing.</li>
+</ul></div>
+</div>
+<div class="box" style="margin-top:14px">
+<h3>The body-composition math</h3>
+<p style="color:var(--mut);font-size:.9rem">118.3 kg × 31.7% = <b class="ok">~37.5 kg fat</b> · <b class="ok">~80.8 kg lean</b> (FFMI ~24.7 — near the natural ceiling, confirming the muscle is real). Hold/build lean ~82–85 kg through the bridge, then at a 5–6% stage condition → ≈ <b class="ok">87–90 kg</b> bodyweight. <b>Net to lose ≈ 28–31 kg fat.</b> &nbsp;<span class="warn">⚠ Bioimpedance is ±3%. Confirm the 31.7% with a DEXA before deep prep. 95 kg+ on stage would need lean mass beyond typical natural limits.</span></p>
+</div>
+<h3 style="margin:18px 0 0">Your measurement trend (benchmark)</h3>
+<table><thead><tr><th>Measure</th><th>07 Jul 25</th><th>22 Sep 25</th><th>27 Oct 25</th><th>07 Jan 26</th><th>09 Feb 26</th><th>Read</th></tr></thead><tbody><tr><td class="ml">Weight (kg)</td><td>123</td><td>119.1</td><td>117.7</td><td>118.9</td><td>119.6</td><td class="nt">Flat ~120 for 7 months → you&#x27;ve been maintaining, not cutting. A structured deficit is the missing piece.</td></tr><tr><td class="ml">Shoulders (cm)</td><td>139</td><td>144</td><td>142</td><td>142</td><td>144</td><td class="nt">Girth ok, but it&#x27;s width/cap (side delt) you need, not circumference.</td></tr><tr><td class="ml">Chest (cm)</td><td>124</td><td>126</td><td>126</td><td>124</td><td>121.5</td><td class="nt">Driven by fat as much as muscle — definition comes with leaning out.</td></tr><tr><td class="ml">Biceps R (cm)</td><td>46</td><td>45.5</td><td>44</td><td>44.5</td><td>43.5</td><td class="nt">Trending DOWN — confirms biceps are under-stimulated vs triceps.</td></tr><tr><td class="ml">Upper leg R (cm)</td><td>76</td><td>76</td><td>74</td><td>72</td><td>75</td><td class="nt">Already huge — maintenance only.</td></tr><tr><td class="ml">Calf R (cm)</td><td>50.5</td><td>48.5</td><td>47.5</td><td>48</td><td>49</td><td class="nt">Can still grow — kept in every phase.</td></tr><tr><td class="ml">Belly fold (mm)</td><td>50</td><td>49</td><td>48</td><td>50</td><td>41.5</td><td class="nt">The number that must fall steadily — your leanness benchmark.</td></tr><tr><td class="ml">Chest fold (mm)</td><td>51</td><td>50</td><td>49</td><td>51</td><td>44</td><td class="nt">Same — track folds as the truest fat-loss signal.</td></tr></tbody></table>
+<p class="sub" style="margin-top:10px"><b>PR highlights from your log (6 mo ago):</b> Squat 150 · Bench 135×3 · Incline ~80 · RDL ~70 · Leg press 170 · Barbell row 98 · Preacher 44 · Hammer 22.5 · Lateral raise 12.5. Strong base — the engine is there; now we redirect it.</p>
+</section>
+
+<section id="nutrition">
+<h2><span class="n">3</span>Nutrition</h2>
+<p class="sub">Your stated unknowns — calories, macros, intensity — answered with numbers. Track real intake vs weight trend for 2–3 weeks, then trust YOUR data over any formula.</p>
+<div class="grid g3">
+<div class="box"><h3>Maintenance (TDEE)</h3><p style="font-size:.88rem;color:var(--mut)">BMR (nutritionist) ≈ <b>2,200 kcal</b> · TDEE ≈ <b class="ok">~3,000 kcal</b> (activity factor 1.36). <span class="warn">Likely conservative for 5–6 lifts/wk + 8–10k steps. Real TDEE may be ~3,200–3,500 — track 7-day weight trend for 2–3 wk before trusting the number.</span></p></div>
+<div class="box"><h3>Fat-loss target (start)</h3><p style="font-size:.88rem;color:var(--mut)">Cut target <b class="ok">~2,400 kcal</b> — 600 kcal deficit → <b>~0.5%/wk</b> loss (~0.6 kg/wk). Textbook natural-comp pace (Helms &lt;0.75%/wk to preserve muscle). Shrinks slightly as you lean: mid ~2,200, deep prep ~maintenance−300.</p></div>
+<div class="box"><h3>Protein (the anchor)</h3><p style="font-size:.88rem;color:var(--mut)">2.3–3.1 g/kg of <b>lean mass</b> (Helms). 80.8 kg LBM → <b class="ok">~200 g/day</b> now, up to <b>~230 g</b> in deep prep. Spread across 4–5 meals (~45–50 g each). Uric acid 4.33 mg/dL → no source restrictions. <span class="warn">Collagen doesn't count — see supplements.</span></p></div>
+</div>
+<h3 style="margin:18px 0 8px">Example macro split — fat-loss phase @ 2,400 kcal</h3>
+<div class="grid g4">
+<div class="box macro"><div class="big">200 g</div><div class="lbl">Protein · 800 kcal · 33%</div></div>
+<div class="box macro"><div class="big">220 g</div><div class="lbl">Carbs · 880 kcal · 37%</div></div>
+<div class="box macro"><div class="big">80 g</div><div class="lbl">Fat · 720 kcal · 30%</div></div>
+<div class="box macro"><div class="big">2,400</div><div class="lbl">Total kcal ✓</div></div>
+</div>
+<div class="grid g2" style="margin-top:14px">
+<div class="box"><h3>Carb cycling</h3><p style="font-size:.86rem;color:var(--mut)">Keep protein & weekly average fixed; trade carbs↔fat by day. <b>Training days</b> ~240–260 g carb / ~65–70 g fat. <b>Rest days</b> ~180 g carb / ~90–95 g fat. Put most carbs around training.</p></div>
+<div class="box"><h3>Rate of loss & diet breaks</h3><p style="font-size:.86rem;color:var(--mut)"><b>0.5–1% bodyweight/week</b> (~1 kg/wk early → ~0.4 kg/wk lean). <b>MATADOR rule:</b> every 6–10 weeks of dieting, take <b>1–2 weeks at maintenance</b> — proven to retain more muscle, protect metabolism & adherence over a long cut.</p></div>
+</div>
+</section>
+
+<section id="cardio">
+<h2><span class="n">4</span>Cardio & Steps</h2>
+<p class="sub">You lack cardio — so we build a base gently. Principle: <b>cut food first, add cardio only when the scale stalls ~2 wks.</b> Low-impact only (your 118 kg + no running) to protect joints. No yoga/crossfit, as requested. Cardio is <b>daily-habit</b> based — not tied to the 10-day rotation — because it protects joints and drives energy expenditure regardless of which training day you're on.</p>
+<table><thead><tr><th>Variable</th><th>Phase 1 (base)</th><th>Phase 2 (grind)</th><th>Phase 3 (bridge)</th><th>Phase 4 (prep)</th></tr></thead><tbody>
+<tr><td class="ml">Daily steps</td><td>8,000</td><td>10,000</td><td>8,000–10,000</td><td>12,000–15,000</td></tr>
+<tr><td class="ml">LISS sessions / iteration</td><td>4 (2 per 7 days)</td><td>4–8</td><td>4</td><td>8–12</td></tr>
+<tr><td class="ml">Session duration</td><td>15–25 min</td><td>20–40 min</td><td>20–30 min</td><td>30–45 min</td></tr>
+<tr><td class="ml">Intensity</td><td colspan="4">Zone 2 — ~112–130 bpm (≈60–70% of ~186 max HR). Talk-test: you can hold a conversation.</td></tr>
+<tr><td class="ml">Modality</td><td colspan="4">Stationary bike & incline-treadmill walking (best) → elliptical / stairmaster → rower. <span class="warn">No running until much lighter (~100 kg).</span></td></tr>
+<tr><td class="ml">Placement in rotation</td><td colspan="4">Cardio on <b>rest days OR after lifting</b>, never before. In the 10-day rotation, the leg days (Day 3, Day 8) are best PAIRED with a shorter cardio session or SKIPPED for cardio; upper-body days can take a full session either same-day post-lift or on rest days.</td></tr>
+</tbody></table>
+<p class="sub" style="margin-top:10px">Fasted cardio has <b>no fat-loss advantage</b> when calories match — do it whenever you'll be consistent. <b>Sleep 7.5–9 h</b>: dieters on short sleep lost ~60% more muscle on the same diet. <b>Add more cardio only when the scale stalls for 14 days at consistent intake</b>, not proactively.</p>
+</section>
+
+<section id="programs">
+<h2><span class="n">5</span>The Training Programs</h2>
+<p class="sub">Four phases, each importable straight into NoRestNest. Every <code class="k">exerciseId</code> is verified against the app's exercise library (so videos and muscle maps load). Each phase is a <b>10-day rotation</b> — sessions 1→10 cycle in order, week-agnostic. Weak-point movements open every session while fresh. Calves omitted (naturally big per your notes). <b>Loads shown are seed values only</b> — the app's progression suggester handles actual overload from your logged history. Phase differences are in sets, reps, RPE, and exercise selection. RPE = effort (RPE 7 ≈ 3 reps in reserve; RPE 9 ≈ 1 RIR).</p>
+<div class="toolbar"><button class="btn big" onclick="dlAll()">⬇ Download all four programs</button><span class="hint">Or use Copy / Download inside each phase. The app imports by paste.</span></div>
+
+<div class="box" style="margin:14px 0;border-left:3px solid var(--acc)">
+<h3 style="margin-bottom:8px">⚙ How the app progresses loads — and why each phase needs a different Progression Profile</h3>
+<p style="color:var(--mut);font-size:.9rem;margin-bottom:10px">The app doesn't blindly add weight. After every set you rate it <b>Easy / Good / Hard / Failed</b>; next session the app adjusts the load by a % depending on the <b>Progression Profile</b> set on that program. The profile is a <b>per-program</b> setting in the app — the JSON import currently defaults to <b>Standard</b>, so <b>you must change it manually</b> under <em>Program Detail → Progression Profile</em> after importing each phase.</p>
+<table style="font-size:.86rem"><thead><tr><th>Profile</th><th>Easy set →</th><th>Good set →</th><th>Hard set →</th><th>Failed set →</th><th>Use it when</th></tr></thead>
+<tbody>
+<tr><td class="ml" style="color:#64748b">Conservative</td><td>+5%</td><td>0%</td><td>0%</td><td>−5%</td><td class="nt">Deficit, layoff return, recovery limited — smaller jumps, protect what you have</td></tr>
+<tr><td class="ml" style="color:#3b82f6">Standard</td><td>+7.5%</td><td>+2.5%</td><td>0%</td><td>−10%</td><td class="nt">Default balance — maintenance calories, normal progress</td></tr>
+<tr><td class="ml" style="color:#ef4444">Aggressive</td><td>+10%</td><td>+5%</td><td>+2.5%</td><td>−5%</td><td class="nt">Surplus / growth phase — push loads hard while recovery is high</td></tr>
+<tr><td class="ml" style="color:#a855f7">Custom</td><td colspan="4" class="nt">Your own %s. Skip unless you know your response to each bucket precisely.</td></tr>
+</tbody></table>
+<p style="color:var(--mut);font-size:.85rem;margin-top:10px"><b>Recommended profile per phase</b> (also shown as a chip inside each phase card below):
+<span class="chip" style="border-left:3px solid #64748b"><b>P1</b> Conservative</span>
+<span class="chip" style="border-left:3px solid #3b82f6"><b>P2</b> Standard</span>
+<span class="chip" style="border-left:3px solid #ef4444"><b>P3</b> Aggressive</span>
+<span class="chip" style="border-left:3px solid #64748b"><b>P4</b> Conservative</span></p>
+</div>
+
+<details class="prog" style="--c:#3b82f6">
+<summary><span class="ptag" style="background:#3b82f6">Phase 1</span> Foundation & Cardio Primer <span class="pwk">Weeks 1–6 · 5 days/wk · 10-day rotation</span></summary>
+<p class="ptagline">Rebuild capacity, groove technique, ignite weak-point bias</p>
+<div class="import">📲 <strong>Get it into NoRestNest:</strong> tap <strong>Copy</strong>, then in the app go to <strong>Programs → + → Import JSON</strong>, paste, and hit Import. (Or <strong>Download</strong> to save the file.) The plan is a <b>10-day rotation</b>: sessions cycle in order regardless of week. <b>Loads shown are SEED values only</b> for the app's first fill — after that the app's progression suggester takes over from your logged history.
+<div class="btns"><button class="btn copy" onclick="copyProg('p1',this)">⧉ Copy</button><button class="btn" onclick="dlProg('p1')">⬇ Download</button></div></div>
+<div class="profchip" style="border-left:3px solid #64748b"><strong>Set in app after import →</strong> Program Detail → Progression Profile = <b style="color:#64748b;text-transform:uppercase">conservative</b>. <span style="color:var(--mut)">On-ramp after layoff — smaller load jumps (Easy +5%) prevent early flame-out.</span></div>
+<p class="pdesc">WEEKS 1-6. On-ramp after layoff. 10 unique training days that cycle — each session repeats every ~2 weeks at 5 sessions/wk. Moderate volume to rebuild capacity, groove technique, and start weak-point bias (side/rear delts, biceps, upper + mid chest). Forearms at ~10/wk direct volume (balanced flexor/extensor + farmer walk grip). Pair with ~2,400 kcal cut, 200 g protein, 8-10k steps, 2× zone-2 cardio. RPE 7-8. Weak points hit 3×/wk. Legs on maintenance. NO calves — user has naturally big calves. Weights are STARTING guides from your Feb 2026 logs — progress via double progression (add reps, then load). Loads are SEED values only — the app's progression suggester takes over once you log real sets and drives actual progression from your history.</p>
+<div class="day">
+<h4>Day 1 · Push A — Upper Chest &amp; Side Delts</h4>
+<p class="daydesc">Weak-point bias: side delts open the session while fresh, then upper-chest press. Triceps minimal. Brachioradialis finisher.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Cable lateral raises</strong> <span class="wp">weak-point</span></td><td>4</td><td>12–20</td><td>8</td><td>8 kg</td><td class="nt">WEAK POINT #1. Low pulley, big stretch at bottom. Last set: lengthened partials.</td></tr><tr><td class="exn">Barbell incline bench press</td><td>4</td><td>6–10</td><td>7</td><td>72 kg</td><td class="nt">Upper chest anchor. ~30° bench. Controlled 2s eccentric.</td></tr><tr><td class="exn">Cable machine low to high</td><td>3</td><td>12–18</td><td>8</td><td>—</td><td class="nt">Clavicular fly arc. Squeeze at top.</td></tr><tr><td class="exn">Dumbbell Seated Shoulder Press</td><td>3</td><td>8–12</td><td>8</td><td>22 kg</td><td class="nt">Delt mass — overhead pressing.</td></tr><tr><td class="exn">Reverse machine fly</td><td>3</td><td>15–20</td><td>9</td><td>25 kg</td><td class="nt">Rear delts. Slow, feel the squeeze.</td></tr><tr><td class="exn">Cable triceps push down ez bar</td><td>2</td><td>12–15</td><td>8</td><td>—</td><td class="nt">Triceps maintenance — you already have big tris.</td></tr><tr><td class="exn">Dumbbell Seated Neutral Wrist Curl</td><td>2</td><td>12–15</td><td>9</td><td>12 kg</td><td class="nt">FOREARM (neutral grip) — brachioradialis focus. Placed at end.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 2 · Pull A — Biceps Stretch &amp; Back Width</h4>
+<p class="daydesc">Biceps first while fresh — lengthened-position bias (weak point). Back width via wide pulldown. Heavy flexor work at end after all the grip demand.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Incline dumbbell curl</strong> <span class="wp">weak-point</span></td><td>4</td><td>10–15</td><td>8</td><td>15 kg</td><td class="nt">WEAK POINT. Shoulders behind body for max biceps stretch. 2s eccentric.</td></tr><tr><td class="exn">Lat pull down wide grip</td><td>4</td><td>8–12</td><td>8</td><td>82 kg</td><td class="nt">Lats. Full stretch, drive elbows down. From your log: 84kg×4 top set.</td></tr><tr><td class="exn">Cable seated row</td><td>3</td><td>8–12</td><td>8</td><td>80 kg</td><td class="nt">Mid-back thickness. From your log: 90kg×4 top set.</td></tr><tr><td class="exn">Reverse machine fly</td><td>3</td><td>15–20</td><td>9</td><td>25 kg</td><td class="nt">Rear delts — 2nd weekly hit.</td></tr><tr><td class="exn">Dumbbell Hammer Curl</td><td>3</td><td>10–15</td><td>8</td><td>17.5 kg</td><td class="nt">Brachialis + forearm — adds arm thickness.</td></tr><tr><td class="exn">Cable straight arm pulldown</td><td>3</td><td>12–15</td><td>9</td><td>—</td><td class="nt">Lats in stretch, low fatigue finisher.</td></tr><tr><td class="exn">Barbell wrist curl on knees</td><td>3</td><td>12–20</td><td>9</td><td>30 kg</td><td class="nt">FOREARM (flexor) — 3 sets, heavy day since grip is already primed.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 3 · Legs A — Quad-Biased Maintenance</h4>
+<p class="daydesc">Heavy but submaximal. Your 74cm quads are a strong point — protect them, don't chase growth.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Barbell full squat</td><td>3</td><td>6–10</td><td>7</td><td>110 kg</td><td class="nt">Heavy maintenance. From your log: 150×4 top. Stay 2-3 reps shy of failure.</td></tr><tr><td class="exn">Leg press machine normal stance</td><td>3</td><td>10–15</td><td>8</td><td>140 kg</td><td class="nt">Quad volume, controlled. Your PR ~170kg.</td></tr><tr><td class="exn">Lever Leg Extension</td><td>2</td><td>12–18</td><td>9</td><td>80 kg</td><td class="nt">Quad finisher. Full ROM, no swing.</td></tr><tr><td class="exn">Hanging knee raises</td><td>3</td><td>10–20</td><td>9</td><td>—</td><td class="nt">Abs. Slow, no swing.</td></tr><tr><td class="exn">Russian twist</td><td>3</td><td>15–25</td><td>9</td><td>16 kg</td><td class="nt">Obliques — helps classic waist line.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 4 · Weak-Point Specialization A — Delts + Biceps</h4>
+<p class="daydesc">The make-or-break day. Multiple angles on side + rear delts and biceps while fresh. Extensor finisher balances all the biceps flexor work.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Cable lateral raises</strong> <span class="wp">weak-point</span></td><td>4</td><td>12–20</td><td>9</td><td>9 kg</td><td class="nt">WEAK POINT — 2nd side-delt hit, heavier bias.</td></tr><tr><td class="exn">Cable reverse fly on crossover</td><td>4</td><td>15–20</td><td>9</td><td>—</td><td class="nt">Rear delts — different angle vs machine.</td></tr><tr><td class="exn">Leaning Dumbbell Lateral Raise</td><td>3</td><td>12–20</td><td>9</td><td>10 kg</td><td class="nt">Lean away for constant tension on side delt. 3rd angle.</td></tr><tr><td class="exn">Barbell preacher curl</td><td>3</td><td>8–12</td><td>8</td><td>38 kg</td><td class="nt">Biceps peak/brachialis under constant load. Your PR: 44×4.</td></tr><tr><td class="exn">Biceps curl cable</td><td>3</td><td>10–15</td><td>9</td><td>—</td><td class="nt">Constant-tension curl. Squeeze hard at top.</td></tr><tr><td class="exn">Dumbbell Reverse Wrist Curl</td><td>3</td><td>12–20</td><td>9</td><td>12 kg</td><td class="nt">FOREARM (extensor) — 3 sets, balances the biceps volume.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 5 · Chest Sternal Bias + Back Thickness</h4>
+<p class="daydesc">Mid-chest / sternal squeeze work — the "middle chest" separation you asked about. Reality: it's 60% body fat, 40% muscle. This trains the fibers; the cut reveals them.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Pec deck fly machine</td><td>4</td><td>12–18</td><td>9</td><td>—</td><td class="nt">STERNAL SQUEEZE. Peak-contraction on the inside. Your log: 32.5kg×4 top.</td></tr><tr><td class="exn">Dumbbell Bench Press</td><td>3</td><td>8–12</td><td>8</td><td>30 kg</td><td class="nt">Mid-chest pressing volume. DBs give better stretch than BB.</td></tr><tr><td class="exn">Cable machine low to high</td><td>3</td><td>12–15</td><td>9</td><td>—</td><td class="nt">Upper-chest fly for angle balance.</td></tr><tr><td class="exn">Cable seated row</td><td>3</td><td>10–12</td><td>8</td><td>78 kg</td><td class="nt">Back thickness — hold not build.</td></tr><tr><td class="exn">Cable lateral raises</td><td>3</td><td>15–20</td><td>9</td><td>8 kg</td><td class="nt">Side delt — 3rd weekly hit for width.</td></tr><tr><td class="exn">Barbell wrist curl on knees</td><td>3</td><td>12–20</td><td>9</td><td>32 kg</td><td class="nt">FOREARM (flexor) — 3 sets, chest+back day has moderate grip use.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 6 · Push B — Mid Chest &amp; Delts (Different Angles)</h4>
+<p class="daydesc">Rotate exercises so nothing goes stale. Machine lateral + DB incline hits shoulders and chest at fresh angles. No direct forearm on this day — no grip demand.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Machine lateral raise</strong> <span class="wp">weak-point</span></td><td>4</td><td>12–20</td><td>9</td><td>—</td><td class="nt">WEAK POINT — machine angle, super strict, no traps.</td></tr><tr><td class="exn">Dumbbell Incline Bench Press</td><td>4</td><td>8–12</td><td>8</td><td>32 kg</td><td class="nt">Upper chest, DB stretch. Your log: 40kg×4-10 tops.</td></tr><tr><td class="exn">Chest Press Machine</td><td>3</td><td>8–12</td><td>8</td><td>—</td><td class="nt">Mid-chest pressing — easy overload target.</td></tr><tr><td class="exn">Pec deck fly machine</td><td>3</td><td>12–18</td><td>9</td><td>—</td><td class="nt">Sternal squeeze — 2nd weekly mid-chest hit.</td></tr><tr><td class="exn">Dumbbell Chest Supported Lateral Raises</td><td>3</td><td>15–20</td><td>9</td><td>8 kg</td><td class="nt">Chest-supported = zero cheating. Pure side-delt.</td></tr><tr><td class="exn">Cable triceps overhead extension (ez bar)</td><td>2</td><td>10–15</td><td>8</td><td>—</td><td class="nt">Triceps long-head — minimal maintenance.</td></tr><tr><td class="exn">Dumbbell Over Bench Reverse Wrist Curl</td><td>2</td><td>12–20</td><td>9</td><td>10 kg</td><td class="nt">FOREARM (extensor) — over bench, wrist unsupported for full ROM. Balances flexor days.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 7 · Pull B — Biceps Peak &amp; Back Thickness</h4>
+<p class="daydesc">Different curl and row variations. Biceps hit again with peak-contraction bias. Extensor forearm work balances the pull volume.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Barbell preacher curl</strong> <span class="wp">weak-point</span></td><td>4</td><td>8–12</td><td>8</td><td>40 kg</td><td class="nt">WEAK POINT — heavier preacher for load progression.</td></tr><tr><td class="exn">Lat pull down close grip</td><td>3</td><td>8–12</td><td>8</td><td>78 kg</td><td class="nt">Width, neutral grip. Your log: 90kg×10.5 top.</td></tr><tr><td class="exn">Dumbbell One Arm Row (rack support)</td><td>3</td><td>8–12</td><td>8</td><td>30 kg</td><td class="nt">Unilateral back thickness. Your log: 40kg×8-11.</td></tr><tr><td class="exn">Cable reverse fly on crossover</td><td>3</td><td>15–20</td><td>9</td><td>—</td><td class="nt">Rear delts — 3rd weekly hit.</td></tr><tr><td class="exn">Spider curl dumbbells simultaneous</td><td>3</td><td>10–15</td><td>9</td><td>12 kg</td><td class="nt">Short-head peak in shortened position.</td></tr><tr><td class="exn">Barbell reverse biceps curl</td><td>2</td><td>12–15</td><td>9</td><td>25 kg</td><td class="nt">Brachialis + forearm extensors.</td></tr><tr><td class="exn">Dumbbell Reverse Wrist Curl</td><td>2</td><td>12–20</td><td>9</td><td>12 kg</td><td class="nt">FOREARM (extensor) — 2 sets since reverse curl already hit extensors.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 8 · Legs B — Hamstring Focus + Bonus Delts</h4>
+<p class="daydesc">Posterior chain focus — your RDL is way behind your squat (62kg vs 150kg). Bonus side-delt hit if recovered. Direct forearm flexor finisher — no straps allowed here (real grip work, not carry).</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Barbell romanian deadlift</td><td>4</td><td>8–12</td><td>8</td><td>65 kg</td><td class="nt">HAMSTRINGS — big deficit vs squat. Progressive overload target.</td></tr><tr><td class="exn">Seated leg curl machine</td><td>3</td><td>10–15</td><td>9</td><td>65 kg</td><td class="nt">Hamstring isolation. Your log: 75-80kg top set.</td></tr><tr><td class="exn">Lying leg curl machine</td><td>2</td><td>12–18</td><td>9</td><td>—</td><td class="nt">2nd hamstring angle — different length.</td></tr><tr><td class="exn">Cable lateral raises</td><td>3</td><td>15–20</td><td>9</td><td>8 kg</td><td class="nt">BONUS 4th-5th weekly side-delt volume.</td></tr><tr><td class="exn">Abdominal Crunches Machine</td><td>3</td><td>12–20</td><td>9</td><td>—</td><td class="nt">Weighted abs. Your log: 65kg×20.</td></tr><tr><td class="exn">Dumbbell Over Bench Wrist Curl</td><td>3</td><td>12–20</td><td>9</td><td>12 kg</td><td class="nt">FOREARM (flexor) — over bench for full ROM. NO STRAPS, direct flexor work.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 9 · Weak-Point Specialization B — Different Angles</h4>
+<p class="daydesc">Same emphasis as Day 4, different exercises. This is what stops boredom while pounding weak points. Flexor forearm work at end.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Leaning Dumbbell Lateral Raise</td><td>4</td><td>12–20</td><td>9</td><td>10 kg</td><td class="nt">Lean side-delt — heavier bias, different from Day 4.</td></tr><tr><td class="exn">Dumbbell Incline Rear Lateral Raise</td><td>4</td><td>15–20</td><td>9</td><td>10 kg</td><td class="nt">Rear delts, chest-supported strict form. NO cheating.</td></tr><tr><td class="exn">Machine lateral raise</td><td>3</td><td>12–15</td><td>9</td><td>—</td><td class="nt">3rd side-delt angle in the rotation.</td></tr><tr><td class="exn">Incline dumbbell curl</td><td>3</td><td>10–15</td><td>9</td><td>15 kg</td><td class="nt">Biceps stretch — 2nd hit this rotation.</td></tr><tr><td class="exn">Biceps curl cable</td><td>3</td><td>10–15</td><td>9</td><td>—</td><td class="nt">Cable curl — different from preacher, constant tension.</td></tr><tr><td class="exn">Barbell wrist curl on knees</td><td>3</td><td>12–20</td><td>9</td><td>32 kg</td><td class="nt">FOREARM (flexor) — 3 sets. Progressive load target this phase.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 10 · Push/Pull Upper Hybrid — Volume Finisher</h4>
+<p class="daydesc">High-rep pump session across all upper-body weak points. Closes the 10-day rotation on a metabolic high. Extensor work balances the flexor emphasis on other days.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Cable lateral raises</td><td>4</td><td>15–20</td><td>9</td><td>8 kg</td><td class="nt">Side delt — final hit of rotation. Highest rep range.</td></tr><tr><td class="exn">Dumbbell fly incline bench</td><td>3</td><td>12–15</td><td>9</td><td>15 kg</td><td class="nt">Upper-chest fly. Your log: 17.5kg tops.</td></tr><tr><td class="exn">Cable straight arm pulldown</td><td>3</td><td>12–15</td><td>9</td><td>—</td><td class="nt">Lat detail, high rep, low fatigue.</td></tr><tr><td class="exn">Dumbbell Hammer Curl</td><td>3</td><td>10–15</td><td>9</td><td>17.5 kg</td><td class="nt">Brachialis + forearm — pump finisher.</td></tr><tr><td class="exn">Cable reverse fly on crossover</td><td>3</td><td>15–20</td><td>9</td><td>—</td><td class="nt">Rear delts — final hit.</td></tr><tr><td class="exn">Dumbbell Reverse Wrist Curl</td><td>3</td><td>12–20</td><td>9</td><td>12 kg</td><td class="nt">FOREARM (extensor) — 3 sets, final extensor volume of rotation.</td></tr></tbody></table>
+</div>
+</details>
+<details class="prog" style="--c:#22c55e">
+<summary><span class="ptag" style="background:#22c55e">Phase 2</span> Recomp — Weak-Point Emphasis <span class="pwk">Months ~2–15 · 5 days/wk · 10-day rotation</span></summary>
+<p class="ptagline">30% → ~15% BF in deficit blocks + MATADOR diet breaks</p>
+<div class="import">📲 <strong>Get it into NoRestNest:</strong> tap <strong>Copy</strong>, then in the app go to <strong>Programs → + → Import JSON</strong>, paste, and hit Import. (Or <strong>Download</strong> to save the file.) The plan is a <b>10-day rotation</b>: sessions cycle in order regardless of week. <b>Loads shown are SEED values only</b> for the app's first fill — after that the app's progression suggester takes over from your logged history.
+<div class="btns"><button class="btn copy" onclick="copyProg('p2',this)">⧉ Copy</button><button class="btn" onclick="dlProg('p2')">⬇ Download</button></div></div>
+<div class="profchip" style="border-left:3px solid #3b82f6"><strong>Set in app after import →</strong> Program Detail → Progression Profile = <b style="color:#3b82f6;text-transform:uppercase">standard</b>. <span style="color:var(--mut)">Balanced default (Easy +7.5%). Mild deficit tolerates normal progression.</span></div>
+<p class="pdesc">THE MAIN GRIND (months ~2-15, run in 4-6 wk blocks + deload). Same 10-day rotation as P1 with +1 set on every weak-point exercise (side/rear delts, biceps, upper + mid chest pushed to MAV→MRV). Forearms bumped further with the WP volume ramp. Pair with recomp diet (~2,400 kcal), 200 g protein, carb-cycle higher on training days, 10k steps, 2-4× zone-2 LISS. MATADOR diet break (1-2 wk at maintenance ~3,000 kcal) every 6-10 weeks. RPE 8-9. Deload every 5-6 wks. Loads are SEED values only — the app's progression suggester takes over once you log real sets and drives actual progression from your history.</p>
+<div class="day">
+<h4>Day 1 · Push A — Upper Chest &amp; Side Delts</h4>
+<p class="daydesc">Weak-point bias: side delts open the session while fresh, then upper-chest press. Triceps minimal. Brachioradialis finisher.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Cable lateral raises</strong> <span class="wp">weak-point</span></td><td>5</td><td>12–20</td><td>9</td><td>8 kg</td><td class="nt">WEAK POINT #1. Low pulley, big stretch at bottom. Last set: lengthened partials.</td></tr><tr><td class="exn">Barbell incline bench press</td><td>4</td><td>6–10</td><td>8</td><td>72 kg</td><td class="nt">Upper chest anchor. ~30° bench. Controlled 2s eccentric.</td></tr><tr><td class="exn">Cable machine low to high</td><td>3</td><td>12–18</td><td>9</td><td>—</td><td class="nt">Clavicular fly arc. Squeeze at top.</td></tr><tr><td class="exn">Dumbbell Seated Shoulder Press</td><td>3</td><td>8–12</td><td>9</td><td>22 kg</td><td class="nt">Delt mass — overhead pressing.</td></tr><tr><td class="exn">Reverse machine fly</td><td>4</td><td>15–20</td><td>10</td><td>25 kg</td><td class="nt">Rear delts. Slow, feel the squeeze.</td></tr><tr><td class="exn">Cable triceps push down ez bar</td><td>2</td><td>12–15</td><td>9</td><td>—</td><td class="nt">Triceps maintenance — you already have big tris.</td></tr><tr><td class="exn">Dumbbell Seated Neutral Wrist Curl</td><td>2</td><td>12–15</td><td>10</td><td>12 kg</td><td class="nt">FOREARM (neutral grip) — brachioradialis focus. Placed at end.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 2 · Pull A — Biceps Stretch &amp; Back Width</h4>
+<p class="daydesc">Biceps first while fresh — lengthened-position bias (weak point). Back width via wide pulldown. Heavy flexor work at end after all the grip demand.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Incline dumbbell curl</strong> <span class="wp">weak-point</span></td><td>5</td><td>10–15</td><td>9</td><td>15 kg</td><td class="nt">WEAK POINT. Shoulders behind body for max biceps stretch. 2s eccentric.</td></tr><tr><td class="exn">Lat pull down wide grip</td><td>4</td><td>8–12</td><td>9</td><td>82 kg</td><td class="nt">Lats. Full stretch, drive elbows down. From your log: 84kg×4 top set.</td></tr><tr><td class="exn">Cable seated row</td><td>3</td><td>8–12</td><td>9</td><td>80 kg</td><td class="nt">Mid-back thickness. From your log: 90kg×4 top set.</td></tr><tr><td class="exn">Reverse machine fly</td><td>4</td><td>15–20</td><td>10</td><td>25 kg</td><td class="nt">Rear delts — 2nd weekly hit.</td></tr><tr><td class="exn">Dumbbell Hammer Curl</td><td>3</td><td>10–15</td><td>9</td><td>17.5 kg</td><td class="nt">Brachialis + forearm — adds arm thickness.</td></tr><tr><td class="exn">Cable straight arm pulldown</td><td>3</td><td>12–15</td><td>10</td><td>—</td><td class="nt">Lats in stretch, low fatigue finisher.</td></tr><tr><td class="exn">Barbell wrist curl on knees</td><td>3</td><td>12–20</td><td>10</td><td>30 kg</td><td class="nt">FOREARM (flexor) — 3 sets, heavy day since grip is already primed.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 3 · Legs A — Quad-Biased Maintenance</h4>
+<p class="daydesc">Heavy but submaximal. Your 74cm quads are a strong point — protect them, don't chase growth.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Barbell full squat</td><td>3</td><td>6–10</td><td>8</td><td>110 kg</td><td class="nt">Heavy maintenance. From your log: 150×4 top. Stay 2-3 reps shy of failure.</td></tr><tr><td class="exn">Leg press machine normal stance</td><td>3</td><td>10–15</td><td>9</td><td>140 kg</td><td class="nt">Quad volume, controlled. Your PR ~170kg.</td></tr><tr><td class="exn">Lever Leg Extension</td><td>2</td><td>12–18</td><td>10</td><td>80 kg</td><td class="nt">Quad finisher. Full ROM, no swing.</td></tr><tr><td class="exn">Hanging knee raises</td><td>3</td><td>10–20</td><td>10</td><td>—</td><td class="nt">Abs. Slow, no swing.</td></tr><tr><td class="exn">Russian twist</td><td>3</td><td>15–25</td><td>10</td><td>16 kg</td><td class="nt">Obliques — helps classic waist line.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 4 · Weak-Point Specialization A — Delts + Biceps</h4>
+<p class="daydesc">The make-or-break day. Multiple angles on side + rear delts and biceps while fresh. Extensor finisher balances all the biceps flexor work.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Cable lateral raises</strong> <span class="wp">weak-point</span></td><td>5</td><td>12–20</td><td>10</td><td>9 kg</td><td class="nt">WEAK POINT — 2nd side-delt hit, heavier bias.</td></tr><tr><td class="exn">Cable reverse fly on crossover</td><td>5</td><td>15–20</td><td>10</td><td>—</td><td class="nt">Rear delts — different angle vs machine.</td></tr><tr><td class="exn">Leaning Dumbbell Lateral Raise</td><td>4</td><td>12–20</td><td>10</td><td>10 kg</td><td class="nt">Lean away for constant tension on side delt. 3rd angle.</td></tr><tr><td class="exn">Barbell preacher curl</td><td>4</td><td>8–12</td><td>9</td><td>38 kg</td><td class="nt">Biceps peak/brachialis under constant load. Your PR: 44×4.</td></tr><tr><td class="exn">Biceps curl cable</td><td>4</td><td>10–15</td><td>10</td><td>—</td><td class="nt">Constant-tension curl. Squeeze hard at top.</td></tr><tr><td class="exn">Dumbbell Reverse Wrist Curl</td><td>3</td><td>12–20</td><td>10</td><td>12 kg</td><td class="nt">FOREARM (extensor) — 3 sets, balances the biceps volume.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 5 · Chest Sternal Bias + Back Thickness</h4>
+<p class="daydesc">Mid-chest / sternal squeeze work — the "middle chest" separation you asked about. Reality: it's 60% body fat, 40% muscle. This trains the fibers; the cut reveals them.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Pec deck fly machine</td><td>4</td><td>12–18</td><td>10</td><td>—</td><td class="nt">STERNAL SQUEEZE. Peak-contraction on the inside. Your log: 32.5kg×4 top.</td></tr><tr><td class="exn">Dumbbell Bench Press</td><td>3</td><td>8–12</td><td>9</td><td>30 kg</td><td class="nt">Mid-chest pressing volume. DBs give better stretch than BB.</td></tr><tr><td class="exn">Cable machine low to high</td><td>3</td><td>12–15</td><td>10</td><td>—</td><td class="nt">Upper-chest fly for angle balance.</td></tr><tr><td class="exn">Cable seated row</td><td>3</td><td>10–12</td><td>9</td><td>78 kg</td><td class="nt">Back thickness — hold not build.</td></tr><tr><td class="exn">Cable lateral raises</td><td>4</td><td>15–20</td><td>10</td><td>8 kg</td><td class="nt">Side delt — 3rd weekly hit for width.</td></tr><tr><td class="exn">Barbell wrist curl on knees</td><td>3</td><td>12–20</td><td>10</td><td>32 kg</td><td class="nt">FOREARM (flexor) — 3 sets, chest+back day has moderate grip use.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 6 · Push B — Mid Chest &amp; Delts (Different Angles)</h4>
+<p class="daydesc">Rotate exercises so nothing goes stale. Machine lateral + DB incline hits shoulders and chest at fresh angles. No direct forearm on this day — no grip demand.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Machine lateral raise</strong> <span class="wp">weak-point</span></td><td>5</td><td>12–20</td><td>10</td><td>—</td><td class="nt">WEAK POINT — machine angle, super strict, no traps.</td></tr><tr><td class="exn">Dumbbell Incline Bench Press</td><td>4</td><td>8–12</td><td>9</td><td>32 kg</td><td class="nt">Upper chest, DB stretch. Your log: 40kg×4-10 tops.</td></tr><tr><td class="exn">Chest Press Machine</td><td>3</td><td>8–12</td><td>9</td><td>—</td><td class="nt">Mid-chest pressing — easy overload target.</td></tr><tr><td class="exn">Pec deck fly machine</td><td>3</td><td>12–18</td><td>10</td><td>—</td><td class="nt">Sternal squeeze — 2nd weekly mid-chest hit.</td></tr><tr><td class="exn">Dumbbell Chest Supported Lateral Raises</td><td>4</td><td>15–20</td><td>10</td><td>8 kg</td><td class="nt">Chest-supported = zero cheating. Pure side-delt.</td></tr><tr><td class="exn">Cable triceps overhead extension (ez bar)</td><td>2</td><td>10–15</td><td>9</td><td>—</td><td class="nt">Triceps long-head — minimal maintenance.</td></tr><tr><td class="exn">Dumbbell Over Bench Reverse Wrist Curl</td><td>2</td><td>12–20</td><td>9</td><td>10 kg</td><td class="nt">FOREARM (extensor) — over bench, wrist unsupported for full ROM. Balances flexor days.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 7 · Pull B — Biceps Peak &amp; Back Thickness</h4>
+<p class="daydesc">Different curl and row variations. Biceps hit again with peak-contraction bias. Extensor forearm work balances the pull volume.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Barbell preacher curl</strong> <span class="wp">weak-point</span></td><td>5</td><td>8–12</td><td>9</td><td>40 kg</td><td class="nt">WEAK POINT — heavier preacher for load progression.</td></tr><tr><td class="exn">Lat pull down close grip</td><td>3</td><td>8–12</td><td>9</td><td>78 kg</td><td class="nt">Width, neutral grip. Your log: 90kg×10.5 top.</td></tr><tr><td class="exn">Dumbbell One Arm Row (rack support)</td><td>3</td><td>8–12</td><td>9</td><td>30 kg</td><td class="nt">Unilateral back thickness. Your log: 40kg×8-11.</td></tr><tr><td class="exn">Cable reverse fly on crossover</td><td>4</td><td>15–20</td><td>10</td><td>—</td><td class="nt">Rear delts — 3rd weekly hit.</td></tr><tr><td class="exn">Spider curl dumbbells simultaneous</td><td>4</td><td>10–15</td><td>10</td><td>12 kg</td><td class="nt">Short-head peak in shortened position.</td></tr><tr><td class="exn">Barbell reverse biceps curl</td><td>2</td><td>12–15</td><td>10</td><td>25 kg</td><td class="nt">Brachialis + forearm extensors.</td></tr><tr><td class="exn">Dumbbell Reverse Wrist Curl</td><td>2</td><td>12–20</td><td>10</td><td>12 kg</td><td class="nt">FOREARM (extensor) — 2 sets since reverse curl already hit extensors.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 8 · Legs B — Hamstring Focus + Bonus Delts</h4>
+<p class="daydesc">Posterior chain focus — your RDL is way behind your squat (62kg vs 150kg). Bonus side-delt hit if recovered. Direct forearm flexor finisher — no straps allowed here (real grip work, not carry).</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Barbell romanian deadlift</td><td>4</td><td>8–12</td><td>9</td><td>65 kg</td><td class="nt">HAMSTRINGS — big deficit vs squat. Progressive overload target.</td></tr><tr><td class="exn">Seated leg curl machine</td><td>3</td><td>10–15</td><td>10</td><td>65 kg</td><td class="nt">Hamstring isolation. Your log: 75-80kg top set.</td></tr><tr><td class="exn">Lying leg curl machine</td><td>2</td><td>12–18</td><td>10</td><td>—</td><td class="nt">2nd hamstring angle — different length.</td></tr><tr><td class="exn">Cable lateral raises</td><td>4</td><td>15–20</td><td>10</td><td>8 kg</td><td class="nt">BONUS 4th-5th weekly side-delt volume.</td></tr><tr><td class="exn">Abdominal Crunches Machine</td><td>3</td><td>12–20</td><td>10</td><td>—</td><td class="nt">Weighted abs. Your log: 65kg×20.</td></tr><tr><td class="exn">Dumbbell Over Bench Wrist Curl</td><td>3</td><td>12–20</td><td>9</td><td>12 kg</td><td class="nt">FOREARM (flexor) — over bench for full ROM. NO STRAPS, direct flexor work.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 9 · Weak-Point Specialization B — Different Angles</h4>
+<p class="daydesc">Same emphasis as Day 4, different exercises. This is what stops boredom while pounding weak points. Flexor forearm work at end.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Leaning Dumbbell Lateral Raise</td><td>5</td><td>12–20</td><td>10</td><td>10 kg</td><td class="nt">Lean side-delt — heavier bias, different from Day 4.</td></tr><tr><td class="exn">Dumbbell Incline Rear Lateral Raise</td><td>5</td><td>15–20</td><td>10</td><td>10 kg</td><td class="nt">Rear delts, chest-supported strict form. NO cheating.</td></tr><tr><td class="exn">Machine lateral raise</td><td>4</td><td>12–15</td><td>10</td><td>—</td><td class="nt">3rd side-delt angle in the rotation.</td></tr><tr><td class="exn">Incline dumbbell curl</td><td>4</td><td>10–15</td><td>10</td><td>15 kg</td><td class="nt">Biceps stretch — 2nd hit this rotation.</td></tr><tr><td class="exn">Biceps curl cable</td><td>4</td><td>10–15</td><td>10</td><td>—</td><td class="nt">Cable curl — different from preacher, constant tension.</td></tr><tr><td class="exn">Barbell wrist curl on knees</td><td>3</td><td>12–20</td><td>10</td><td>32 kg</td><td class="nt">FOREARM (flexor) — 3 sets. Progressive load target this phase.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 10 · Push/Pull Upper Hybrid — Volume Finisher</h4>
+<p class="daydesc">High-rep pump session across all upper-body weak points. Closes the 10-day rotation on a metabolic high. Extensor work balances the flexor emphasis on other days.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Cable lateral raises</td><td>5</td><td>15–20</td><td>10</td><td>8 kg</td><td class="nt">Side delt — final hit of rotation. Highest rep range.</td></tr><tr><td class="exn">Dumbbell fly incline bench</td><td>3</td><td>12–15</td><td>10</td><td>15 kg</td><td class="nt">Upper-chest fly. Your log: 17.5kg tops.</td></tr><tr><td class="exn">Cable straight arm pulldown</td><td>3</td><td>12–15</td><td>10</td><td>—</td><td class="nt">Lat detail, high rep, low fatigue.</td></tr><tr><td class="exn">Dumbbell Hammer Curl</td><td>3</td><td>10–15</td><td>10</td><td>17.5 kg</td><td class="nt">Brachialis + forearm — pump finisher.</td></tr><tr><td class="exn">Cable reverse fly on crossover</td><td>4</td><td>15–20</td><td>10</td><td>—</td><td class="nt">Rear delts — final hit.</td></tr><tr><td class="exn">Dumbbell Reverse Wrist Curl</td><td>3</td><td>12–20</td><td>10</td><td>12 kg</td><td class="nt">FOREARM (extensor) — 3 sets, final extensor volume of rotation.</td></tr></tbody></table>
+</div>
+</details>
+<details class="prog" style="--c:#a855f7">
+<summary><span class="ptag" style="background:#a855f7">Phase 3</span> Lean-Gaining Bridge <span class="pwk">Months ~15–30 · 5 days/wk · 10-day rotation</span></summary>
+<p class="ptagline">Build the quality muscle judges score, in a slight surplus</p>
+<div class="import">📲 <strong>Get it into NoRestNest:</strong> tap <strong>Copy</strong>, then in the app go to <strong>Programs → + → Import JSON</strong>, paste, and hit Import. (Or <strong>Download</strong> to save the file.) The plan is a <b>10-day rotation</b>: sessions cycle in order regardless of week. <b>Loads shown are SEED values only</b> for the app's first fill — after that the app's progression suggester takes over from your logged history.
+<div class="btns"><button class="btn copy" onclick="copyProg('p3',this)">⧉ Copy</button><button class="btn" onclick="dlProg('p3')">⬇ Download</button></div></div>
+<div class="profchip" style="border-left:3px solid #ef4444"><strong>Set in app after import →</strong> Program Detail → Progression Profile = <b style="color:#ef4444;text-transform:uppercase">aggressive</b>. <span style="color:var(--mut)">Slight surplus + growth phase — push loads (Easy +10%) to drive overload.</span></div>
+<p class="pdesc">AFTER you reach ~12-15% BF (~month 15+). You cannot diet onto a natural stage — you must BUILD muscle first. Same 10-day rotation, +1 set on weak points, heavier rep ranges on compounds (5-8 reps returning). Slight surplus (+150-250 kcal, gain ~0.6-1% BW/MONTH). Protein 200-220g. Cardio drops to 2×/wk. Deload every 5-6 weeks. This is where the biceps, delts AND forearms actually GROW — the deficit protects them, the surplus builds them. Loads are SEED values only — the app's progression suggester takes over once you log real sets and drives actual progression from your history.</p>
+<div class="day">
+<h4>Day 1 · Push A — Upper Chest &amp; Side Delts</h4>
+<p class="daydesc">Weak-point bias: side delts open the session while fresh, then upper-chest press. Triceps minimal. Brachioradialis finisher.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Cable lateral raises</strong> <span class="wp">weak-point</span></td><td>5</td><td>12–20</td><td>8</td><td>8 kg</td><td class="nt">WEAK POINT #1. Low pulley, big stretch at bottom. Last set: lengthened partials.</td></tr><tr><td class="exn">Barbell incline bench press</td><td>4</td><td>6–10</td><td>7</td><td>72 kg</td><td class="nt">Upper chest anchor. ~30° bench. Controlled 2s eccentric.</td></tr><tr><td class="exn">Cable machine low to high</td><td>3</td><td>12–18</td><td>8</td><td>—</td><td class="nt">Clavicular fly arc. Squeeze at top.</td></tr><tr><td class="exn">Dumbbell Seated Shoulder Press</td><td>3</td><td>8–12</td><td>8</td><td>22 kg</td><td class="nt">Delt mass — overhead pressing.</td></tr><tr><td class="exn">Reverse machine fly</td><td>4</td><td>15–20</td><td>9</td><td>25 kg</td><td class="nt">Rear delts. Slow, feel the squeeze.</td></tr><tr><td class="exn">Cable triceps push down ez bar</td><td>2</td><td>12–15</td><td>8</td><td>—</td><td class="nt">Triceps maintenance — you already have big tris.</td></tr><tr><td class="exn">Dumbbell Seated Neutral Wrist Curl</td><td>2</td><td>12–15</td><td>9</td><td>12 kg</td><td class="nt">FOREARM (neutral grip) — brachioradialis focus. Placed at end.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 2 · Pull A — Biceps Stretch &amp; Back Width</h4>
+<p class="daydesc">Biceps first while fresh — lengthened-position bias (weak point). Back width via wide pulldown. Heavy flexor work at end after all the grip demand.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Incline dumbbell curl</strong> <span class="wp">weak-point</span></td><td>5</td><td>10–15</td><td>8</td><td>15 kg</td><td class="nt">WEAK POINT. Shoulders behind body for max biceps stretch. 2s eccentric.</td></tr><tr><td class="exn">Lat pull down wide grip</td><td>4</td><td>8–12</td><td>8</td><td>82 kg</td><td class="nt">Lats. Full stretch, drive elbows down. From your log: 84kg×4 top set.</td></tr><tr><td class="exn">Cable seated row</td><td>3</td><td>8–12</td><td>8</td><td>80 kg</td><td class="nt">Mid-back thickness. From your log: 90kg×4 top set.</td></tr><tr><td class="exn">Reverse machine fly</td><td>4</td><td>15–20</td><td>9</td><td>25 kg</td><td class="nt">Rear delts — 2nd weekly hit.</td></tr><tr><td class="exn">Dumbbell Hammer Curl</td><td>3</td><td>10–15</td><td>8</td><td>17.5 kg</td><td class="nt">Brachialis + forearm — adds arm thickness.</td></tr><tr><td class="exn">Cable straight arm pulldown</td><td>3</td><td>12–15</td><td>9</td><td>—</td><td class="nt">Lats in stretch, low fatigue finisher.</td></tr><tr><td class="exn">Barbell wrist curl on knees</td><td>3</td><td>12–20</td><td>9</td><td>30 kg</td><td class="nt">FOREARM (flexor) — 3 sets, heavy day since grip is already primed.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 3 · Legs A — Quad-Biased Maintenance</h4>
+<p class="daydesc">Heavy but submaximal. Your 74cm quads are a strong point — protect them, don't chase growth.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Barbell full squat</td><td>3</td><td>6–10</td><td>7</td><td>110 kg</td><td class="nt">Heavy maintenance. From your log: 150×4 top. Stay 2-3 reps shy of failure.</td></tr><tr><td class="exn">Leg press machine normal stance</td><td>3</td><td>10–15</td><td>8</td><td>140 kg</td><td class="nt">Quad volume, controlled. Your PR ~170kg.</td></tr><tr><td class="exn">Lever Leg Extension</td><td>2</td><td>12–18</td><td>9</td><td>80 kg</td><td class="nt">Quad finisher. Full ROM, no swing.</td></tr><tr><td class="exn">Hanging knee raises</td><td>3</td><td>10–20</td><td>9</td><td>—</td><td class="nt">Abs. Slow, no swing.</td></tr><tr><td class="exn">Russian twist</td><td>3</td><td>15–25</td><td>9</td><td>16 kg</td><td class="nt">Obliques — helps classic waist line.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 4 · Weak-Point Specialization A — Delts + Biceps</h4>
+<p class="daydesc">The make-or-break day. Multiple angles on side + rear delts and biceps while fresh. Extensor finisher balances all the biceps flexor work.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Cable lateral raises</strong> <span class="wp">weak-point</span></td><td>5</td><td>12–20</td><td>9</td><td>9 kg</td><td class="nt">WEAK POINT — 2nd side-delt hit, heavier bias.</td></tr><tr><td class="exn">Cable reverse fly on crossover</td><td>5</td><td>15–20</td><td>9</td><td>—</td><td class="nt">Rear delts — different angle vs machine.</td></tr><tr><td class="exn">Leaning Dumbbell Lateral Raise</td><td>4</td><td>12–20</td><td>9</td><td>10 kg</td><td class="nt">Lean away for constant tension on side delt. 3rd angle.</td></tr><tr><td class="exn">Barbell preacher curl</td><td>4</td><td>8–12</td><td>8</td><td>38 kg</td><td class="nt">Biceps peak/brachialis under constant load. Your PR: 44×4.</td></tr><tr><td class="exn">Biceps curl cable</td><td>4</td><td>10–15</td><td>9</td><td>—</td><td class="nt">Constant-tension curl. Squeeze hard at top.</td></tr><tr><td class="exn">Dumbbell Reverse Wrist Curl</td><td>3</td><td>12–20</td><td>9</td><td>12 kg</td><td class="nt">FOREARM (extensor) — 3 sets, balances the biceps volume.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 5 · Chest Sternal Bias + Back Thickness</h4>
+<p class="daydesc">Mid-chest / sternal squeeze work — the "middle chest" separation you asked about. Reality: it's 60% body fat, 40% muscle. This trains the fibers; the cut reveals them.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Pec deck fly machine</td><td>4</td><td>12–18</td><td>9</td><td>—</td><td class="nt">STERNAL SQUEEZE. Peak-contraction on the inside. Your log: 32.5kg×4 top.</td></tr><tr><td class="exn">Dumbbell Bench Press</td><td>3</td><td>8–12</td><td>8</td><td>30 kg</td><td class="nt">Mid-chest pressing volume. DBs give better stretch than BB.</td></tr><tr><td class="exn">Cable machine low to high</td><td>3</td><td>12–15</td><td>9</td><td>—</td><td class="nt">Upper-chest fly for angle balance.</td></tr><tr><td class="exn">Cable seated row</td><td>3</td><td>10–12</td><td>8</td><td>78 kg</td><td class="nt">Back thickness — hold not build.</td></tr><tr><td class="exn">Cable lateral raises</td><td>4</td><td>15–20</td><td>9</td><td>8 kg</td><td class="nt">Side delt — 3rd weekly hit for width.</td></tr><tr><td class="exn">Barbell wrist curl on knees</td><td>3</td><td>12–20</td><td>9</td><td>32 kg</td><td class="nt">FOREARM (flexor) — 3 sets, chest+back day has moderate grip use.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 6 · Push B — Mid Chest &amp; Delts (Different Angles)</h4>
+<p class="daydesc">Rotate exercises so nothing goes stale. Machine lateral + DB incline hits shoulders and chest at fresh angles. No direct forearm on this day — no grip demand.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Machine lateral raise</strong> <span class="wp">weak-point</span></td><td>5</td><td>12–20</td><td>9</td><td>—</td><td class="nt">WEAK POINT — machine angle, super strict, no traps.</td></tr><tr><td class="exn">Dumbbell Incline Bench Press</td><td>4</td><td>8–12</td><td>8</td><td>32 kg</td><td class="nt">Upper chest, DB stretch. Your log: 40kg×4-10 tops.</td></tr><tr><td class="exn">Chest Press Machine</td><td>3</td><td>8–12</td><td>8</td><td>—</td><td class="nt">Mid-chest pressing — easy overload target.</td></tr><tr><td class="exn">Pec deck fly machine</td><td>3</td><td>12–18</td><td>9</td><td>—</td><td class="nt">Sternal squeeze — 2nd weekly mid-chest hit.</td></tr><tr><td class="exn">Dumbbell Chest Supported Lateral Raises</td><td>4</td><td>15–20</td><td>9</td><td>8 kg</td><td class="nt">Chest-supported = zero cheating. Pure side-delt.</td></tr><tr><td class="exn">Cable triceps overhead extension (ez bar)</td><td>2</td><td>10–15</td><td>8</td><td>—</td><td class="nt">Triceps long-head — minimal maintenance.</td></tr><tr><td class="exn">Dumbbell Over Bench Reverse Wrist Curl</td><td>2</td><td>12–20</td><td>9</td><td>10 kg</td><td class="nt">FOREARM (extensor) — over bench, wrist unsupported for full ROM. Balances flexor days.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 7 · Pull B — Biceps Peak &amp; Back Thickness</h4>
+<p class="daydesc">Different curl and row variations. Biceps hit again with peak-contraction bias. Extensor forearm work balances the pull volume.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Barbell preacher curl</strong> <span class="wp">weak-point</span></td><td>5</td><td>8–12</td><td>8</td><td>40 kg</td><td class="nt">WEAK POINT — heavier preacher for load progression.</td></tr><tr><td class="exn">Lat pull down close grip</td><td>3</td><td>8–12</td><td>8</td><td>78 kg</td><td class="nt">Width, neutral grip. Your log: 90kg×10.5 top.</td></tr><tr><td class="exn">Dumbbell One Arm Row (rack support)</td><td>3</td><td>8–12</td><td>8</td><td>30 kg</td><td class="nt">Unilateral back thickness. Your log: 40kg×8-11.</td></tr><tr><td class="exn">Cable reverse fly on crossover</td><td>4</td><td>15–20</td><td>9</td><td>—</td><td class="nt">Rear delts — 3rd weekly hit.</td></tr><tr><td class="exn">Spider curl dumbbells simultaneous</td><td>4</td><td>10–15</td><td>9</td><td>12 kg</td><td class="nt">Short-head peak in shortened position.</td></tr><tr><td class="exn">Barbell reverse biceps curl</td><td>2</td><td>12–15</td><td>9</td><td>25 kg</td><td class="nt">Brachialis + forearm extensors.</td></tr><tr><td class="exn">Dumbbell Reverse Wrist Curl</td><td>2</td><td>12–20</td><td>9</td><td>12 kg</td><td class="nt">FOREARM (extensor) — 2 sets since reverse curl already hit extensors.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 8 · Legs B — Hamstring Focus + Bonus Delts</h4>
+<p class="daydesc">Posterior chain focus — your RDL is way behind your squat (62kg vs 150kg). Bonus side-delt hit if recovered. Direct forearm flexor finisher — no straps allowed here (real grip work, not carry).</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Barbell romanian deadlift</td><td>4</td><td>8–12</td><td>8</td><td>65 kg</td><td class="nt">HAMSTRINGS — big deficit vs squat. Progressive overload target.</td></tr><tr><td class="exn">Seated leg curl machine</td><td>3</td><td>10–15</td><td>9</td><td>65 kg</td><td class="nt">Hamstring isolation. Your log: 75-80kg top set.</td></tr><tr><td class="exn">Lying leg curl machine</td><td>2</td><td>12–18</td><td>9</td><td>—</td><td class="nt">2nd hamstring angle — different length.</td></tr><tr><td class="exn">Cable lateral raises</td><td>4</td><td>15–20</td><td>9</td><td>8 kg</td><td class="nt">BONUS 4th-5th weekly side-delt volume.</td></tr><tr><td class="exn">Abdominal Crunches Machine</td><td>3</td><td>12–20</td><td>9</td><td>—</td><td class="nt">Weighted abs. Your log: 65kg×20.</td></tr><tr><td class="exn">Dumbbell Over Bench Wrist Curl</td><td>3</td><td>12–20</td><td>9</td><td>12 kg</td><td class="nt">FOREARM (flexor) — over bench for full ROM. NO STRAPS, direct flexor work.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 9 · Weak-Point Specialization B — Different Angles</h4>
+<p class="daydesc">Same emphasis as Day 4, different exercises. This is what stops boredom while pounding weak points. Flexor forearm work at end.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Leaning Dumbbell Lateral Raise</td><td>5</td><td>12–20</td><td>9</td><td>10 kg</td><td class="nt">Lean side-delt — heavier bias, different from Day 4.</td></tr><tr><td class="exn">Dumbbell Incline Rear Lateral Raise</td><td>5</td><td>15–20</td><td>9</td><td>10 kg</td><td class="nt">Rear delts, chest-supported strict form. NO cheating.</td></tr><tr><td class="exn">Machine lateral raise</td><td>4</td><td>12–15</td><td>9</td><td>—</td><td class="nt">3rd side-delt angle in the rotation.</td></tr><tr><td class="exn">Incline dumbbell curl</td><td>4</td><td>10–15</td><td>9</td><td>15 kg</td><td class="nt">Biceps stretch — 2nd hit this rotation.</td></tr><tr><td class="exn">Biceps curl cable</td><td>4</td><td>10–15</td><td>9</td><td>—</td><td class="nt">Cable curl — different from preacher, constant tension.</td></tr><tr><td class="exn">Barbell wrist curl on knees</td><td>3</td><td>12–20</td><td>9</td><td>32 kg</td><td class="nt">FOREARM (flexor) — 3 sets. Progressive load target this phase.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 10 · Push/Pull Upper Hybrid — Volume Finisher</h4>
+<p class="daydesc">High-rep pump session across all upper-body weak points. Closes the 10-day rotation on a metabolic high. Extensor work balances the flexor emphasis on other days.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Cable lateral raises</td><td>5</td><td>15–20</td><td>9</td><td>8 kg</td><td class="nt">Side delt — final hit of rotation. Highest rep range.</td></tr><tr><td class="exn">Dumbbell fly incline bench</td><td>3</td><td>12–15</td><td>9</td><td>15 kg</td><td class="nt">Upper-chest fly. Your log: 17.5kg tops.</td></tr><tr><td class="exn">Cable straight arm pulldown</td><td>3</td><td>12–15</td><td>9</td><td>—</td><td class="nt">Lat detail, high rep, low fatigue.</td></tr><tr><td class="exn">Dumbbell Hammer Curl</td><td>3</td><td>10–15</td><td>9</td><td>17.5 kg</td><td class="nt">Brachialis + forearm — pump finisher.</td></tr><tr><td class="exn">Cable reverse fly on crossover</td><td>4</td><td>15–20</td><td>9</td><td>—</td><td class="nt">Rear delts — final hit.</td></tr><tr><td class="exn">Dumbbell Reverse Wrist Curl</td><td>3</td><td>12–20</td><td>9</td><td>12 kg</td><td class="nt">FOREARM (extensor) — 3 sets, final extensor volume of rotation.</td></tr></tbody></table>
+</div>
+</details>
+<details class="prog" style="--c:#f59e0b">
+<summary><span class="ptag" style="background:#f59e0b">Phase 4</span> Contest Prep / Peak Physique <span class="pwk">Final 16–24 wk · 5 days/wk · 10-day rotation</span></summary>
+<p class="ptagline">12% → 5–6% BF, hold all muscle, posing, peak week</p>
+<div class="import">📲 <strong>Get it into NoRestNest:</strong> tap <strong>Copy</strong>, then in the app go to <strong>Programs → + → Import JSON</strong>, paste, and hit Import. (Or <strong>Download</strong> to save the file.) The plan is a <b>10-day rotation</b>: sessions cycle in order regardless of week. <b>Loads shown are SEED values only</b> for the app's first fill — after that the app's progression suggester takes over from your logged history.
+<div class="btns"><button class="btn copy" onclick="copyProg('p4',this)">⧉ Copy</button><button class="btn" onclick="dlProg('p4')">⬇ Download</button></div></div>
+<div class="profchip" style="border-left:3px solid #64748b"><strong>Set in app after import →</strong> Program Detail → Progression Profile = <b style="color:#64748b;text-transform:uppercase">conservative</b>. <span style="color:var(--mut)">Deficit + recovery limited — chase preservation, not PRs (Easy +5%).</span></div>
+<p class="pdesc">THE FINAL 16-24 WEEKS, begun only at ~10-12% BF. Goal: strip last fat while HOLDING every gram of muscle. Same 10-day rotation, volume TRIMMED (-1 set from most maintenance exercises toward MEV/MV) but LOADS STAY HEAVY (&gt;=75% — heavy maintenance preserves muscle). More pump work on isolation for stage detail. Weak points still get priority. Forearms kept full-volume — they show on stage. Diet: 0.5%/wk loss, protein 210-230g, refeeds/diet-breaks as needed, cardio ramps (LISS 4-6× + 12-15k steps) — add cardio only when the scale stalls. POSE 4-7×/week. Mock peak week 2-4 wks out. Never crash diet. Loads are SEED values only — the app's progression suggester takes over once you log real sets and drives actual progression from your history.</p>
+<div class="day">
+<h4>Day 1 · Push A — Upper Chest &amp; Side Delts</h4>
+<p class="daydesc">Weak-point bias: side delts open the session while fresh, then upper-chest press. Triceps minimal. Brachioradialis finisher.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Cable lateral raises</strong> <span class="wp">weak-point</span></td><td>3</td><td>12–20</td><td>9</td><td>8 kg</td><td class="nt">WEAK POINT #1. Low pulley, big stretch at bottom. Last set: lengthened partials.</td></tr><tr><td class="exn">Barbell incline bench press</td><td>4</td><td>6–10</td><td>8</td><td>72 kg</td><td class="nt">Upper chest anchor. ~30° bench. Controlled 2s eccentric.</td></tr><tr><td class="exn">Cable machine low to high</td><td>3</td><td>12–18</td><td>9</td><td>—</td><td class="nt">Clavicular fly arc. Squeeze at top.</td></tr><tr><td class="exn">Dumbbell Seated Shoulder Press</td><td>3</td><td>8–12</td><td>9</td><td>22 kg</td><td class="nt">Delt mass — overhead pressing.</td></tr><tr><td class="exn">Reverse machine fly</td><td>2</td><td>15–20</td><td>10</td><td>25 kg</td><td class="nt">Rear delts. Slow, feel the squeeze.</td></tr><tr><td class="exn">Cable triceps push down ez bar</td><td>1</td><td>12–15</td><td>9</td><td>—</td><td class="nt">Triceps maintenance — you already have big tris.</td></tr><tr><td class="exn">Dumbbell Seated Neutral Wrist Curl</td><td>2</td><td>12–15</td><td>10</td><td>12 kg</td><td class="nt">FOREARM (neutral grip) — brachioradialis focus. Placed at end.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 2 · Pull A — Biceps Stretch &amp; Back Width</h4>
+<p class="daydesc">Biceps first while fresh — lengthened-position bias (weak point). Back width via wide pulldown. Heavy flexor work at end after all the grip demand.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Incline dumbbell curl</strong> <span class="wp">weak-point</span></td><td>3</td><td>10–15</td><td>9</td><td>15 kg</td><td class="nt">WEAK POINT. Shoulders behind body for max biceps stretch. 2s eccentric.</td></tr><tr><td class="exn">Lat pull down wide grip</td><td>4</td><td>8–12</td><td>9</td><td>82 kg</td><td class="nt">Lats. Full stretch, drive elbows down. From your log: 84kg×4 top set.</td></tr><tr><td class="exn">Cable seated row</td><td>3</td><td>8–12</td><td>9</td><td>80 kg</td><td class="nt">Mid-back thickness. From your log: 90kg×4 top set.</td></tr><tr><td class="exn">Reverse machine fly</td><td>2</td><td>15–20</td><td>10</td><td>25 kg</td><td class="nt">Rear delts — 2nd weekly hit.</td></tr><tr><td class="exn">Dumbbell Hammer Curl</td><td>3</td><td>10–15</td><td>9</td><td>17.5 kg</td><td class="nt">Brachialis + forearm — adds arm thickness.</td></tr><tr><td class="exn">Cable straight arm pulldown</td><td>3</td><td>12–15</td><td>10</td><td>—</td><td class="nt">Lats in stretch, low fatigue finisher.</td></tr><tr><td class="exn">Barbell wrist curl on knees</td><td>3</td><td>12–20</td><td>10</td><td>30 kg</td><td class="nt">FOREARM (flexor) — 3 sets, heavy day since grip is already primed.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 3 · Legs A — Quad-Biased Maintenance</h4>
+<p class="daydesc">Heavy but submaximal. Your 74cm quads are a strong point — protect them, don't chase growth.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Barbell full squat</td><td>2</td><td>6–10</td><td>8</td><td>110 kg</td><td class="nt">Heavy maintenance. From your log: 150×4 top. Stay 2-3 reps shy of failure.</td></tr><tr><td class="exn">Leg press machine normal stance</td><td>3</td><td>10–15</td><td>9</td><td>140 kg</td><td class="nt">Quad volume, controlled. Your PR ~170kg.</td></tr><tr><td class="exn">Lever Leg Extension</td><td>2</td><td>12–18</td><td>10</td><td>80 kg</td><td class="nt">Quad finisher. Full ROM, no swing.</td></tr><tr><td class="exn">Hanging knee raises</td><td>3</td><td>10–20</td><td>10</td><td>—</td><td class="nt">Abs. Slow, no swing.</td></tr><tr><td class="exn">Russian twist</td><td>3</td><td>15–25</td><td>10</td><td>16 kg</td><td class="nt">Obliques — helps classic waist line.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 4 · Weak-Point Specialization A — Delts + Biceps</h4>
+<p class="daydesc">The make-or-break day. Multiple angles on side + rear delts and biceps while fresh. Extensor finisher balances all the biceps flexor work.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Cable lateral raises</strong> <span class="wp">weak-point</span></td><td>3</td><td>12–20</td><td>10</td><td>9 kg</td><td class="nt">WEAK POINT — 2nd side-delt hit, heavier bias.</td></tr><tr><td class="exn">Cable reverse fly on crossover</td><td>3</td><td>15–20</td><td>10</td><td>—</td><td class="nt">Rear delts — different angle vs machine.</td></tr><tr><td class="exn">Leaning Dumbbell Lateral Raise</td><td>2</td><td>12–20</td><td>10</td><td>10 kg</td><td class="nt">Lean away for constant tension on side delt. 3rd angle.</td></tr><tr><td class="exn">Barbell preacher curl</td><td>2</td><td>8–12</td><td>9</td><td>38 kg</td><td class="nt">Biceps peak/brachialis under constant load. Your PR: 44×4.</td></tr><tr><td class="exn">Biceps curl cable</td><td>2</td><td>10–15</td><td>10</td><td>—</td><td class="nt">Constant-tension curl. Squeeze hard at top.</td></tr><tr><td class="exn">Dumbbell Reverse Wrist Curl</td><td>3</td><td>12–20</td><td>10</td><td>12 kg</td><td class="nt">FOREARM (extensor) — 3 sets, balances the biceps volume.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 5 · Chest Sternal Bias + Back Thickness</h4>
+<p class="daydesc">Mid-chest / sternal squeeze work — the "middle chest" separation you asked about. Reality: it's 60% body fat, 40% muscle. This trains the fibers; the cut reveals them.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Pec deck fly machine</td><td>4</td><td>12–18</td><td>10</td><td>—</td><td class="nt">STERNAL SQUEEZE. Peak-contraction on the inside. Your log: 32.5kg×4 top.</td></tr><tr><td class="exn">Dumbbell Bench Press</td><td>3</td><td>8–12</td><td>9</td><td>30 kg</td><td class="nt">Mid-chest pressing volume. DBs give better stretch than BB.</td></tr><tr><td class="exn">Cable machine low to high</td><td>3</td><td>12–15</td><td>10</td><td>—</td><td class="nt">Upper-chest fly for angle balance.</td></tr><tr><td class="exn">Cable seated row</td><td>3</td><td>10–12</td><td>9</td><td>78 kg</td><td class="nt">Back thickness — hold not build.</td></tr><tr><td class="exn">Cable lateral raises</td><td>2</td><td>15–20</td><td>10</td><td>8 kg</td><td class="nt">Side delt — 3rd weekly hit for width.</td></tr><tr><td class="exn">Barbell wrist curl on knees</td><td>3</td><td>12–20</td><td>10</td><td>32 kg</td><td class="nt">FOREARM (flexor) — 3 sets, chest+back day has moderate grip use.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 6 · Push B — Mid Chest &amp; Delts (Different Angles)</h4>
+<p class="daydesc">Rotate exercises so nothing goes stale. Machine lateral + DB incline hits shoulders and chest at fresh angles. No direct forearm on this day — no grip demand.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Machine lateral raise</strong> <span class="wp">weak-point</span></td><td>3</td><td>12–20</td><td>10</td><td>—</td><td class="nt">WEAK POINT — machine angle, super strict, no traps.</td></tr><tr><td class="exn">Dumbbell Incline Bench Press</td><td>4</td><td>8–12</td><td>9</td><td>32 kg</td><td class="nt">Upper chest, DB stretch. Your log: 40kg×4-10 tops.</td></tr><tr><td class="exn">Chest Press Machine</td><td>3</td><td>8–12</td><td>9</td><td>—</td><td class="nt">Mid-chest pressing — easy overload target.</td></tr><tr><td class="exn">Pec deck fly machine</td><td>3</td><td>12–18</td><td>10</td><td>—</td><td class="nt">Sternal squeeze — 2nd weekly mid-chest hit.</td></tr><tr><td class="exn">Dumbbell Chest Supported Lateral Raises</td><td>2</td><td>15–20</td><td>10</td><td>8 kg</td><td class="nt">Chest-supported = zero cheating. Pure side-delt.</td></tr><tr><td class="exn">Cable triceps overhead extension (ez bar)</td><td>1</td><td>10–15</td><td>9</td><td>—</td><td class="nt">Triceps long-head — minimal maintenance.</td></tr><tr><td class="exn">Dumbbell Over Bench Reverse Wrist Curl</td><td>2</td><td>12–20</td><td>9</td><td>10 kg</td><td class="nt">FOREARM (extensor) — over bench, wrist unsupported for full ROM. Balances flexor days.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 7 · Pull B — Biceps Peak &amp; Back Thickness</h4>
+<p class="daydesc">Different curl and row variations. Biceps hit again with peak-contraction bias. Extensor forearm work balances the pull volume.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn"><strong>Barbell preacher curl</strong> <span class="wp">weak-point</span></td><td>3</td><td>8–12</td><td>9</td><td>40 kg</td><td class="nt">WEAK POINT — heavier preacher for load progression.</td></tr><tr><td class="exn">Lat pull down close grip</td><td>3</td><td>8–12</td><td>9</td><td>78 kg</td><td class="nt">Width, neutral grip. Your log: 90kg×10.5 top.</td></tr><tr><td class="exn">Dumbbell One Arm Row (rack support)</td><td>3</td><td>8–12</td><td>9</td><td>30 kg</td><td class="nt">Unilateral back thickness. Your log: 40kg×8-11.</td></tr><tr><td class="exn">Cable reverse fly on crossover</td><td>2</td><td>15–20</td><td>10</td><td>—</td><td class="nt">Rear delts — 3rd weekly hit.</td></tr><tr><td class="exn">Spider curl dumbbells simultaneous</td><td>2</td><td>10–15</td><td>10</td><td>12 kg</td><td class="nt">Short-head peak in shortened position.</td></tr><tr><td class="exn">Barbell reverse biceps curl</td><td>2</td><td>12–15</td><td>10</td><td>25 kg</td><td class="nt">Brachialis + forearm extensors.</td></tr><tr><td class="exn">Dumbbell Reverse Wrist Curl</td><td>2</td><td>12–20</td><td>10</td><td>12 kg</td><td class="nt">FOREARM (extensor) — 2 sets since reverse curl already hit extensors.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 8 · Legs B — Hamstring Focus + Bonus Delts</h4>
+<p class="daydesc">Posterior chain focus — your RDL is way behind your squat (62kg vs 150kg). Bonus side-delt hit if recovered. Direct forearm flexor finisher — no straps allowed here (real grip work, not carry).</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Barbell romanian deadlift</td><td>4</td><td>8–12</td><td>9</td><td>65 kg</td><td class="nt">HAMSTRINGS — big deficit vs squat. Progressive overload target.</td></tr><tr><td class="exn">Seated leg curl machine</td><td>3</td><td>10–15</td><td>10</td><td>65 kg</td><td class="nt">Hamstring isolation. Your log: 75-80kg top set.</td></tr><tr><td class="exn">Lying leg curl machine</td><td>2</td><td>12–18</td><td>10</td><td>—</td><td class="nt">2nd hamstring angle — different length.</td></tr><tr><td class="exn">Cable lateral raises</td><td>2</td><td>15–20</td><td>10</td><td>8 kg</td><td class="nt">BONUS 4th-5th weekly side-delt volume.</td></tr><tr><td class="exn">Abdominal Crunches Machine</td><td>3</td><td>12–20</td><td>10</td><td>—</td><td class="nt">Weighted abs. Your log: 65kg×20.</td></tr><tr><td class="exn">Dumbbell Over Bench Wrist Curl</td><td>3</td><td>12–20</td><td>9</td><td>12 kg</td><td class="nt">FOREARM (flexor) — over bench for full ROM. NO STRAPS, direct flexor work.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 9 · Weak-Point Specialization B — Different Angles</h4>
+<p class="daydesc">Same emphasis as Day 4, different exercises. This is what stops boredom while pounding weak points. Flexor forearm work at end.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Leaning Dumbbell Lateral Raise</td><td>3</td><td>12–20</td><td>10</td><td>10 kg</td><td class="nt">Lean side-delt — heavier bias, different from Day 4.</td></tr><tr><td class="exn">Dumbbell Incline Rear Lateral Raise</td><td>3</td><td>15–20</td><td>10</td><td>10 kg</td><td class="nt">Rear delts, chest-supported strict form. NO cheating.</td></tr><tr><td class="exn">Machine lateral raise</td><td>2</td><td>12–15</td><td>10</td><td>—</td><td class="nt">3rd side-delt angle in the rotation.</td></tr><tr><td class="exn">Incline dumbbell curl</td><td>2</td><td>10–15</td><td>10</td><td>15 kg</td><td class="nt">Biceps stretch — 2nd hit this rotation.</td></tr><tr><td class="exn">Biceps curl cable</td><td>2</td><td>10–15</td><td>10</td><td>—</td><td class="nt">Cable curl — different from preacher, constant tension.</td></tr><tr><td class="exn">Barbell wrist curl on knees</td><td>3</td><td>12–20</td><td>10</td><td>32 kg</td><td class="nt">FOREARM (flexor) — 3 sets. Progressive load target this phase.</td></tr></tbody></table>
+</div>
+<div class="day">
+<h4>Day 10 · Push/Pull Upper Hybrid — Volume Finisher</h4>
+<p class="daydesc">High-rep pump session across all upper-body weak points. Closes the 10-day rotation on a metabolic high. Extensor work balances the flexor emphasis on other days.</p>
+<table class="ex"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RPE</th><th>Seed wt</th><th>Notes</th></tr></thead>
+<tbody><tr><td class="exn">Cable lateral raises</td><td>3</td><td>15–20</td><td>10</td><td>8 kg</td><td class="nt">Side delt — final hit of rotation. Highest rep range.</td></tr><tr><td class="exn">Dumbbell fly incline bench</td><td>3</td><td>12–15</td><td>10</td><td>15 kg</td><td class="nt">Upper-chest fly. Your log: 17.5kg tops.</td></tr><tr><td class="exn">Cable straight arm pulldown</td><td>3</td><td>12–15</td><td>10</td><td>—</td><td class="nt">Lat detail, high rep, low fatigue.</td></tr><tr><td class="exn">Dumbbell Hammer Curl</td><td>3</td><td>10–15</td><td>10</td><td>17.5 kg</td><td class="nt">Brachialis + forearm — pump finisher.</td></tr><tr><td class="exn">Cable reverse fly on crossover</td><td>2</td><td>15–20</td><td>10</td><td>—</td><td class="nt">Rear delts — final hit.</td></tr><tr><td class="exn">Dumbbell Reverse Wrist Curl</td><td>3</td><td>12–20</td><td>10</td><td>12 kg</td><td class="nt">FOREARM (extensor) — 3 sets, final extensor volume of rotation.</td></tr></tbody></table>
+</div>
+</details>
+</section>
+
+<section id="supps">
+<h2><span class="n">6</span>Supplements — your stack, reviewed</h2>
+<p class="sub">You currently take vitamin C, collagen, creatine and beef protein, and feel that's enough. Mostly agreed — but two points genuinely affect the plan's anchor (protein) and are worth acting on.</p>
+<div class="grid g2">
+<div class="box"><h3 class="ok">Your stack — verdict</h3><ul>
+<li><b class="ok">Creatine</b> ✓ — already optimal at 3–5 g/day, every day (incl. through the cut). Nothing to change.</li>
+<li><b>Beef protein</b> — fine for hitting your target; just note it's typically lower in leucine than whey, so lean on <b>whole-food protein</b> (meat, eggs, dairy, fish) as the base and use the powder to top up.</li>
+<li><b>Vitamin C</b> — harmless; minor. Keep if you like it.</li>
+<li class="warn"><b>Collagen ≠ muscle protein.</b> It's very low in leucine and an incomplete protein — it does <b>not</b> count toward your ~210 g target. Great for skin/joints, but don't let it pad the protein number.</li>
+</ul></div>
+<div class="box"><h3>Two worth adding (cheap, real evidence)</h3><ul>
+<li><b>Vitamin D3</b> — 1,000–2,000 IU/day. You're a desk worker with low sun; deficiency is common and hurts recovery/hormones.</li>
+<li><b>Omega-3 (EPA+DHA)</b> — 2–3 g/day. Recovery, joints, cardiovascular — useful given the low cardio base you're building.</li>
+</ul>
+<h3 class="bad" style="margin-top:10px">Don't bother / avoid</h3>
+<ul><li>Fat burners · BCAAs (redundant) · "test boosters"</li><li class="warn">Any prescription diuretic for peak week — dangerous & banned.</li></ul>
+<p style="font-size:.82rem;color:var(--mut);margin-top:8px"><span class="ok">✓ Eligibility:</span> nothing in your stack is a banned substance — but still confirm against your target federation's list before entering.</p></div>
+</div>
+</section>
+
+<section id="comp">
+<h2><span class="n">7</span>Posing, Division & Federation</h2>
+<div class="grid g2">
+<div class="box"><h3>Division — Classic Physique ✓</h3><p style="font-size:.87rem;color:var(--mut)">Best fit for your big legs + good back (Men's Physique hides legs; Open needs even more mass). Note: Classic has a <b>height-linked weight cap</b> — at 181 cm verify the cap for your federation and plan your stage weight to it. Golden-era aesthetic: width, taper, full posing incl. a vacuum/classic pose.</p>
+<p style="font-size:.87rem;color:var(--mut);margin-top:8px"><b>Mandatory poses to learn:</b> front double biceps, side chest, rear double biceps, abs & thighs, + classic pose, and a ~60s routine.</p></div>
+<div class="box note-pos"><h3>Posing & peak week</h3><ul style="font-size:.87rem">
+<li><b>Start posing NOW</b> — 20–30 min/week in the off-season, daily near a show. You can't show what you can't flex; it also improves muscle control & separation.</li>
+<li><b>Peak week</b> = fine-tuning only; be stage-lean 2–3 wk out. Carb deplete→load, keep water/sodium stable for a first-timer, <b>no diuretics</b>. <b>Rehearse a mock peak week</b> 2–4 wk out.</li>
+<li><b>Federations</b> (WNBF/INBF, OCB, etc.) drug-test via polygraph &/or urine with multi-year natural windows — confirm eligibility early.</li>
+</ul></div>
+</div>
+</section>
+
+<section id="week">
+<h2><span class="n">8</span>Example Iteration (Phase 2)</h2>
+<p class="sub">One full 10-day rotation at 5 training sessions per calendar week. Rest days floating around life. Iteration completes in ~14 calendar days.</p>
+<table><thead><tr><th>Iteration Day</th><th>Session</th><th>Cardio / Steps</th><th>Posing</th></tr></thead><tbody>
+<tr><td class="ml">Day 1</td><td>Push A (upper chest + side delts)</td><td>10k steps</td><td>—</td></tr>
+<tr><td class="ml">Day 2</td><td>Pull A (biceps stretch + back width)</td><td>Zone-2 25 min + 10k steps</td><td>5 min</td></tr>
+<tr><td class="ml">Day 3</td><td>Legs A (quad-biased)</td><td>10k steps (skip Zone-2 on leg day)</td><td>—</td></tr>
+<tr><td class="ml">Day 4</td><td>Weak-Point A (delts + biceps spec)</td><td>Zone-2 25 min + 10k steps</td><td>10 min</td></tr>
+<tr><td class="ml">Day 5</td><td>Chest sternal + Back thickness</td><td>10k steps</td><td>—</td></tr>
+<tr><td class="ml">Day 6</td><td>Push B (mid chest + delts other angles)</td><td>Zone-2 25 min + 10k steps</td><td>10 min</td></tr>
+<tr><td class="ml">Day 7</td><td>Pull B (biceps peak + thickness)</td><td>10k steps</td><td>—</td></tr>
+<tr><td class="ml">Day 8</td><td>Legs B (hamstring focus)</td><td>10k steps (skip Zone-2 on leg day)</td><td>—</td></tr>
+<tr><td class="ml">Day 9</td><td>Weak-Point B (different angles)</td><td>Zone-2 25 min + 10k steps</td><td>15 min</td></tr>
+<tr><td class="ml">Day 10</td><td>Push/Pull upper hybrid (volume)</td><td>Zone-2 25 min + 10k steps</td><td>10 min</td></tr>
+</tbody></table>
+<p class="sub" style="margin-top:10px"><b>Rest cadence you control:</b> at 5 sessions/wk, this 10-day pool completes in ~14 calendar days. Rest days fall between whatever training days life allows. When you resume, next in queue is next in the sequence — the app cycles automatically.</p>
+
+<div class="box" style="margin-top:14px;border-left:3px solid var(--purple)">
+<h3>🔧 When to run Deload and Peak Week (separate imported programs)</h3>
+<p style="font-size:.9rem;color:var(--mut);margin-top:6px"><b>Deload block</b> — 5-day mini rotation at half volume + 60% loads + RPE 5-6. Import once, run every <b>5-6 iterations of any main phase</b> (~10-12 calendar weeks of training). Also run any time you accumulate two consecutive iterations with strength going backward. See Section 11 to download <code class="k">deload-block.json</code>.</p>
+<p style="font-size:.9rem;color:var(--mut);margin-top:8px"><b>Peak Week</b> — 7-day protocol used ONLY for the final week before a show. 2 depletion sessions + 4 rest days + 1 optional pump. Diet: low-carb → carb-load. Do a <b>mock peak week 4 weeks out</b> to test your response. See Section 11 to download <code class="k">peak-week.json</code>.</p>
+</div>
+</section>
+
+<section id="gaps" class="gap">
+<h2><span class="n">9</span>Profile Gaps — please fill these</h2>
+<p class="sub">Updated with what you've told me. <span class="ok">✓ resolved:</span> body fat ~30% (LBM ~85 kg) · no injuries · supplements reviewed · ~90–93 kg stage weight honored. Still open:</p>
+<ul>
+<li><b>True maintenance calories</b> — log intake + weigh-ins for 2–3 weeks; we'll replace the ~3,300 estimate with your real number.</li>
+<li><b>Target show / deadline</b> — a date in mind, or open-ended? (Drives how aggressive each block is.)</li>
+<li><b>Add a thigh caliper site</b> — you track belly + chest folds; a 3rd site (or one DEXA) sharpens the BF% and confirms the ~85 kg lean figure. Keep logging the two folds either way — they're your benchmark.</li>
+<li><b>Sleep hours & stress</b> — current average? (Major lever on muscle retention.)</li>
+<li><b>Food preferences / dietary style</b> — so the macros become an actual meal plan I can write for you.</li>
+<li><b>Federation choice + 181 cm Classic weight cap</b> — pick the org so we confirm your ~88–90 kg stage weight fits the cap.</li>
+</ul>
+</section>
+
+<section>
+<h2><span class="n">10</span>Sources</h2>
+<div class="src">
+<p>Helms et al. — Natural bodybuilding contest prep: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4033492/">nutrition</a> & <a href="https://www.researchgate.net/publication/263746347">training</a></p>
+<p>Refalo/Trexler/Helms 2025 — <a href="https://evidencebasedmuscle.com/best-protein-intake-while-dieting/">protein in a deficit</a></p>
+<p>Byrne et al. — <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5803575/">MATADOR diet-break study</a></p>
+<p>ISSN — <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5477153/">protein</a>, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5469049/">creatine</a> position stands</p>
+<p>RP — <a href="https://rpstrength.com/blogs/articles/training-volume-landmarks-muscle-growth">volume landmarks</a>, <a href="https://rpstrength.com/blogs/articles/all-about-diet-breaks-refeeds">diet breaks</a></p>
+<p>Schoenfeld — <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9935748/">proximity to failure</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/39959841/">lengthened partials</a></p>
+<p>Henselmans — <a href="https://mennohenselmans.com/the-new-science-of-how-to-maximize-biceps-growth/">biceps science</a></p>
+<p>Stronger By Science — <a href="https://www.strongerbyscience.com/research-spotlight-interference-effect/">interference effect</a></p>
+<p>3DMJ — <a href="https://www.3dmusclejourney.com/blog/1-year-bodybuilding-timeline-how-to-prepare-at-12-months-out">prep timeline</a></p>
+<p>Peak week — <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8201693/">evidence-based review</a></p>
+</div>
+<p class="sub" style="margin-top:14px;font-size:.78rem">This is an evidence-based educational plan, not medical advice. Given your starting bodyweight, get medical clearance before the cardio ramp and consider a coach for the final prep. Built 4 main phases + Deload + Peak Week · ~50 unique training days · ~260 exercise slots · forearms 12 direct sets/wk · every exerciseId verified against the app's 1,597-entry library · realistic stage-ready target Q2 2029.</p>
+</section>
+
+<section id="programfiles">
+<h2><span class="n">11</span>Program Files</h2>
+<p class="sub">Every program file in this folder — new plan and old — pick one to view, copy, or download. Files sit alongside this page in the repo.</p>
+<div class="toolbar">
+<select id="progPick" class="picker" onchange="pickProg()">
+<option value="">— Select a program —</option>
+<optgroup label="Natural Bodybuilding Roadmap (current)">
+<option value="p1">Phase 1 — Foundation &amp; Cardio Primer (10-day rotation)</option>
+<option value="p2">Phase 2 — Recomp: Weak-Point Emphasis (10-day rotation)</option>
+<option value="p3">Phase 3 — Lean-Gaining Bridge (10-day rotation)</option>
+<option value="p4">Phase 4 — Contest Prep / Peak Physique (10-day rotation)</option>
+<option value="pd">Deload Block — 5-day recovery rotation</option>
+<option value="pk">Peak Week — 7-day contest protocol</option>
+</optgroup>
+<optgroup label="Advanced Bodybuilding (previous plan)">
+<option value="o0">Fullbody 3-day</option>
+<option value="o1">Phase 1 — Reentry</option>
+<option value="o2">Phase 2 — Foundation</option>
+<option value="o3">Phase 3a — Hypertrophy Cut</option>
+<option value="o4">Phase 3b — Hypertrophy Deep Cut</option>
+<option value="o5">Phase 4 — Contest Prep (old)</option>
+</optgroup>
+</select>
+<button class="btn copy" id="pickCopy" onclick="copyPicked(this)" disabled>⧉ Copy</button>
+<button class="btn" id="pickDl" onclick="dlPicked()" disabled>⬇ Download</button>
+</div>
+<p class="pfsub" id="pfPath">Select a program to preview its file.</p>
+<pre class="progView" id="progView"></pre>
+</section>
+
+<script>
+const PROGRAMS = {
+  p1: { file: 'phase1-foundation.json',              name: 'Phase 1 — Foundation & Cardio Primer (5d)' },
+  p2: { file: 'phase2-recomp-ppl.json',              name: 'Phase 2 — Recomp: Weak-Point PPL x2 (6d)' },
+  p3: { file: 'phase3-lean-gaining.json',            name: 'Phase 3 — Lean-Gaining Bridge (6d)' },
+  p4: { file: 'phase4-contest-prep.json',            name: 'Phase 4 — Contest Prep / Peak Physique (6d)' },
+  o0: { file: 'fullbody_3day.json',                  name: 'Fullbody 3-day' },
+  o1: { file: 'phase1_reentry.json',                 name: 'Phase 1 — Reentry' },
+  o2: { file: 'phase2_foundation.json',              name: 'Phase 2 — Foundation' },
+  o3: { file: 'phase3a_hypertrophy_cut.json',        name: 'Phase 3a — Hypertrophy Cut' },
+  o4: { file: 'phase3b_hypertrophy_deep_cut.json',   name: 'Phase 3b — Hypertrophy Deep Cut' },
+  o5: { file: 'phase4_contest_prep.json',            name: 'Phase 4 — Contest Prep (old)' }
+};
+const _cache = {};
+async function _load(id) {
+  if (_cache[id]) return _cache[id];
+  const r = await fetch(PROGRAMS[id].file, { cache: 'no-cache' });
+  if (!r.ok) throw new Error('HTTP ' + r.status + ' for ' + PROGRAMS[id].file);
+  const j = await r.json();
+  _cache[id] = j;
+  return j;
+}
+async function _txt(id) { return JSON.stringify(await _load(id), null, 2); }
+function _dl(name, text) {
+  const b = new Blob([text], { type: 'application/json' });
+  const u = URL.createObjectURL(b);
+  const a = document.createElement('a');
+  a.href = u; a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(u), 1000);
+}
+async function dlProg(id) {
+  try { _dl(PROGRAMS[id].file, await _txt(id)); }
+  catch (e) { alert('Could not load ' + PROGRAMS[id].file + ' — serve this page over http/https.'); }
+}
+async function dlAll() {
+  const ids = Object.keys(PROGRAMS);
+  for (let i = 0; i < ids.length; i++) {
+    await dlProg(ids[i]);
+    await new Promise(r => setTimeout(r, 350));
+  }
+}
+async function copyProg(id, btn) {
+  try {
+    const t = await _txt(id);
+    const done = () => {
+      const o = btn.textContent;
+      btn.textContent = '✓ Copied!';
+      btn.classList.add('ok');
+      setTimeout(() => { btn.textContent = o; btn.classList.remove('ok'); }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(t).then(done, () => _fallback(t, done));
+    } else { _fallback(t, done); }
+  } catch (e) { alert('Could not load ' + PROGRAMS[id].file + ' — serve this page over http/https.'); }
+}
+function _fallback(t, done) {
+  const ta = document.createElement('textarea');
+  ta.value = t; ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); done(); }
+  catch (e) { alert('Copy failed — long-press to select.'); }
+  ta.remove();
+}
+async function pickProg() {
+  const id = document.getElementById('progPick').value;
+  const view = document.getElementById('progView');
+  const copyBtn = document.getElementById('pickCopy');
+  const dlBtn = document.getElementById('pickDl');
+  const path = document.getElementById('pfPath');
+  if (!id) {
+    view.textContent = ''; view.classList.remove('on');
+    copyBtn.disabled = true; dlBtn.disabled = true;
+    path.textContent = 'Select a program to preview its file.';
+    return;
+  }
+  copyBtn.disabled = false; dlBtn.disabled = false;
+  path.innerHTML = 'File: <code class="k">' + PROGRAMS[id].file + '</code>';
+  view.classList.add('on');
+  view.textContent = 'Loading…';
+  try { view.textContent = await _txt(id); }
+  catch (e) { view.textContent = 'Could not load ' + PROGRAMS[id].file + ' — serve this page over http/https.'; }
+}
+function copyPicked(btn) { const id = document.getElementById('progPick').value; if (id) copyProg(id, btn); }
+function dlPicked() { const id = document.getElementById('progPick').value; if (id) dlProg(id); }
+</script>
+</div></body></html>
